@@ -1,0 +1,8 @@
+*~
+*.elc
+*.pyc
+*.log
+*.orig
+.DS_Store
+auto-save-list
+anything-c-adaptive-history

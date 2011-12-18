@@ -25,7 +25,7 @@
 ;;; Code:
 
 ;;; 初期位置
-(cd "~/")
+;; (cd "~/")
 
 ;; ログの長さを無限に
 ;;(setq message-log-max 't)

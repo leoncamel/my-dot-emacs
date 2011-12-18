@@ -48,26 +48,24 @@
 (setq user-full-name "Le0n Zh4ng")
 (setq user-mail-address "leoncamel@gmail.com")
 
-;; 
 
-;; start emacs server
-(server-start)
 
-;; remove the kill-buffer confirmation
-(remove-hook 'kill-buffer-query-functions 'server-kill-buffer-query-function)
+;; -----
+;; main
+;; -----
 
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Font
-(require 'my-plat-vars)
-(require 'my-fontset-win)
-(if window-system
-    (cond
-     (linux-p
-      (newleon-fontset-dejvu-msyh 16))
-     (darwin-p
-      (macleon-fontset-dejvu-hei 16))
-     (t
-      (newleon-fontset-dejvu-msyh 16))))
+;; global settings
+(require 'init_global)
+
+(require 'init_keys)
+(require 'init_font_color)
+(require 'init_anything)
+(require 'init_session)
+(require 'init_autoinsert)
+
+(require 'init_org)
+(require 'init_markdown)
+
 
 (provide 'init_main)
 ;;; init_main.el ends here

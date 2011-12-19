@@ -39,6 +39,7 @@
                       starter-kit-eshell
                       starter-kit-bindings
                       scpaste
+                      lua-mode
                       clojure-mode
                       clojure-test-mode
                       markdown-mode

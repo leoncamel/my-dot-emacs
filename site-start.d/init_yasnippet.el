@@ -24,7 +24,8 @@
 
 ;;; Code:
 
-
+(setq yas/my-snippets-dir (concat dotfiles-dir "/etc/my-yasnippets/"))
+(yas/load-directory yas/my-snippets-dir)
 
 (provide 'init_yasnippet)
 ;;; init_yasnippet.el ends here

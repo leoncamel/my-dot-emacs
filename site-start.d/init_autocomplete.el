@@ -41,7 +41,11 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories (concat dotfiles-dir "/vendor/auto-complete/dict/"))
 (ac-config-default)
- 
+
+;; auto-complete for haskell-mode
+;; reference : http://madscientist.jp/~ikegami/diary/20090215.html
+(require 'init_ac_hs)
+
 ;; (require 'auto-complete-config)
 ;; (require 'auto-complete-yasnippet)
 ;; (require 'auto-complete-etags)

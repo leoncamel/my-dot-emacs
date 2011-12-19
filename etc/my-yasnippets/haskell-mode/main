@@ -1,0 +1,8 @@
+# contributor: https://github.com/polypus74
+# expand-env: ((yas/indent-line 'fixed))
+# --
+--
+-- Main
+--
+main :: IO ()
+main = ${undefined}

@@ -1,7 +1,7 @@
 
 (require 'autoinsert)
 (auto-insert-mode)  ;;; Adds hook to find-files-hook
-(setq auto-insert-directory (concat dotfiles-dir "/leon/autoinsert-template/")) ;;; Or use custom, *NOTE* Trailing slash important
+(setq auto-insert-directory (concat dotfiles-dir "/etc/autoinsert-template/")) ;;; Or use custom, *NOTE* Trailing slash important
 ;(setq auto-insert-query nil) ;;; If you don't want to be prompted before insertion
 ;(define-auto-insert "\.py" "my-python-template.py")
 ;(define-auto-insert "\.php" "my-php-template.php")

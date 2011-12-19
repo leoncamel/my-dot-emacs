@@ -71,6 +71,7 @@
 
 (require 'init_w3m)
 
+(require 'init_clojure)
 (require 'init_python)
 (require 'init_ruby)
 (require 'init_ocaml)

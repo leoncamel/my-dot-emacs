@@ -1,4 +1,4 @@
-;;; init_autocomplete.el --- auto-complete settings
+;;; init_clojure.el --- clojure-mode settings
 
 ;; Copyright (C) 2011  Le0n Zh4ng
 
@@ -24,11 +24,9 @@
 
 ;;; Code:
 
-(setq ac-comphist-file
-      (expand-file-name (concat dotfiles-dir "/var/ac-comphist.dat")))
+(autoload 'clojure-mode "clojure-mode" "A major mode for Clojure" t)
+(add-to-list 'auto-mode-alist '("\\.clj$" . clojure-mode))
 
-;; tell emacs where to read abbrev
-(setq abbrev-file-name (concat "/var/abbrev_defs"))
 
-(provide 'init_autocomplete)
-;;; init_autocomplete.el ends here
+(provide 'init_clojure)
+;;; init_clojure.el ends here

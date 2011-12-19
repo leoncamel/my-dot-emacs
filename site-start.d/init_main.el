@@ -61,11 +61,32 @@
 (require 'init_font_color)
 (require 'init_anything)
 (require 'init_session)
-(require 'init_autoinsert)
+
+(require 'init_dired)
+(require 'init_autocomplete)
+(require 'init_flymake)
 
 (require 'init_org)
 (require 'init_markdown)
 
+(require 'init_w3m)
+
+(require 'init_python)
+(require 'init_ruby)
+(require 'init_ocaml)
+(require 'init_js)
+(require 'init_haskell)
+
+(require 'init_slime)
+
+(require 'init_cpp)
+(when mac-p
+  (require 'init_objc))
+(require 'init_cedet)
+
+(require 'init_yasnippet)
+
+(require 'init_autoinsert)
 
 (provide 'init_main)
 ;;; init_main.el ends here

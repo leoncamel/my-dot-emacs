@@ -33,8 +33,8 @@
 ;(require 'org-babel-python)
 ;;(org-babel-load-library-of-label)
 
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/org-7.3/lisp/"))
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/org-7.3/contrib/lisp"))
+;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/org-7.3/lisp/"))
+;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/org-7.3/contrib/lisp"))
 (require 'org-install)
 (require 'ob-tangle)
 (require 'ob-python)

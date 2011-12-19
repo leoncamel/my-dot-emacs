@@ -87,43 +87,43 @@
 ;;   xelatex setup.
 ;;
 (require 'org-latex)
-(setq org-export-latex-classes
-      (cons '("article"
-              "\\documentclass{article}
-[NO-DEFAULT-PACKAGES]
-\\usepackage{amsmath}
-\\usepackage[utf8]{inputenc}
-\\usepackage[OT2,T1]{fontenc}
-\\usepackage{fixltx2e}
-\\usepackage{graphicx}
-\\usepackage{longtable}
-\\usepackage{float}
-\\usepackage{wrapfig}
-\\usepackage{soul}
-\\usepackage{t1enc}
-\\usepackage{textcomp}
-\\usepackage{marvosym}
-\\usepackage{wasysym}
-\\usepackage{latexsym}
-\\usepackage{amssymb}
-\\usepackage{hyperref}
-\\usepackage{xeCJK}
-[EXTRA]
-[PACKAGES]
-%\\setCJKmainfont{Hei}            % default font for Mac
-"
-              ("\\section{%s}" . "\\section*{%s}")
-              ("\\subsection{%s}" . "\\subsection*{%s}")
-              ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
-              ("\\paragraph{%s}" . "\\paragraph*{%s}")
-              ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
-            org-export-latex-classes))
+;; (setq org-export-latex-classes
+;;       (cons '("article"
+;;               "\\documentclass{article}
+;; [NO-DEFAULT-PACKAGES]
+;; \\usepackage{amsmath}
+;; \\usepackage[utf8]{inputenc}
+;; \\usepackage[OT2,T1]{fontenc}
+;; \\usepackage{fixltx2e}
+;; \\usepackage{graphicx}
+;; \\usepackage{longtable}
+;; \\usepackage{float}
+;; \\usepackage{wrapfig}
+;; \\usepackage{soul}
+;; \\usepackage{t1enc}
+;; \\usepackage{textcomp}
+;; \\usepackage{marvosym}
+;; \\usepackage{wasysym}
+;; \\usepackage{latexsym}
+;; \\usepackage{amssymb}
+;; \\usepackage{hyperref}
+;; \\usepackage{xeCJK}
+;; [EXTRA]
+;; [PACKAGES]
+;; %\\setCJKmainfont{Hei}            % default font for Mac
+;; "
+;;               ("\\section{%s}" . "\\section*{%s}")
+;;               ("\\subsection{%s}" . "\\subsection*{%s}")
+;;               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
+;;               ("\\paragraph{%s}" . "\\paragraph*{%s}")
+;;               ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))
+;;             org-export-latex-classes))
 
-(setq org-latex-to-pdf-process
-        '("xelatex -interaction nonstopmode %b"
-          "bibtex %b"
-          "xelatex -interaction nonstopmode %b"
-          "xelatex -interaction nonstopmode %b"))
+;; (setq org-latex-to-pdf-process
+;;         '("xelatex -interaction nonstopmode %b"
+;;           "bibtex %b"
+;;           "xelatex -interaction nonstopmode %b"
+;;           "xelatex -interaction nonstopmode %b"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; bibtex

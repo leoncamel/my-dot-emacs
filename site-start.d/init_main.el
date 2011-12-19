@@ -57,6 +57,8 @@
 ;; global settings
 (require 'init_global)
 
+(require 'init_setenv)
+
 (require 'init_keys)
 (require 'init_font_color)
 (require 'init_anything)

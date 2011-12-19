@@ -48,7 +48,17 @@
                       oddmuse
                       scpaste
                       anything
-                      haskell-mode))
+                      anything-complete
+                      anything-config
+                      anything-extension
+                      haskell-mode
+                      magit
+                      dired-details+
+                      dired-single
+                      dired-isearch
+                      org
+                      org-table-comment
+                      slime))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

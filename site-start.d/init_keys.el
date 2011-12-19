@@ -25,6 +25,7 @@
 ;;; Code:
 
 
+(global-set-key (kbd "C-x C-b") 'anything-buffers+)
 
 (provide 'init_keys)
 ;;; init_keys.el ends here

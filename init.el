@@ -58,7 +58,10 @@
                       dired-isearch
                       org
                       org-table-comment
-                      slime))
+                      slime
+                      bookmark+
+                      yasnippet
+                      yasnippet-bundle))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

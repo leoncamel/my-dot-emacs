@@ -7,6 +7,7 @@
     4. anything
     5. auto-complete
     6. yasnippet
+    7. set ~/.emacs.d/url/cookies to `private`
     
 * Linux
 

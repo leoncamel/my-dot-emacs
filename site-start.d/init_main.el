@@ -38,7 +38,7 @@
 ;; ├── private
 ;; ├── share
 ;; ├── site-start.d
-;; │   └── init_main.el
+;; │   └── init_main.el
 ;; ├── userconfigs
 ;; ├── var
 ;; └── vendor

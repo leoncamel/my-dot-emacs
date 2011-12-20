@@ -27,5 +27,7 @@
 
 (global-set-key (kbd "C-x C-b") 'anything-buffers+)
 
+(global-set-key (kbd "C-c m")   'toggle-fullscreen)
+
 (provide 'init_keys)
 ;;; init_keys.el ends here

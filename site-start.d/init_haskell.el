@@ -25,6 +25,9 @@
 ;;; Code:
 
 
+;; ghc mode
+(autoload 'ghc-init "ghc" nil t)
+(add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
 
 (provide 'init_haskell)
 ;;; init_haskell.el ends here

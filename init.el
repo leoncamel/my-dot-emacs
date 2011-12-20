@@ -55,6 +55,7 @@
                       anything-config
                       anything-extension
                       haskell-mode
+                      ghc
                       magit
                       dired-details+
                       dired-single

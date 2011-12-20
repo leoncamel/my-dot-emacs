@@ -23,6 +23,41 @@
 ;; 
 
 ;;; Code:
+(defun prepend-exec-path (dir)
+  "prepend a exec-path to $PATH"
+  (when (and (file-exists-p dir) (not (member dir exec-path)))
+    (let ((full-dir (expand-file-name dir)))
+      (setenv "PATH" (concat full-dir ":" (getenv "PATH")))
+      (setq exec-path (append (list full-dir) exec-path))
+      )))
+
+;; TODO: Not tested
+;; (dolist (dir (list
+;;                (expand-file-name "~/bin")
+;;                (expand-file-name "~/local/bin")
+;;                (expand-file-name "~/.emacs.d/bin")
+;;                "/home/leon/bin/emacs-git//bin"
+;;                "/usr/local/cuda/bin"
+;;                "/usr/lib/lightdm/lightdm"
+;;                "/usr/local/sbin"
+;;                "/usr/local/bin"
+;;                "/usr/sbin"
+;;                "/usr/bin"
+;;                "/sbin"
+;;                "/bin"
+;;                "/usr/games"
+;;                ))
+;;   (prepend-exec-path dir))
+
+;; (setenv "MANPATH" (concat "/usr/local/man:/usr/share/man:/Developer/usr/share/man:/sw/share/man" (getenv "MANPATH")))
+
+;; (setenv "JAVA_OPTS" "-Dfile.encoding=UTF-8")
+
+;; (setenv "CVS_RSH" "ssh")
+;; (setenv "DISPLAY" "localhost")
+;; (setenv "SSH_AUTH_SOCK" (getenv "SSH_AUTH_SOCK"))
+;; (setenv "LC_ALL" "ja_JP.UTF-8")
+
 
 ;; switch network environment
 (defun switch-net-env (env)

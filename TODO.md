@@ -7,7 +7,8 @@
     9. `package-list-packages` generates ".smex-items" and "places". Fix it.
     10. dired mode : use single buffer
     11. spell check, for latex or org-mode
-
+    12. fix "setenv" for all platform. Especially on windows.
+ 
 * Linux
 
 * Mac OSX

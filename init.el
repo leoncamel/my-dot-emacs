@@ -9,6 +9,9 @@
 ;; and brighter; it simply makes everything else vanish."
 ;; -Neal Stephenson, "In the Beginning was the Command Line"
 
+;; for debug
+;; (setq debug-on-error t)
+
 ;; Turn off mouse interface early in startup to avoid momentary display
 ;; You really don't need these; trust me.
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -27,7 +30,6 @@
                   ("elpa" . "http://tromey.com/elpa/")))
   (add-to-list 'package-archives source t))
 (package-initialize)
-
 
 ;; Install packages if not existed
 (when (not package-archive-contents)
@@ -84,9 +86,9 @@
 ;; Load Platform independent configs
 
 ;; You can keep system- or user-specific customizations here
-(setq system-specific-config (concat dotfiles-dir "/hostconfigs/" system-name ".el")
-      user-specific-config (concat dotfiles-dir "/userconfigs/" user-login-name ".el")
-      user-specific-dir (concat dotfiles-dir "/userconfigs/" user-login-name))
+(setq system-specific-config (concat dotfiles-dir "hostconfigs/" system-name ".el")
+      user-specific-config (concat dotfiles-dir "userconfigs/" user-login-name ".el")
+      user-specific-dir (concat dotfiles-dir "userconfigs/" user-login-name))
 (add-to-list 'load-path user-specific-dir)
 
 (if (file-exists-p system-specific-config) (load system-specific-config))

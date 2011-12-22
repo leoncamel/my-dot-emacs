@@ -38,7 +38,5 @@
           (lambda ()
             (setq imenu-generic-expression leon-markdown-imenu-generic-expression)))
 
-
-
 (provide 'init_markdown)
 ;;; init_markdown.el ends here

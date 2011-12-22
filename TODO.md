@@ -8,6 +8,7 @@
     10. dired mode : use single buffer
     11. spell check, for latex or org-mode
     12. fix "setenv" for all platform. Especially on windows.
+    13. filladapt.el :: it seems a old package. try it later
  
 * Linux
 

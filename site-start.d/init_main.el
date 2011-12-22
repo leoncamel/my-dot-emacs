@@ -59,13 +59,15 @@
 
 (require 'init_setenv)
 
-(require 'init_keys)
-(require 'init_font_color)
-(require 'init_anything)
-(require 'init_session)
+(require 'init_keys)                    ;; Keyboard bindings
+(require 'init_font_color)              ;; Font and color-theme
+(require 'init_anything)                ;; Anything
+(require 'init_session)                 ;; Session and desktop
+
+(require 'init_fci)                     ;; fill-column-indicator mode
 
 (require 'init_dired)
-(require 'init_autocomplete)
+(require 'init_autocomplete)            ;; auto-complete mode
 (require 'init_flymake)
 
 (require 'init_org)

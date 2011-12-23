@@ -49,7 +49,33 @@
                              (if (boundp 'old-fullscreen) old-fullscreen nil)
                            (progn (setq old-fullscreen current-value)
                                   'fullboth)))))
+;;
+;; win32 max/restore frame, copied from:
+;; [1] : https://bitbucket.org/phromo/w32-fullscreen/src/tip/w32-fullscreen.el
+;;
+(defun w32-fullscreen-maximize-frame ()
+  "Maximize the current frame (windows only)"
+  (interactive)
+  (w32-send-sys-command 61488))
 
+(defun w32-fullscreen-restore-frame ()
+  "Restore a minimized/maximized frame (windows only)"
+  (interactive)
+  (w32-send-sys-command 61728))
+
+;; 
+(defun w32-toggle-fullscreen (&optional f)
+  (interactive)
+  (let ((current-value (frame-parameter nil 'fullscreen)))
+    (set-frame-parameter nil 'fullscreen
+                         (if (equal 'fullboth current-value)
+                             (if (boundp 'old-fullscreen) old-fullscreen nil)
+                           (progn (setq old-fullscreen current-value)
+                                  'fullboth)))))
+
+;;
+;; toggle-fullscreen
+;;
 (defun toggle-fullscreen (&optional f)
   (interactive)
   (cond (ns-p (if (fboundp 'ns-toggle-fullscreen)

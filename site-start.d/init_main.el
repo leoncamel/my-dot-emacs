@@ -90,6 +90,7 @@
   (require 'init_objc))
 (require 'init_cedet)
 
+(require 'init_skeleton)
 (require 'init_yasnippet)
 
 (require 'init_autoinsert)

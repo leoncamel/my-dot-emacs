@@ -59,5 +59,41 @@
   )
 
 
+;;
+;; toggle frame transparency
+;;
+
+;; This code snippet download from :
+;;   [1] http://www.emacswiki.org/emacs/TransparentEmacs
+;; But, it can not work on Emacs-24.
+;;  TODO:
+;;  1. Does it work on emacs 23?
+;;  2. When did the "set-frame-parameter" change parameter from tuple
+;;       to single value?
+
+;; (eval-when-compile (require 'cl))
+;; (defun toggle-transparency ()
+;;   (interactive)
+;;   (if (/=
+;;        (cadr (frame-parameter nil 'alpha))
+;;        100)
+;;       (set-frame-parameter nil 'alpha '(100 100))
+;;     (set-frame-parameter nil 'alpha '(85 50))))
+
+;;
+;; This function, which is modified by myself, can work on Emacs 24.
+;;
+(eval-when-compile (require 'cl))
+(defun toggle-transparency ()
+  (interactive)
+  (if (not (eq (frame-parameter nil 'alpha) 100))
+      (set-frame-parameter nil 'alpha 100)
+    (set-frame-parameter nil 'alpha 85)))
+
+(defun transparency (value)
+  "Sets the transparency of the frame window. 0=transparent/100=opaque"
+  (interactive "nTransparency Value 0 - 100 opaque:")
+  (set-frame-parameter (selected-frame) 'alpha value))
+
 (provide 'my-fullscreen)
 ;;; my-fullscreen.el ends here

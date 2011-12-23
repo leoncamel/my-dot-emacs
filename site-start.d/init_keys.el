@@ -29,5 +29,7 @@
 
 (global-set-key (kbd "C-c m")   'toggle-fullscreen)
 
+(global-set-key (kbd "C-c t")   'toggle-transparency)
+
 (provide 'init_keys)
 ;;; init_keys.el ends here

@@ -24,34 +24,5 @@
 
 ;;; Code:
 
-(define-skeleton sexpr-example
-  "Insert a silly example."
-  ""
-  > "Emacs version is: " emacs-version \n
-  > "And time is: " (current-time-string))
-
-(define-skeleton insert-c-comment-header
-  "Inserts a c comment in a rectangle into current buffer."
-  ""
-  '(setq str (skeleton-read "Comment: "))
-  ;; `str' is set explicitly here, because otherwise the skeleton
-  ;; program would set it, only when it is going to insert it into the
-  ;; buffer. But we need to determine the length of the string
-  ;; beforehand, with `(length str)' below.
-  '(when (string= str "") (setq str " - "))
-  '(setq v1 (make-string (- fill-column 6) ?*))
-  '(setq v2 (- fill-column 10 (length str)))
-  "/* " v1 " */" \n
-  "/* **"
-  (make-string (floor v2 2) ?\ )
-  str
-  (make-string (ceiling v2 2) ?\ )
-  "** */" \n
-  "/* " v1 " */")
-
-/* ************************************************************************** */
-/* **                                hello                                 ** */
-/* ************************************************************************** */
-
 (provide 'init_skeleton)
 ;;; init_skeleton.el ends here

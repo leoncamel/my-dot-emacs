@@ -43,7 +43,6 @@
                       scpaste
                       lua-mode
                       clojure-mode
-                      clojure-test-mode
                       cmake-mode
                       coffee-mode
                       markdown-mode
@@ -65,6 +64,7 @@
                       org
                       org-table-comment
                       slime
+                      swank-clojure
                       bookmark+
                       yasnippet
                       yasnippet-bundle))

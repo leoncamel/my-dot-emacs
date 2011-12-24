@@ -1,4 +1,4 @@
-;;; init_slime.el --- SLIME settings
+;;; Leon-no-MBP.el --- hostconfigs for host Leon-no-MBP
 
 ;; Copyright (C) 2011  Le0n Zh4ng
 
@@ -24,14 +24,7 @@
 
 ;;; Code:
 
-;; (setq inferior-lisp-program "sbcl")
-;; (setq slime-net-coding-system 'utf-8-unix) ; 文字コードの指定
-;; (setq slime-startup-animation nil)
-;; (setq slime-truncate-lines nil)
+(prepend-exec-path "~/bin/homebrew/bin")
 
-;; slime
-;; (eval-after-load "slime"
-;;   '(progn (slime-setup '(slime-repl))))
-
-(provide 'init_slime)
-;;; init_slime.el ends here
+(provide 'Leon-no-MBP)
+;;; Leon-no-MBP.el ends here

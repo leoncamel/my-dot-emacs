@@ -78,7 +78,7 @@
    (interactive)
    (find-file "~/org-doc/gtd/gtd.org")
    )
-(setq org-export-with-LaTeX-fragments t)
+;; (setq org-export-with-LaTeX-fragments t)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Local Org-mode XeLaTeX Export Settings
@@ -124,6 +124,20 @@
 ;;           "bibtex %b"
 ;;           "xelatex -interaction nonstopmode %b"
 ;;           "xelatex -interaction nonstopmode %b"))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; minted setup for org-mode ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; reference : newsmth
+
+(setq org-src-fontify-natively t)
+(setq org-export-latex-minted t)
+(add-to-list 'org-export-latex-packages-alist '("" "minted"))
+(add-to-list 'org-export-latex-minted-langs '(ocaml "ocaml"))
+(setq org-export-latex-listings 'minted)
+(setq org-latex-to-pdf-process
+      '("pdflatex -shell-escape -interaction nonstopmode %f"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ; bibtex

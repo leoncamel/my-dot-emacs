@@ -54,6 +54,10 @@
         (".*" . "~/.emacs.d/backups")
         ))
 
+;; tetris score
+(setq tetris-score-file
+  "~/.emacs.d/var/tetris-scores")
+
 ;; emacsclient を利用するためにサーバ起動
 ;; サーバが起動していた場合は先に起動していた方を優先
 (require 'server)

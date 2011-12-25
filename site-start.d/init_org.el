@@ -135,6 +135,9 @@
 (setq org-export-latex-minted t)
 (add-to-list 'org-export-latex-packages-alist '("" "minted"))
 (add-to-list 'org-export-latex-minted-langs '(ocaml "ocaml"))
+(add-to-list 'org-export-latex-minted-langs '(haskell "haskell"))
+(add-to-list 'org-export-latex-minted-langs '(clojure "clojure"))
+(add-to-list 'org-export-latex-minted-langs '(erlang "erlang"))
 (setq org-export-latex-listings 'minted)
 (setq org-latex-to-pdf-process
       '("pdflatex -shell-escape -interaction nonstopmode %f"))

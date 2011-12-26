@@ -41,19 +41,24 @@
 ;; color-theme
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Color theme
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
-(require 'color-theme)
-(color-theme-initialize)
+; (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
+;; (color-theme-initialize)
+;;; (color-theme-dark-laptop)
 ;(add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme-by-leon/"))
 ;(require 'color-theme-tangotango)
 ;(require 'color-theme-blackboard)
 ;(require 'color-theme-blackboard-xiaoqiang)
 ;(color-theme-blackboard-xiaoqiang)
-(color-theme-dark-laptop)
 ;(require 'solarized-theme)
-;(color-theme-solarized-dark)
-;(eval-after-load 'color-theme '(print "LEON : loaded solarized-theme"))
 
+;;
+;; new color-theme settings
+;; for color-theme-6.6.1 downloaded from package.el
+;;
+(require 'color-theme)
+(setq color-theme-initialized t)
+(require 'color-theme-blackboard)
+(color-theme-blackboard)
 
 (provide 'init_font_color)
 ;;; init_font_color.el ends here

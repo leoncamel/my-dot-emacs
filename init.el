@@ -40,6 +40,9 @@
                       starter-kit-lisp
                       starter-kit-eshell
                       starter-kit-bindings
+                      color-theme
+                      color-theme-blackboard
+                      color-theme-solarized
                       scpaste
                       lua-mode
                       clojure-mode

@@ -10,6 +10,7 @@
     12. fix "setenv" for all platform. Especially on windows.
     13. filladapt.el :: it seems a old package. try it later
     14. skeleton mode
+    15. color-theme library from "/vendor/color-theme-6.6.0"
     
 * Linux
 

@@ -57,8 +57,19 @@
 ;;
 (require 'color-theme)
 (setq color-theme-initialized t)
-(require 'color-theme-blackboard)
-(color-theme-blackboard)
+
+;; optional : load old color-theme-6.6.0's color-theme-library
+(load-file (concat dotfiles-dir "vendor/color-theme/themes/color-theme-library.el"))
+(color-theme-dark-laptop)
+
+;(require 'color-theme-blackboard)
+;(color-theme-blackboard)
+
+;(require 'color-theme-zenburn)
+;(color-theme-zenburn)
+
+;(require 'color-theme-tango)
+;(color-theme-tango)
 
 (provide 'init_font_color)
 ;;; init_font_color.el ends here

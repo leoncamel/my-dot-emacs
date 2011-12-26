@@ -59,7 +59,13 @@
 (setq color-theme-initialized t)
 
 ;; optional : load old color-theme-6.6.0's color-theme-library
-(load-file (concat dotfiles-dir "vendor/color-theme/themes/color-theme-library.el"))
+;;(load-file (concat dotfiles-dir "vendor/color-theme/themes/color-theme-library.el"))
+;;(color-theme-dark-laptop)
+
+;;
+;; my color-theme is back, after I upload the "color-theme-library"
+;;
+(require 'color-theme-library)
 (color-theme-dark-laptop)
 
 ;(require 'color-theme-blackboard)

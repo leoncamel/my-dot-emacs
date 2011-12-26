@@ -43,6 +43,7 @@
                       color-theme
                       color-theme-blackboard
                       color-theme-solarized
+                      color-theme-library
                       scpaste
                       lua-mode
                       clojure-mode

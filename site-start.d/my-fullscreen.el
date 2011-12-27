@@ -49,6 +49,7 @@
                              (if (boundp 'old-fullscreen) old-fullscreen nil)
                            (progn (setq old-fullscreen current-value)
                                   'fullboth)))))
+
 ;;
 ;; win32 max/restore frame, copied from:
 ;; [1] : https://bitbucket.org/phromo/w32-fullscreen/src/tip/w32-fullscreen.el
@@ -81,9 +82,7 @@
   (cond (ns-p (if (fboundp 'ns-toggle-fullscreen)
                   (funcall 'ns-toggle-fullscreen)))
         (t (if (fboundp 'toggle-fullscreen-linux)
-               (funcall 'toggle-fullscreen-linux))))
-  )
-
+               (funcall 'toggle-fullscreen-linux)))))
 
 ;;
 ;; toggle frame transparency

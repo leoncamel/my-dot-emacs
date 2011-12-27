@@ -73,6 +73,8 @@
 (require 'init_org)
 (require 'init_markdown)
 
+(require 'init_calendar)
+
 (require 'init_w3m)
 
 (require 'init_lua)

@@ -8,7 +8,7 @@
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation, either version 3 of the License, or
-;; (at your option) any later version.
+;; (at  option) any later version.
 
 ;; This program is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
@@ -47,16 +47,28 @@
 (setq backup-by-copying t)
 ;;; バックアップファイルの保存位置指定[2002/03/02]
 ;; !path!to!file-name~ で保存される
+(require 'starter-kit-misc)
 (setq backup-directory-alist
       '(
         ;; ("^/etc/" . "~/.emacs.d/var/etc")
         ;; (".*" . "~/.emacs.d/var/emacs")
-        (".*" . "~/.emacs.d/backups")
+        (".*" . "~/.emacs.d/var/backups")
         ))
+
+;; places
+(setq save-place-file (concat dotfiles-dir "/var/places"))
+
+;; smex-items
+(setq smex-save-file (concat dotfiles-dir "/var/smex-items"))
 
 ;; tetris score
 (setq tetris-score-file
   "~/.emacs.d/var/tetris-scores")
+
+;; cookie path
+(require 'url-cookie)
+(setq url-cookie-file
+      (concat dotfiles-dir "var/url-cookies"))
 
 ;; emacsclient を利用するためにサーバ起動
 ;; サーバが起動していた場合は先に起動していた方を優先

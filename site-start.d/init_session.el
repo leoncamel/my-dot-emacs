@@ -27,10 +27,6 @@
 ;; 前回のカーソル位置を記憶 session に代替え
 ;(require 'saveplace)
 ;(setq-default save-place t)
-(setq save-place-file (concat dotfiles-dir "/var/places"))
-
-;; smex-items
-(setq smex-save-file (concat dotfiles-dir "/var/smex-items"))
 
 ;;; Desktop
 (setq *foo-desktop-dir* (expand-file-name "~/.emacs.d/desktop"))

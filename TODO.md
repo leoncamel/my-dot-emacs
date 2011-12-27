@@ -13,6 +13,7 @@
     15. color-theme library from "/vendor/color-theme-6.6.0"
     16. offline backup all package from elpa and marmalade
     17. how to write a "package" instead of a single .el file?
+    18. japanese-holidays.el was not encoded in UTF-8.
     
 * Linux
 

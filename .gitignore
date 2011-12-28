@@ -5,6 +5,4 @@
 *.orig
 \#*#
 .DS_Store
-anything-c-adaptive-history
-url/*
 server/*

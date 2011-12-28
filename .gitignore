@@ -5,10 +5,6 @@
 *.orig
 \#*#
 .DS_Store
-auto-save-list
 anything-c-adaptive-history
-.smex-items
-places
-abbrev_defs
 url/*
 server/*

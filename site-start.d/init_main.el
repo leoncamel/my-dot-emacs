@@ -24,31 +24,13 @@
 
 ;;; Code:
 
-;; Directory
 ;;
-;; ~/.emacs.d/
-;; ├── abbrev_defs
-;; ├── auto-save-list
-;; ├── backups
-;; ├── bin
-;; ├── elpa
-;; ├── etc
-;; ├── hostconfigs
-;; ├── init.el
-;; ├── private
-;; ├── share
-;; ├── site-start.d
-;; │   └── init_main.el
-;; ├── userconfigs
-;; ├── var
-;; └── vendor
+;; Directory tree structure, see README.md
 ;;
 
 ;; 
 (setq user-full-name "Le0n Zh4ng")
 (setq user-mail-address "leoncamel@gmail.com")
-
-
 
 ;; -----
 ;; main

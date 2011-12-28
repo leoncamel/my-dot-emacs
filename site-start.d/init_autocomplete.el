@@ -25,21 +25,25 @@
 ;;; Code:
 
 (setq ac-comphist-file
-      (expand-file-name (concat dotfiles-dir "/var/ac-comphist.dat")))
+      (my-file-path-join dotfiles-dir "var/ac-comphist.dat"))
 
 ;; tell emacs where to read abbrev
-(setq abbrev-file-name (concat "/var/abbrev_defs"))
+(setq abbrev-file-name
+      (my-file-path-join dotfiles-dir "var/abbrev_defs"))
 
-;(add-to-list 'load-path (concat dotfiles-dir "/vendor/ac/"))
-;(require 'auto-complete-config)
-;(add-to-list 'ac-dictionary-directories (concat "/vendor/ac/ac-dict"))
-;(ac-config-default)
+;; (add-to-list 'load-path (my-file-path-join dotfiles-dir "/vendor/ac/"))
+;; (require 'auto-complete-config)
+;; (add-to-list 'ac-dictionary-directories
+;;              (my-file-path-join dotfiles-dir "/vendor/ac/ac-dict"))
+;; (ac-config-default)
 
 ; TODO: auto-complete mode has strange problems
 ;       this mode is quite strange while integration with yasnippet
-(add-to-list 'load-path (concat dotfiles-dir "/vendor/auto-complete/"))
+(add-to-list 'load-path
+             (my-file-path-join dotfiles-dir "vendor/auto-complete/"))
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories (concat dotfiles-dir "/vendor/auto-complete/dict/"))
+(add-to-list 'ac-dictionary-directories
+             (my-file-path-join dotfiles-dir "vendor/auto-complete/dict/"))
 (ac-config-default)
 
 ;; auto-complete for haskell-mode
@@ -69,7 +73,8 @@
 ;;   ;; 不让回车的时候执行`ac-complete', 因为当你输入完一个
 ;;   ;; 单词的时候, 很有可能补全菜单还在, 这时候你要回车的话,
 ;;   ;; 必须要干掉补全菜单, 很麻烦, 用M-j来执行`ac-complete'
-;;   (add-to-list 'ac-dictionary-directories (concat dotfiles-dir "vendor/auto-complete/dict/"))
+;;   (add-to-list 'ac-dictionary-directories
+;;                 (my-file-path-join dotfiles-dir "vendor/auto-complete/dict/"))
 ;; 
 ;;   (setq ac-auto-show-menu t
 ;;         ac-auto-start t

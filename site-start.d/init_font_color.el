@@ -41,10 +41,10 @@
 ;; color-theme
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Color theme
-; (add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme"))
+;; (add-to-list 'load-path (my-file-path-join dotfiles-dir "/vendor/color-theme"))
 ;; (color-theme-initialize)
 ;;; (color-theme-dark-laptop)
-;(add-to-list 'load-path (concat dotfiles-dir "/vendor/color-theme-by-leon/"))
+;(add-to-list 'load-path (my-file-path-join dotfiles-dir "/vendor/color-theme-by-leon/"))
 ;(require 'color-theme-tangotango)
 ;(require 'color-theme-blackboard)
 ;(require 'color-theme-blackboard-xiaoqiang)
@@ -59,8 +59,9 @@
 (setq color-theme-initialized t)
 
 ;; optional : load old color-theme-6.6.0's color-theme-library
-;;(load-file (concat dotfiles-dir "vendor/color-theme/themes/color-theme-library.el"))
-;;(color-theme-dark-laptop)
+;; (load-file
+;;     (my-file-path-join dotfiles-dir "vendor/color-theme/themes/color-theme-library.el"))
+;; (color-theme-dark-laptop)
 
 ;;
 ;; my color-theme is back, after I upload the "color-theme-library"

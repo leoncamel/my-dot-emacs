@@ -24,6 +24,10 @@
 
 (add-to-list 'load-path dotfiles-dir)
 
+;; load-path utility function
+(defun my-file-path-join (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y)) paths))
+
 ;; Load up ELPA, the package manager
 (require 'package)
 (dolist (source '(("marmalade" . "http://marmalade-repo.org/packages/")
@@ -78,7 +82,7 @@
     (package-install p)))
 
 ;; load init_main.el
-(setq site-start-dir (concat dotfiles-dir "site-start.d/"))
+(setq site-start-dir (my-file-path-join dotfiles-dir "site-start.d/"))
 (add-to-list 'load-path site-start-dir)
 
 (if (file-exists-p site-start-dir)
@@ -90,9 +94,9 @@
 ;; Load Platform independent configs
 
 ;; You can keep system- or user-specific customizations here
-(setq system-specific-config (concat dotfiles-dir "hostconfigs/" system-name ".el")
-      user-specific-config (concat dotfiles-dir "userconfigs/" user-login-name ".el")
-      user-specific-dir (concat dotfiles-dir "userconfigs/" user-login-name))
+(setq system-specific-config (my-file-path-join dotfiles-dir "hostconfigs/" system-name ".el")
+      user-specific-config (my-file-path-join dotfiles-dir "userconfigs/" user-login-name ".el")
+      user-specific-dir (my-file-path-join dotfiles-dir "userconfigs/" user-login-name))
 (add-to-list 'load-path user-specific-dir)
 
 (if (file-exists-p system-specific-config) (load system-specific-config))

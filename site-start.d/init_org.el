@@ -25,16 +25,16 @@
 ;;; Code:
 
 ;; org-mode
-;(add-to-list 'load-path (concat dotfiles-dir "/vendor/org-6.35i/lisp/"))
-;(add-to-list 'load-path (concat dotfiles-dir "/vendor/org-6.35i/contrib/lisp/"))
+;(add-to-list 'load-path (my-file-path-join dotfiles-dir "/vendor/org-6.35i/lisp/"))
+;(add-to-list 'load-path (my-file-path-join dotfiles-dir "/vendor/org-6.35i/contrib/lisp/"))
 ;(require 'org-install)
 ;(require 'org-babel-init)
 ;(require 'org-babel-R)
 ;(require 'org-babel-python)
 ;;(org-babel-load-library-of-label)
 
-;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/org-7.3/lisp/"))
-;; (add-to-list 'load-path (concat dotfiles-dir "/vendor/org-7.3/contrib/lisp"))
+;; (add-to-list 'load-path (my-file-path-join dotfiles-dir "/vendor/org-7.3/lisp/"))
+;; (add-to-list 'load-path (my-file-path-join dotfiles-dir "/vendor/org-7.3/contrib/lisp"))
 (require 'org-install)
 (require 'ob-tangle)
 (require 'ob-python)

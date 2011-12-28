@@ -37,7 +37,8 @@
 (setq calendar-mark-holidays-flag t)
 
 ;; TODO : submit japanese-holidays.el to http://marmalade-repo.org/
-(add-to-list 'load-path (concat dotfiles-dir "vendor/japanese-holidays/"))
+(add-to-list 'load-path
+             (my-file-path-join dotfiles-dir "vendor/japanese-holidays/"))
 
 (require 'japanese-holidays)
 (setq calendar-holidays

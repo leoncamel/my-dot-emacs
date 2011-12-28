@@ -53,6 +53,7 @@
 (require 'init_flymake)
 
 (require 'init_magit)
+(require 'init_tramp)
 
 (require 'init_org)
 (require 'init_markdown)

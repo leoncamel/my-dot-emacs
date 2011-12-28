@@ -1,0 +1,27 @@
+#-*- mode: org -*-
+#+startup: overview
+#+startup: hidestars
+#+TODO: TODO | INPROGRESS | DONE
+
+* General
+
+  - [X] org-mode
+  - [X] set ~/.emacs.d/url/cookies to `private`
+  - [ ] why emacs create temporary files in `site-start.d`. for example, #init_cpp.el#
+  - [ ] `package-list-packages` generates ".smex-items" and "places". Fix it.
+  - [ ] spell check, for latex or org-mode
+  - [ ] fix "setenv" for all platform. Especially on windows.
+  - [ ] filladapt.el :: it seems a old package. try it later
+  - [ ] skeleton mode
+  - [X] color-theme library from "/vendor/color-theme-6.6.0"
+  - [ ] offline backup all package from elpa and marmalade
+  - [X] how to write a "package" instead of a single .el file?
+  - [ ] japanese-holidays.el was not encoded in UTF-8.
+    
+* Linux
+
+* Mac OSX
+
+* Windows
+
+  - [ ] magit : magit-1.1.0 can work correctly on Windows. But emacs response slowly while using git commands.

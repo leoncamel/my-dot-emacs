@@ -24,7 +24,9 @@
 
 ;;; Code:
 
-
+(require 'anything-config)
+(setq anything-c-adaptive-history-file
+      (my-file-path-join dotfiles-dir "var/anything-c-adaptive-history"))
 
 (provide 'init_anything)
 ;;; init_anything.el ends here

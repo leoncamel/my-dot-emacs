@@ -40,6 +40,9 @@
 (when (not package-archive-contents)
   (package-refresh-contents))
 
+;; (add-to-list 'load-path
+;;             (my-file-path-join dotfiles-dir "vendor/magit-1.1.0"))
+
 ;; TODO: color-theme from package.el is buggy, use vendor one
 (defvar my-packages '(starter-kit
                       starter-kit-lisp

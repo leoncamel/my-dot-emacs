@@ -20,4 +20,4 @@
 
 * Windows
 
-  1. 
+  1. magit : magit-1.1.0 can work correctly on Windows. But emacs response slowly while using git commands.

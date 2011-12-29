@@ -75,6 +75,8 @@
                       org-table-comment
                       slime
                       swank-clojure
+                      rainbow-mode
+                      rainbow-delimiters
                       bookmark+
                       popwin
                       yasnippet

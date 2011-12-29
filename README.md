@@ -13,6 +13,10 @@
 > │   └── init_evernote.el
 > ├── site-start.d
 > │   └── init_*.el
+> ├── lisp                         ;; elisp
+> │   └── auto-install.el
+> ├── local-lisp                   ;; modified elisp
+> ├── my-elisp                     ;; my elisp scripts
 > ├── hostconfigs
 > │   └── $(hostname).el
 > ├── userconfigs

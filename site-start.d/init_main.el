@@ -36,6 +36,9 @@
 ;; main
 ;; -----
 
+;; auto-install
+(require 'init_auto-install)            ;; auto-install packages from gist/emacswiki
+
 ;; global settings
 (require 'init_global)
 

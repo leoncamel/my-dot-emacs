@@ -5,7 +5,6 @@
 
 * General
 
-
   - [X] set ~/.emacs.d/url/cookies to `private`
   - [ ] why emacs create temporary files in `site-start.d`. for example, #init_cpp.el#
   - [ ] `package-list-packages` generates ".smex-items" and "places". Fix it.
@@ -18,12 +17,16 @@
   - [ ] japanese-holidays.el was not encoded in UTF-8.
   - [ ] emacswiki : download and manage scripts from emacswiki
   - [ ] add `lisp` and `locallisp` directory
+  - [ ] parentheses :: http://www.emacswiki.org/emacs/NavigatingParentheses 
+        and http://www.emacswiki.org/emacs/ParenthesisMatching  
 
 * Packages
 
   - [X] org-mode
 
   - [ ] wget
+
+  - [ ] install-elisp.el : http://www.emacswiki.org/emacs/install-elisp.el
 
   - [ ] smart-compile.el : http://www.emacswiki.org/emacs/smart-compile+.el
 

@@ -67,6 +67,7 @@
                       haskell-mode
                       ghc
                       magit
+                      wget
                       dired-details+
                       dired-single
                       dired-isearch

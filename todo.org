@@ -5,14 +5,13 @@
 
 * General
 
-  - [X] org-mode
+
   - [X] set ~/.emacs.d/url/cookies to `private`
   - [ ] why emacs create temporary files in `site-start.d`. for example, #init_cpp.el#
   - [ ] `package-list-packages` generates ".smex-items" and "places". Fix it.
   - [ ] spell check, for latex or org-mode
   - [ ] fix "setenv" for all platform. Especially on windows.
   - [ ] filladapt.el :: it seems a old package. try it later
-  - [ ] skeleton mode
   - [X] color-theme library from "/vendor/color-theme-6.6.0"
   - [ ] offline backup all package from elpa and marmalade
   - [X] how to write a "package" instead of a single .el file?
@@ -22,6 +21,14 @@
 
 * Packages
 
+  - [X] org-mode
+
+  - [ ] wget
+
+  - [ ] smart-compile.el : http://www.emacswiki.org/emacs/smart-compile+.el
+
+  - [ ] skeleton mode
+
   - [ ] eproject
     1. two *totally* different eproject http://www.emacswiki.org/emacs/eproject 
        and https://github.com/jrockway/eproject/wiki/EprojectExamples
@@ -29,6 +36,8 @@
   - [ ] icicles : http://www.emacswiki.org/emacs/Icicles_-_Support_for_Projects
 
   - [ ] gh : github library. problem with a eieio error
+
+  - [ ] ess : emacs speak statistics http://ess.r-project.org/index.php
 
 * Linux
 

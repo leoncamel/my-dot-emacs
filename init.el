@@ -96,9 +96,15 @@
 ;; Load Platform independent configs
 
 ;; You can keep system- or user-specific customizations here
-(setq system-specific-config (my-file-path-join dotfiles-dir "hostconfigs/" system-name ".el")
-      user-specific-config (my-file-path-join dotfiles-dir "userconfigs/" user-login-name ".el")
-      user-specific-dir (my-file-path-join dotfiles-dir "userconfigs/" user-login-name))
+(setq system-specific-config (my-file-path-join dotfiles-dir
+                                                "hostconfigs/"
+                                                (concat system-name ".el"))
+      user-specific-config (my-file-path-join dotfiles-dir
+                                              "userconfigs/"
+                                              (concat user-login-name ".el"))
+      user-specific-dir (my-file-path-join dotfiles-dir
+                                           "userconfigs/"
+                                           user-login-name))
 (add-to-list 'load-path user-specific-dir)
 
 (if (file-exists-p system-specific-config) (load system-specific-config))

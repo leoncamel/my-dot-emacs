@@ -65,6 +65,7 @@
 (require 'init_calendar)                ;; Japanese/Chinese Calendar
 
 (require 'init_w3m)
+(require 'init_wget)
 
 (require 'init_lua)
 (require 'init_clojure)

@@ -17,6 +17,18 @@
   - [ ] offline backup all package from elpa and marmalade
   - [X] how to write a "package" instead of a single .el file?
   - [ ] japanese-holidays.el was not encoded in UTF-8.
+  - [ ] emacswiki : download and manage scripts from emacswiki
+  - [ ] add `lisp` and `locallisp` directory
+
+* Packages
+
+  - [ ] eproject
+    1. two *totally* different eproject http://www.emacswiki.org/emacs/eproject 
+       and https://github.com/jrockway/eproject/wiki/EprojectExamples
+
+  - [ ] icicles : http://www.emacswiki.org/emacs/Icicles_-_Support_for_Projects
+
+  - [ ] gh : github library. problem with a eieio error
 
 * Linux
 

@@ -57,6 +57,8 @@
 (require 'init_magit)
 (require 'init_tramp)
 
+(require 'init_eproject)                ;; eproject
+
 (require 'init_org)
 (require 'init_markdown)
 

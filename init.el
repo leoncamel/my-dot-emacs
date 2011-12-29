@@ -75,6 +75,7 @@
                       slime
                       swank-clojure
                       bookmark+
+                      popwin
                       yasnippet
                       yasnippet-bundle))
 

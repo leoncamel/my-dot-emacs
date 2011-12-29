@@ -52,6 +52,8 @@
 (require 'init_autocomplete)            ;; auto-complete mode
 (require 'init_flymake)
 
+(require 'init_popwin)                  ;; popwin
+
 (require 'init_magit)
 (require 'init_tramp)
 

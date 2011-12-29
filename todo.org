@@ -17,7 +17,7 @@
   - [ ] offline backup all package from elpa and marmalade
   - [X] how to write a "package" instead of a single .el file?
   - [ ] japanese-holidays.el was not encoded in UTF-8.
-    
+
 * Linux
 
 * Mac OSX

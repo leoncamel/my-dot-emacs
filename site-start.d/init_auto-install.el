@@ -30,7 +30,7 @@
 ;; (setq my-elisp-dir (my-file-path-join dotfiles-dir "lisp"))
 (add-to-list 'load-path lisp-dir)
 
-(require 'auto-load)
+(require 'auto-install)
 (setq auto-install-directory (my-file-path-join lisp-dir "auto-install"))
 
 (provide 'init_auto-install)

@@ -26,7 +26,10 @@
 
   - [ ] wget
 
-  - [ ] install-elisp.el : http://www.emacswiki.org/emacs/install-elisp.el
+  - [X] install-elisp.el : http://www.emacswiki.org/emacs/install-elisp.el
+        try el-get.el
+
+  - [ ] el-get.el : https://github.com/dimitri/el-get
 
   - [ ] smart-compile.el : http://www.emacswiki.org/emacs/smart-compile+.el
 

@@ -24,6 +24,11 @@
 
 ;;; Code:
 
+(require 'color-moccur)
+
+;; 別ウィンドウで該当ファイルを開かない。エンターした場合にだけ開く
+(setq moccur-grep-following-mode-toggle nil)
+
 (require 'loccur)
 ;; defines shortcut for loccur of the current word
 (global-set-key (kbd "C-:") 'loccur-current)

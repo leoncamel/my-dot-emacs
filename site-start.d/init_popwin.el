@@ -42,6 +42,8 @@
                 ("*aHg diff*" :position top :height 50)
                 ("\\*hg command" :regexp t :noselect)
                 ("\\*magit: [a-zA-Z0-9_]+" :regexp t :height 20)
+                ("*Occur*" :height 20)
+                ("*Moccur*" :height 20)
                 )
                popwin:special-display-config))
 

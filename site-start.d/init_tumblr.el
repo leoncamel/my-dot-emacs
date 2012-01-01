@@ -1,6 +1,6 @@
-;;; init_auto-install.el --- settings for auto-install which install packages from emacswiki/gist.
+;;; init_tumblr.el --- tumblr settings
 
-;; Copyright (C) 2011  Le0n Zh4ng
+;; Copyright (C) 2012  Le0n Zh4ng
 
 ;; Author: Le0n Zh4ng <leoncamel@gmail.com>
 ;; Keywords: 
@@ -24,16 +24,14 @@
 
 ;;; Code:
 
-;; TODO : append "~/.emacs.d/lisp", "~/.emacs.d/local-lisp" to load-list
-(setq lisp-dir       (my-file-path-join dotfiles-dir "lisp"))
-(setq local-lisp-dir (my-file-path-join dotfiles-dir "local-lisp"))
-;;(setq my-elisp-dir (my-file-path-join dotfiles-dir "my-lisp"))
-(add-to-list 'load-path lisp-dir)
-(add-to-list 'load-path local-lisp-dir)
+(add-to-list 'load-path (my-file-path-join dotfiles-dir "vendor/tumble.git/"))
+;; (add-to-list 'load-path (my-file-path-join dotfiles-dir "vendor/tumble/vendor"))
+(require 'tumble)
 
-(require 'auto-install)
-(setq auto-install-directory (my-file-path-join lisp-dir "auto-install"))
-(add-to-list 'load-path auto-install-directory)
+;; (setq tumble-email    "")
+;; (setq tumble-password "")
+;; (setq tumble-url      "yourname.tumblr.com")
+(try-load-custom-file)
 
-(provide 'init_auto-install)
-;;; init_auto-install.el ends here
+(provide 'init_tumblr)
+;;; init_tumblr.el ends here

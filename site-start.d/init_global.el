@@ -78,6 +78,14 @@
 (setq auto-save-list-file-prefix
       (my-file-path-join dotfiles-dir "var/auto-save-list/.saves-"))
 
+;; custom-file
+(setq custom-file (my-file-path-join dotfiles-dir "private/customize.el"))
+
+(defun try-load-custom-file ()
+  "load customize.el if the file existed."
+  (if (file-exists-p custom-file)
+      (load custom-file)))
+
 ;; emacsclient を利用するためにサーバ起動
 ;; サーバが起動していた場合は先に起動していた方を優先
 (require 'server)

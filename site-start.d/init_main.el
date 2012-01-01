@@ -50,6 +50,8 @@
 (require 'init_session)                 ;; Session and desktop
 
 (require 'init_fci)                     ;; fill-column-indicator mode
+(require 'init_recentf)
+(require 'init_ido)
 
 (require 'init_dired)
 (require 'init_autocomplete)            ;; auto-complete mode
@@ -69,6 +71,8 @@
 
 (require 'init_w3m)
 (require 'init_wget)
+
+(require 'init_tumblr)                  ;; tumblr-mode from git repo
 
 (require 'init_lua)
 (require 'init_clojure)

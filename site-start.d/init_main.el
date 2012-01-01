@@ -52,6 +52,7 @@
 (require 'init_fci)                     ;; fill-column-indicator mode
 (require 'init_recentf)
 (require 'init_ido)
+(require 'init_occur)                   ;; `occur` and `loccur`
 
 (require 'init_dired)
 (require 'init_autocomplete)            ;; auto-complete mode

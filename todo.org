@@ -26,6 +26,8 @@
 
   - [ ] wget
 
+  - [ ] google data : http://code.google.com/p/emacs-google/
+
   - [X] install-elisp.el : http://www.emacswiki.org/emacs/install-elisp.el
         try el-get.el
 

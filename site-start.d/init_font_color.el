@@ -63,9 +63,7 @@
 ;;     (my-file-path-join dotfiles-dir "vendor/color-theme/themes/color-theme-library.el"))
 ;; (color-theme-dark-laptop)
 
-;;
-;; my color-theme is back, after I upload the "color-theme-library"
-;;
+;; After I uploaded the "color-theme-library", my favorite color-theme comes back.
 (require 'color-theme-library)
 (color-theme-dark-laptop)
 

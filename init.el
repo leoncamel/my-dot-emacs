@@ -80,6 +80,7 @@
                       rainbow-delimiters
                       bookmark+
                       popwin
+                      quickrun
                       yasnippet
                       yasnippet-bundle))
 

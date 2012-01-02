@@ -1,3 +1,28 @@
+;;; init_autoinsert.el --- auto-insert
+
+;; Copyright (C) 2011  Le0n Zh4ng
+
+;; Author: Le0n Zh4ng <leoncamel@gmail.com>
+;; Keywords: 
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;; 
+
+;;; Code:
 
 (require 'autoinsert)
 (auto-insert-mode)  ;;; Adds hook to find-files-hook
@@ -5,6 +30,7 @@
 ;; Or use custom, *NOTE* Trailing slash important :: TODO ?
 (setq auto-insert-directory
       (my-file-path-join dotfiles-dir "/etc/autoinsert-template/"))
+
 ;(setq auto-insert-query nil) ;;; If you don't want to be prompted before insertion
 ;(define-auto-insert "\.py" "my-python-template.py")
 ;(define-auto-insert "\.php" "my-php-template.php")
@@ -16,12 +42,13 @@
 (require 'cl)
 
 (setq auto-insert-alist
-      (append '(
-                ;;("main\\.cpp$" . ["my-main-cpp-template.cpp"] my-template)
-                ;;("main\\.c$" . ["my-main-c-template.c"] my-template)
-                ;;("\\.cpp$" . ["my-cpp-template.cpp" my-template])
-                ;;("\\.hpp$" . ["my-cpp-template.h" my-template])
-                ;;("\\.h$" . ["my-h-template.h"] my-template)
+      (append '(("main\\.cpp$" . ["my-main-cpp-template.cpp" my-template])
+                ("main\\.c$"   . ["my-main-c-template.c"     my-template])
+                ("\\.cpp$"     . ["my-cpp-template.cpp"      my-template])
+                ("\\.hpp$"     . ["my-cpp-template.h"        my-template])
+                ("\\.h$"       . ["my-h-template.h"          my-template])
+                ("\\.c$"       . ["my-c-template.h"          my-template])
+                ("\\.org"      . ["my-org-template.org"      my-template])
               ) auto-insert-alist))
 (add-hook 'find-file-hooks 'auto-insert)
 
@@ -85,3 +112,4 @@
   (message "done."))
 
 (provide 'init_autoinsert)
+;;; init_autoinsert.el ends here

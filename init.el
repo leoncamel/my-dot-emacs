@@ -64,6 +64,7 @@
                       anything-complete
                       anything-config
                       anything-extension
+                      loccur
                       haskell-mode
                       ghc
                       magit

@@ -1,6 +1,6 @@
-;;; init_keys.el --- key bindings
+;;; init_occur.el --- occur related settings
 
-;; Copyright (C) 2011  Le0n Zh4ng
+;; Copyright (C) 2012  Le0n Zh4ng
 
 ;; Author: Le0n Zh4ng <leoncamel@gmail.com>
 ;; Keywords: 
@@ -24,15 +24,19 @@
 
 ;;; Code:
 
+(require 'color-moccur)
 
-(global-set-key (kbd "C-x C-b") 'anything-buffers+)
+;; 別ウィンドウで該当ファイルを開かない。エンターした場合にだけ開く
+(setq moccur-grep-following-mode-toggle nil)
 
-(global-set-key (kbd "C-c m")   'toggle-fullscreen)
+(require 'loccur)
+;; defines shortcut for loccur of the current word
+(global-set-key (kbd "C-:") 'loccur-current)
+;; defines shortcut for the interactive loccur command
+(global-set-key (kbd "C-*") 'loccur)
+;; defines shortcut for the loccur of the previously found word
+;; (global-set-key (kbd "C-*") 'loccur-previous-match)
+;; (define-key global-map [(control shift o)] 'loccur-previous-match)
 
-(global-set-key (kbd "C-c t")   'toggle-transparency)
-
-;; occur
-(global-set-key (kbd "C-c o")   'occur)
-
-(provide 'init_keys)
-;;; init_keys.el ends here
+(provide 'init_occur)
+;;; init_occur.el ends here

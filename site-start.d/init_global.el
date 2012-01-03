@@ -93,13 +93,16 @@
 (when (and (functionp 'server-running-p) (not (server-running-p)))
   (server-start))
 
+;; Frame を前面にする
 (defun skt:raise-frame()
-  ;; Frame を前面にする
-  (raise-frame (selected-frame))
-  ;; キーボードフォーカスを選択しているFrameにする
-  (x-focus-frame (selected-frame)))
-(add-hook 'server-visit-hook 'skt:raise-frame)
-(add-hook 'find-file-hook 'skt:raise-frame)
+     (raise-frame (selected-frame))
+     ;; キーボードフォーカスを選択しているFrameにする
+     (x-focus-frame (selected-frame)))
+
+(when window-system
+  (progn
+   (add-hook 'server-visit-hook 'skt:raise-frame)
+   (add-hook 'find-file-hook 'skt:raise-frame)))
 
 ;; 起動時のmessageを表示しない
 (setq inhibit-startup-message t)

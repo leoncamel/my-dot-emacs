@@ -39,3 +39,8 @@
 
     1. cabal install ghc-mod
     2. cabal install hlint
+
+* Twittering-mode
+
+    1. brew install curl gnutls openssl
+

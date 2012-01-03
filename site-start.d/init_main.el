@@ -96,5 +96,7 @@
 
 (require 'init_autoinsert)
 
+(require 'init_twit)                    ;; twittering-mode
+
 (provide 'init_main)
 ;;; init_main.el ends here

@@ -67,6 +67,14 @@
 (require 'color-theme-library)
 (color-theme-dark-laptop)
 
+;; sunburst
+(add-to-list 'load-path
+             (my-file-path-join dotfiles-dir "vendor/Emacs-Sunburst-Color-Theme.git/"))
+;; (require 'color-theme-sunburst)
+;; (color-theme-sunburst)
+;; (require 'color-theme-sunburst-new)
+;; (color-theme-sunburst-new)
+
 ;(require 'color-theme-blackboard)
 ;(color-theme-blackboard)
 

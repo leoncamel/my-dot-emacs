@@ -4,3 +4,6 @@
 [submodule "vendor/twittering-mode.git"]
 	path = vendor/twittering-mode.git
 	url = https://github.com/hayamiz/twittering-mode.git
+[submodule "vendor/Emacs-Sunburst-Color-Theme.git"]
+	path = vendor/Emacs-Sunburst-Color-Theme.git
+	url = https://github.com/leoncamel/Emacs-Sunburst-Color-Theme.git

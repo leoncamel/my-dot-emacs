@@ -9,14 +9,13 @@
   - [ ] why emacs create temporary files in `site-start.d`. for example, #init_cpp.el#
   - [ ] `package-list-packages` generates ".smex-items" and "places". Fix it.
   - [ ] spell check, for latex or org-mode
-  - [ ] fix "setenv" for all platform. Especially on windows.
-  - [ ] filladapt.el :: it seems a old package. try it later
+  - [X] fix "setenv" for all platform. Especially on windows.
   - [X] color-theme library from "/vendor/color-theme-6.6.0"
   - [ ] offline backup all package from elpa and marmalade
   - [X] how to write a "package" instead of a single .el file?
   - [ ] japanese-holidays.el was not encoded in UTF-8.
-  - [ ] emacswiki : download and manage scripts from emacswiki
-  - [ ] add `lisp` and `locallisp` directory
+  - [X] emacswiki : download and manage scripts from emacswiki. *auto-install*
+  - [X] add `lisp` and `locallisp` directory
   - [ ] parentheses :: http://www.emacswiki.org/emacs/NavigatingParentheses 
         and http://www.emacswiki.org/emacs/ParenthesisMatching  
 
@@ -33,7 +32,8 @@
 
   - [ ] el-get.el : https://github.com/dimitri/el-get
 
-  - [ ] smart-compile.el : http://www.emacswiki.org/emacs/smart-compile+.el
+  - [X] smart-compile.el : http://www.emacswiki.org/emacs/smart-compile+.el
+        use quickrun
 
   - [ ] skeleton mode
 
@@ -46,6 +46,10 @@
   - [ ] gh : github library. problem with a eieio error
 
   - [ ] ess : emacs speak statistics http://ess.r-project.org/index.php
+
+  - [ ] filladapt.el :: it seems a old package. try it later
+
+  - [ ] mew : a mail client
 
 * Linux
 

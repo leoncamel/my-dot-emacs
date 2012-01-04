@@ -35,16 +35,18 @@
 ;; -----
 ;; main
 ;; -----
+(require 'init_setenv)
 
-;; auto-install
+;; Package system
+(require 'init_packages)
+(require 'init_el-get)
 (require 'init_auto-install)            ;; auto-install packages from gist/emacswiki
 
 ;; global settings
 (require 'init_global)
 
-(require 'init_setenv)
-
-(require 'init_keys)                    ;; Keyboard bindings
+;; mode settings
+(require 'init_keys)                    ;; Global key bindings, only
 (require 'init_font_color)              ;; Font and color-theme
 (require 'init_anything)                ;; Anything
 (require 'init_session)                 ;; Session and desktop
@@ -65,6 +67,7 @@
 
 (require 'init_eproject)                ;; eproject
 
+;; meta-text modes
 (require 'init_org)
 (require 'init_markdown)
 
@@ -73,8 +76,7 @@
 (require 'init_w3m)
 (require 'init_wget)
 
-(require 'init_tumblr)                  ;; tumblr-mode from git repo
-
+;; Programming modes
 (require 'init_lua)
 (require 'init_clojure)
 (require 'init_python)
@@ -96,6 +98,8 @@
 
 (require 'init_autoinsert)
 
+;; internet service
+(require 'init_tumblr)                  ;; tumblr-mode from git repo
 (require 'init_twit)                    ;; twittering-mode
 
 (provide 'init_main)

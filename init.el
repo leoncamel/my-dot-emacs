@@ -25,76 +25,18 @@
 (add-to-list 'load-path dotfiles-dir)
 
 ;; load-path utility function
+(require 'cl)
 (defun my-file-path-join (&rest paths)
   (reduce #'(lambda (x y) (concat (file-name-as-directory x) y)) paths))
 
-;; Load up ELPA, the package manager
-(require 'package)
-(dolist
-    (source '(("marmalade" . "http://marmalade-repo.org/packages/")
-              ("elpa" . "http://tromey.com/elpa/")))
-  (add-to-list 'package-archives source t))
-(package-initialize)
-
-;; Install packages if not existed
-(when (not package-archive-contents)
-  (package-refresh-contents))
-
-;; TODO: color-theme from package.el is buggy, use vendor one
-(defvar my-packages '(starter-kit
-                      starter-kit-lisp
-                      starter-kit-eshell
-                      starter-kit-bindings
-                      color-theme
-                      color-theme-blackboard
-                      color-theme-solarized
-                      color-theme-library
-                      scpaste
-                      lua-mode
-                      clojure-mode
-                      cmake-mode
-                      coffee-mode
-                      markdown-mode
-                      yaml-mode
-                      tuareg
-                      marmalade
-                      oddmuse
-                      scpaste
-                      anything
-                      anything-complete
-                      anything-config
-                      anything-extension
-                      loccur
-                      haskell-mode
-                      ghc
-                      magit
-                      wget
-                      dired-details+
-                      dired-single
-                      dired-isearch
-                      org
-                      org-table-comment
-                      slime
-                      swank-clojure
-                      rainbow-mode
-                      rainbow-delimiters
-                      bookmark+
-                      popwin
-                      quickrun
-                      yasnippet
-                      yasnippet-bundle))
-
-(dolist (p my-packages)
-  (when (not (package-installed-p p))
-    (package-install p)))
-
-;; load init_main.el
+;; add "~/.emacs.d/site-start.d/" to load-path
 (setq site-start-dir (my-file-path-join dotfiles-dir "site-start.d/"))
 (add-to-list 'load-path site-start-dir)
 
-(if (file-exists-p site-start-dir)
-    (mapc #'load (directory-files site-start-dir nil ".*el$")))
+;; (if (file-exists-p site-start-dir)
+;;     (mapc #'load (directory-files site-start-dir nil ".*el$")))
 
+;; load init_main.el
 (require 'init_main)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

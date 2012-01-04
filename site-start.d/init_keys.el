@@ -24,15 +24,11 @@
 
 ;;; Code:
 
-
-(global-set-key (kbd "C-x C-b") 'anything-buffers+)
+(require 'my-fullscreen)
 
 (global-set-key (kbd "C-c m")   'toggle-fullscreen)
 
 (global-set-key (kbd "C-c t")   'toggle-transparency)
-
-;; occur
-(global-set-key (kbd "C-c o")   'occur)
 
 (provide 'init_keys)
 ;;; init_keys.el ends here

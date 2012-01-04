@@ -38,5 +38,8 @@
 ;; (global-set-key (kbd "C-*") 'loccur-previous-match)
 ;; (define-key global-map [(control shift o)] 'loccur-previous-match)
 
+;; occur
+(global-set-key (kbd "C-c o")   'occur)
+
 (provide 'init_occur)
 ;;; init_occur.el ends here

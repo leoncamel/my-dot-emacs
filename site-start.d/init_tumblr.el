@@ -28,6 +28,9 @@
 ;; (add-to-list 'load-path (my-file-path-join dotfiles-dir "vendor/tumble/vendor"))
 (require 'tumble)
 
+;; set api to https for secure posting
+(setq tumble-api-url "https://www.tumblr.com/api/write")
+
 ;; (setq tumble-email    "")
 ;; (setq tumble-password "")
 ;; (setq tumble-url      "yourname.tumblr.com")

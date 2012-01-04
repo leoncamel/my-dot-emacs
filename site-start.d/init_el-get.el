@@ -1,6 +1,6 @@
-;;; init_anything.el --- anything settings
+;;; init_el-get.el --- el-get settings
 
-;; Copyright (C) 2011  Le0n Zh4ng
+;; Copyright (C) 2012  Le0n Zh4ng
 
 ;; Author: Le0n Zh4ng <leoncamel@gmail.com>
 ;; Keywords: 
@@ -24,11 +24,7 @@
 
 ;;; Code:
 
-(require 'anything-config)
-(setq anything-c-adaptive-history-file
-      (my-file-path-join dotfiles-dir "var/anything-c-adaptive-history"))
 
-(global-set-key (kbd "C-x C-b") 'anything-buffers+)
 
-(provide 'init_anything)
-;;; init_anything.el ends here
+(provide 'init_el-get)
+;;; init_el-get.el ends here

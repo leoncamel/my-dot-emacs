@@ -20,6 +20,8 @@
         and http://www.emacswiki.org/emacs/ParenthesisMatching  
 
 * Packages
+  
+  - [ ] emacs-prelude : https://github.com/bbatsov/emacs-prelude
 
   - [X] org-mode
 

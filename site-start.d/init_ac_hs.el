@@ -24,6 +24,7 @@
 
 ;;; Code:
 
+(require 'auto-complete)
 ;; see also
 ;; http://www.enigmacurry.com/2009/01/21/autocompleteel-python-code-completion-in-emacs/
 ;; about auto-complete-mode for python-mode

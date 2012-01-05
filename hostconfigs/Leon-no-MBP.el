@@ -51,33 +51,5 @@
 (dolist (p my-exec-path)
   (prepend-exec-path p))
 
-;; (setq my-exec-path
-;;       (reverse
-;;        '("/Users/leoncamel/bin/homebrew/bin"
-;;          "/usr/local/texlive/2011/bin/x86_64-darwin/"
-;;          "/Users/leoncamel/bin/homebrew//sbin"
-;;          "/Users/leoncamel/bin/homebrew//bin"
-;;          "/Users/leoncamel/.nvm/v0.5.10/bin"
-;;          "/Users/leoncamel/.rvm/gems/ruby-1.8.7-p334/bin"
-;;          "/Users/leoncamel/.rvm/gems/ruby-1.8.7-p334@global/bin"
-;;          "/Users/leoncamel/.rvm/rubies/ruby-1.8.7-p334/bin"
-;;          "/Users/leoncamel/.rvm/bin"
-;;          "/Users/leoncamel/bin/erlang-r14b04-by-kerl//bin"
-;;          "/Users/leoncamel/bin/cmigemo//bin"
-;;          "/Users/leoncamel/bin/AllegroCL/"
-;;          "/Users/leoncamel/bin/GoogleAppEngine/"
-;;          "/Users/leoncamel/bin/Wireshark_CMD/"
-;;          "/Users/leoncamel/bin/depot_tools"
-;;          "/Users/leoncamel/bin/plowshare-svn//bin"
-;;          "/Users/leoncamel/bin/cmucl-20b//bin"
-;;          "/Users/leoncamel/bin/proxytunnel-1.9.0//bin"
-;;          "/Users/leoncamel/Library/Haskell/bin"
-;;          "/opt/local//sbin"
-;;          "/opt/local//bin"
-;;          "/Users/leoncamel/bin/"
-;;          "/usr/local/bin/"
-;;          "/usr/local/cuda/bin")))
-
-
 (provide 'Leon-no-MBP)
 ;;; Leon-no-MBP.el ends here

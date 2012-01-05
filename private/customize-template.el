@@ -29,6 +29,15 @@
 ;; (setq tumble-password "")
 ;; (setq tumble-url      "")
 
+;; Join the a couple of interesting channels whenever connecting to Freenode.
+;; (setq erc-autojoin-channels-alist '(("freenode.net"
+;;                                      "#emacs" "#haskell")))
+
+;; set your nickname
+;; (setq erc-nick "")
+
+;; share your username (optional)
+;; (setq erc-user-full-name "")
 
 (provide 'customize-template)
 ;;; customize-template.el ends here

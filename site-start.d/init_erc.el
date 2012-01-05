@@ -56,6 +56,16 @@
 (if (not (file-exists-p erc-log-channels-directory))
     (mkdir erc-log-channels-directory t))
 
+;; auto identify
+(setq my-erc-pass-file (my-file-path-join dotfiles-dir "var/ercpass"))
+(when (file-exists-p my-erc-pass-file)
+  (load my-erc-pass-file)
+  (require 'erc-services)
+  (erc-services-mode 1)
+  (setq erc-prompt-for-nickserv-password nil)
+  (setq erc-nickserv-passwords
+        `((freenode ((erc-nick . ,erc-pass))))))
+
 (setq erc-save-buffer-on-part t)
 (defadvice save-buffers-kill-emacs (before save-logs (arg) activate)
   (save-some-buffers t (lambda () (when (eq major-mode 'erc-mode) t))))

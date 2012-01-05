@@ -44,5 +44,11 @@
 ;; share your username (optional)
 ;; (setq erc-user-full-name "")
 
+;;;;;;;;;;;;;;;;
+;; org mobile ;;
+;;;;;;;;;;;;;;;;
+;; Set a password
+;; (setq org-mobile-encryption-password "")
+
 (provide 'customize-template)
 ;;; customize-template.el ends here

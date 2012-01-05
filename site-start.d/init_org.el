@@ -62,7 +62,7 @@
 ;; Enable encryption
 ;(setq org-mobile-use-encryption t)
 ;; Set a password
-;(setq org-mobile-encryption-password "luobo")
+;(setq org-mobile-encryption-password "")
 
 ;; (setq org-agenda-custom-commands
 ;;     '(("w" todo "WAITING" nil)

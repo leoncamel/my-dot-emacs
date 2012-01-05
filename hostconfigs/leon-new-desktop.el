@@ -24,6 +24,8 @@
 
 ;;; Code:
 
+(require 'init_setenv)
+
 (prepend-exec-path "~/.cabal/bin")
 
 (provide 'leon-new-desktop)

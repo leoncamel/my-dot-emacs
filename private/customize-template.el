@@ -24,11 +24,16 @@
 
 ;;; Code:
 
-;; tumblr settings
+;;;;;;;;;;;;;;;;;;;;;
+;; tumblr settings ;;
+;;;;;;;;;;;;;;;;;;;;;
 ;; (setq tumble-email    "")
 ;; (setq tumble-password "")
 ;; (setq tumble-url      "")
 
+;;;;;;;;;;;;;;;;;;
+;; erc settings ;;
+;;;;;;;;;;;;;;;;;;
 ;; Join the a couple of interesting channels whenever connecting to Freenode.
 ;; (setq erc-autojoin-channels-alist '(("freenode.net"
 ;;                                      "#emacs" "#haskell")))

@@ -75,6 +75,7 @@
 
 (require 'init_w3m)
 (require 'init_wget)
+(require 'init_erc)
 
 ;; Programming modes
 (require 'init_lua)

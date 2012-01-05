@@ -36,13 +36,6 @@
 ;; (if (file-exists-p site-start-dir)
 ;;     (mapc #'load (directory-files site-start-dir nil ".*el$")))
 
-;; load init_main.el
-(require 'init_main)
-
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; Load Platform independent configs
-
-;; You can keep system- or user-specific customizations here
 (setq system-specific-config (my-file-path-join dotfiles-dir
                                                 "hostconfigs/"
                                                 (concat system-name ".el"))
@@ -52,12 +45,21 @@
       user-specific-dir (my-file-path-join dotfiles-dir
                                            "userconfigs/"
                                            user-login-name))
-(add-to-list 'load-path user-specific-dir)
 
-(if (file-exists-p system-specific-config) (load system-specific-config))
+(if (file-exists-p system-specific-config)
+    (load system-specific-config))
+
+;; load init_main.el
+(require 'init_main)
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Load Platform independent configs
+;; You can keep system- or user-specific customizations here
+(add-to-list 'load-path user-specific-dir)
 (if (file-exists-p user-specific-dir)
-  (mapc #'load (directory-files user-specific-dir nil ".*el$")))
-(if (file-exists-p user-specific-config) (load user-specific-config))
+    (mapc #'load (directory-files user-specific-dir nil ".*el$")))
+(if (file-exists-p user-specific-config)
+    (load user-specific-config))
 
 (put 'set-goal-column 'disabled nil)
 

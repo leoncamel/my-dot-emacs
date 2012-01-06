@@ -45,6 +45,11 @@ May be overridden with key-value additional arguments to `notify'.")
 'notify-via-dbus, 'notify-via-libnotify, 'notify-via-message or 
 'notify-via-growl")
 
+(defun safe-dbus-ping ()
+  "A safe version dbug-ping"
+  (if (fboundp 'dbus-call-method)
+      (dbus-ping :session "org.freedesktop.Notifications")))
+
 ;; determine notification method unless already set
 ;; prefer growl > D-Bus > libnotify > message
 (cond
@@ -53,14 +58,14 @@ May be overridden with key-value additional arguments to `notify'.")
 	(cond
         ((executable-find "growlnotify") 'notify-via-growl)
 	 ((and (require 'dbus nil t)
-	       (dbus-ping :session "org.freedesktop.Notifications"))
+	       (safe-dbus-ping))
 	  (defvar notify-id 0 "Current D-Bus notification id.")
 	  'notify-via-dbus)
 	 ((executable-find "notify-send") 'notify-via-libnotify)
 	 (t 'notify-via-message))))
  ((eq notify-method 'notify-via-dbus) ;housekeeping for pre-chosen DBus
   (if (and (require 'dbus nil t)
-	   (dbus-ping :session "org.freedesktop.Notifications"))
+           (safe-dbus-ping))
       (defvar notify-id 0 "Current D-Bus notification id.")
     (setq notify-method (if (executable-find "notify-send")
 			    'notify-via-libnotify
@@ -68,8 +73,8 @@ May be overridden with key-value additional arguments to `notify'.")
  ((and (eq notify-method 'notify-via-libnotify)
        (not (executable-find "notify-send"))) ;housekeeping for pre-chosen libnotify
   (setq notify-method
-	(if (and (require 'dbus nil t)
-		 (dbus-ping :session "org.freedesktop.Notifications"))
+        (if (and (require 'dbus nil t)
+                 (safe-dbus-ping))
 	    (progn
 	      (defvar notify-id 0 "Current D-Bus notification id.")
 	      'notify-via-dbus)

@@ -55,7 +55,8 @@
 
 (setq wg-file
       (my-file-path-join dotfiles-dir "var/workgroups/wg-save"))
-(wg-load wg-file)
+(when (file-exists-p wg-file)
+  (wg-load wg-file))
 
 (provide 'init_session)
 ;;; init_session.el ends here

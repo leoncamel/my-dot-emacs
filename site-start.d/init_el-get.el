@@ -80,12 +80,12 @@
        ;; see https://github.com/dimitri/el-get/issues/200
        :compile nil)))
 
-(setq prelude-packages
+(setq my-el-get-packages
       (append
-       '()
+       '(workgroups)
        (mapcar 'el-get-source-name el-get-sources)))
 
-(el-get 'sync prelude-packages)
+(el-get 'sync my-el-get-packages)
 
 
 (provide 'init_el-get)

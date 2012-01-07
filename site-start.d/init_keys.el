@@ -25,10 +25,19 @@
 ;;; Code:
 
 (require 'my-fullscreen)
-
 (global-set-key (kbd "C-c m")   'toggle-fullscreen)
-
 (global-set-key (kbd "C-c t")   'toggle-transparency)
+
+;; In order to avoid conflict with cua-mode.
+;; reference: http://www.emacswiki.org/emacs/WinnerMode
+(require 'windmove)
+(windmove-default-keybindings 'meta)
+
+(require 'buffer-move)
+(global-set-key (kbd "<C-S-up>")     'buf-move-up)
+(global-set-key (kbd "<C-S-down>")   'buf-move-down)
+(global-set-key (kbd "<C-S-left>")   'buf-move-left)
+(global-set-key (kbd "<C-S-right>")  'buf-move-right)
 
 (provide 'init_keys)
 ;;; init_keys.el ends here

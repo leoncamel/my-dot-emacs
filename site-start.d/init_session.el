@@ -29,12 +29,33 @@
 ;(setq-default save-place t)
 
 ;;; Desktop
-(setq *foo-desktop-dir* (expand-file-name "~/.emacs.d/desktop"))
+(setq *foo-desktop-dir* (my-file-path-join dotfiles-dir "desktop"))
 (setq desktop-dir *foo-desktop-dir*)
 (setq desktop-path (list *foo-desktop-dir*))
 (desktop-save-mode 1)
 (setq history-length 250)
 
+;; winring
+;; (require 'winring)
+;; (winring-initialize)
+
+;; workgroups
+;; (add-to-list 'load-path
+;;              (my-file-path-join dotfiles-dir "vendor/workgroups.el.git"))
+(require 'workgroups)
+;;(setq wg-prefix-key (kbd "C-c w"))
+(setq wg-prefix-key (kbd "C-t"))
+(workgroups-mode 1)
+
+;; (setq wg-file-root
+;;       (my-file-path-join dotfiles-dir "var/workgroups/"))
+
+;; (if (not (file-directory-p wg-file-root)
+;;            (make-directory wg-file-root)))
+
+(setq wg-file
+      (my-file-path-join dotfiles-dir "var/workgroups/wg-save"))
+(wg-load wg-file)
 
 (provide 'init_session)
 ;;; init_session.el ends here

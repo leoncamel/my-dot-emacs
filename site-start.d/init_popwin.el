@@ -45,6 +45,7 @@
                 ("*Occur*" :height 20)
                 ("*Moccur*" :height 20)
                 ("*quickrun*" :height 20)
+                ("*workroups help*" :height 20)
                 )
                popwin:special-display-config))
 

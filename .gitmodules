@@ -7,3 +7,6 @@
 [submodule "vendor/Emacs-Sunburst-Color-Theme.git"]
 	path = vendor/Emacs-Sunburst-Color-Theme.git
 	url = https://github.com/leoncamel/Emacs-Sunburst-Color-Theme.git
+[submodule "el-get/el-get"]
+	path = el-get/el-get
+	url = https://github.com/dimitri/el-get.git

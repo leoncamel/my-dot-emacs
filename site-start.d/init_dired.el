@@ -24,6 +24,7 @@
 
 ;;; Code:
 
+(require 'ls-lisp)
 (setq ls-lisp-dirs-first t)
 
 (require 'dired+)

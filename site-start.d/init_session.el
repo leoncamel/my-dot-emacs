@@ -39,24 +39,32 @@
 ;; (require 'winring)
 ;; (winring-initialize)
 
-;; workgroups
-;; (add-to-list 'load-path
-;;              (my-file-path-join dotfiles-dir "vendor/workgroups.el.git"))
+
+;;;;;;;;;;;;;;;;
+;; workgroups ;;
+;;;;;;;;;;;;;;;;
 (require 'workgroups)
+
 ;;(setq wg-prefix-key (kbd "C-c w"))
 (setq wg-prefix-key (kbd "C-t"))
+
+;; automatically save workgroups while kill-emacs
+(setq wg-no-confirm t)
+(add-hook 'kill-emacs-hook 'wg-update-all-workgroups-and-save)
+
 (workgroups-mode 1)
 
-;; (setq wg-file-root
-;;       (my-file-path-join dotfiles-dir "var/workgroups/"))
+;; create "~/.emacs.d/var/workgroups" if not existed
+(let ((wg-file-root (my-file-path-join dotfiles-dir "var/workgroups/")))
+  (unless (file-directory-p wg-file-root)
+    (make-directory wg-file-root t)))
 
-;; (if (not (file-directory-p wg-file-root)
-;;            (make-directory wg-file-root)))
-
+;; load workgroup if existed
 (setq wg-file
       (my-file-path-join dotfiles-dir "var/workgroups/wg-save"))
 (when (file-exists-p wg-file)
   (wg-load wg-file))
+
 
 (provide 'init_session)
 ;;; init_session.el ends here

@@ -24,6 +24,10 @@
 
 ;;; Code:
 
+(setq ls-lisp-dirs-first t)
+
+(require 'dired+)
+
 (require 'dired-single)
 
 (defun my-dired-init ()

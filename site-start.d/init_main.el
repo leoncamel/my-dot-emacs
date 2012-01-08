@@ -53,6 +53,7 @@
 
 (require 'init_lisp)
 
+(require 'init_ediff)
 (require 'init_fci)                     ;; fill-column-indicator mode
 (require 'init_recentf)
 (require 'init_ido)

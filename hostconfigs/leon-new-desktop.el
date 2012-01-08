@@ -28,5 +28,8 @@
 
 (prepend-exec-path "~/.cabal/bin")
 
+;; dired
+(setq dired-listing-switches "-la --group-directories-first")
+
 (provide 'leon-new-desktop)
 ;;; leon-new-desktop.el ends here

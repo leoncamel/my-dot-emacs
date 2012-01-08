@@ -37,11 +37,7 @@
   (package-refresh-contents))
 
 ;; TODO: color-theme from package.el is buggy, use vendor one
-(defvar my-packages '(starter-kit
-                      starter-kit-lisp
-                      starter-kit-eshell
-                      starter-kit-bindings
-                      color-theme
+(defvar my-packages '(color-theme
                       color-theme-blackboard
                       color-theme-solarized
                       color-theme-library

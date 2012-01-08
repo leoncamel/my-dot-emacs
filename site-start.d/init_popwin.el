@@ -32,6 +32,7 @@
 (setq popwin:special-display-config
       (append '(
                 ("*anything buffers*" :height 20)
+                ("*Anything Completions*" :height 10)
                 ("*Compile-Log*" :height 10 :noselect t)
                 (dired-mode :position top)
                 ;; ("*terminal<1>*")

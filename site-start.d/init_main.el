@@ -51,11 +51,14 @@
 (require 'init_anything)                ;; Anything
 (require 'init_session)                 ;; Session and desktop
 
+(require 'init_lisp)
+
 (require 'init_fci)                     ;; fill-column-indicator mode
 (require 'init_recentf)
 (require 'init_ido)
 (require 'init_occur)                   ;; `occur` and `loccur`
 
+(require 'init_eshell)
 (require 'init_dired)
 (require 'init_autocomplete)            ;; auto-complete mode
 (require 'init_flymake)

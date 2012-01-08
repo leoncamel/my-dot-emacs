@@ -43,7 +43,7 @@
 (setq visible-bell t)
 
 ;; THIS is important to overwrite settings from starter-kit
-(require 'starter-kit-misc)
+;; (require 'starter-kit-misc)
 
 ;; ファイルを編集した場合コピーにてバックアップする
 ;; inode 番号を変更しない

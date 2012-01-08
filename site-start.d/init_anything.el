@@ -29,6 +29,7 @@
       (my-file-path-join dotfiles-dir "var/anything-c-adaptive-history"))
 
 (global-set-key (kbd "C-x C-b") 'anything-buffers+)
+;; (global-set-key (kbd "M-x") 'anything-M-x)
 
 (provide 'init_anything)
 ;;; init_anything.el ends here

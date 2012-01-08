@@ -24,6 +24,36 @@
 
 ;;; Code:
 
+(global-set-key (kbd "M-/") 'hippie-expand)
+
+;; Font size
+(define-key global-map (kbd "C-+") 'text-scale-increase)
+(define-key global-map (kbd "C--") 'text-scale-decrease)
+
+;; Use regex searches by default.
+(global-set-key (kbd "C-s") 'isearch-forward-regexp)
+(global-set-key (kbd "\C-r") 'isearch-backward-regexp)
+(global-set-key (kbd "C-M-s") 'isearch-forward)
+(global-set-key (kbd "C-M-r") 'isearch-backward)
+
+;; File finding
+(global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
+(global-set-key (kbd "C-c y") 'bury-buffer)
+(global-set-key (kbd "C-c r") 'revert-buffer)
+
+;; Start eshell or switch to it if it's active.
+(global-set-key (kbd "C-x m") 'eshell)
+
+;; If you want to be able to M-x without meta (phones, etc)
+(global-set-key (kbd "C-c x") 'execute-extended-command)
+
+;; Help should search more than just commands
+;; (global-set-key (kbd "C-h a") 'apropos)
+
+;; M-S-6 is awkward
+(global-set-key (kbd "C-c q") 'join-line)
+
+;; fullscreen
 (require 'my-fullscreen)
 (global-set-key (kbd "C-c m")   'toggle-fullscreen)
 (global-set-key (kbd "C-c t")   'toggle-transparency)
@@ -38,6 +68,11 @@
 (global-set-key (kbd "<C-S-down>")   'buf-move-down)
 (global-set-key (kbd "<C-S-left>")   'buf-move-left)
 (global-set-key (kbd "<C-S-right>")  'buf-move-right)
+
+;; smex
+(require 'smex)
+(smex-initialize)
+(global-set-key (kbd "M-x") 'smex)
 
 (provide 'init_keys)
 ;;; init_keys.el ends here

@@ -50,7 +50,11 @@
 
 ;; automatically save workgroups while kill-emacs
 (setq wg-no-confirm t)
-(add-hook 'kill-emacs-hook 'wg-update-all-workgroups-and-save)
+(defun my-workgroup-kill-emacs-hook ()
+  ""
+  (when (wg-current-workgroup t)
+    (wg-update-all-workgroups-and-save)))
+(add-hook 'kill-emacs-hook 'my-workgroup-kill-emacs-hook)
 
 (workgroups-mode 1)
 

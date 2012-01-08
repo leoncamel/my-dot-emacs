@@ -39,12 +39,12 @@
 (setq system-specific-config (my-file-path-join dotfiles-dir
                                                 "hostconfigs/"
                                                 (concat system-name ".el"))
-      user-specific-config (my-file-path-join dotfiles-dir
-                                              "userconfigs/"
-                                              (concat user-login-name ".el"))
-      user-specific-dir (my-file-path-join dotfiles-dir
-                                           "userconfigs/"
-                                           user-login-name))
+      user-specific-config   (my-file-path-join dotfiles-dir
+                                                "userconfigs/"
+                                                (concat user-login-name ".el"))
+      user-specific-dir      (my-file-path-join dotfiles-dir
+                                                "userconfigs/"
+                                                user-login-name))
 
 (if (file-exists-p system-specific-config)
     (load system-specific-config))

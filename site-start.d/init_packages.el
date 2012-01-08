@@ -68,6 +68,7 @@
                       dired-details+
                       dired-single
                       dired-isearch
+                      buffer-move
                       org
                       org-table-comment
                       slime

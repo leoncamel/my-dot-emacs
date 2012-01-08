@@ -25,10 +25,12 @@
 ;;; Code:
 
 (require 'ls-lisp)
-(setq ls-lisp-dirs-first t)
-
+(require 'dired)
 (require 'dired+)
 
+(setq ls-lisp-dirs-first t)
+
+;; use single dired buffer
 (require 'dired-single)
 
 (defun my-dired-init ()

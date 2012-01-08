@@ -51,5 +51,11 @@
 (dolist (p my-exec-path)
   (prepend-exec-path p))
 
+
+;; dired -- use external ls program
+(setq insert-directory-program "gls")
+(setq ls-lisp-use-insert-directory-program t)
+(setq dired-listing-switches "-la --group-directories-first")
+
 (provide 'Leon-no-MBP)
 ;;; Leon-no-MBP.el ends here

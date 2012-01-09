@@ -26,9 +26,6 @@
 
 (require 'init_setenv)
 
-;; (prepend-exec-path "/usr/local/bin/")
-;; (prepend-exec-path "~/bin/homebrew/bin")
-
 ;; executable path priority in *reverse* order
 (setq my-exec-path
       (reverse
@@ -50,7 +47,6 @@
 
 (dolist (p my-exec-path)
   (prepend-exec-path p))
-
 
 ;; dired -- use external ls program
 (setq insert-directory-program "gls")

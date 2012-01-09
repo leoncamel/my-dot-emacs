@@ -26,7 +26,16 @@
 
 (require 'init_setenv)
 
-(prepend-exec-path "~/.cabal/bin")
+;; executable path priority in *reverse* order
+(setq my-exec-path
+      (reverse
+       '(
+         ;; High Priority ;;
+         "~/bin/"
+         ;;
+         "~/.cabal/bin"
+         ;; Low Priority ;;
+         )))
 
 ;; dired
 (setq dired-listing-switches "-la --group-directories-first")

@@ -24,6 +24,19 @@
 
 ;;; Code:
 
+;; executable path priority in *reverse* order
+(setq my-exec-path
+      (reverse
+       '(
+         ;; High Priority ;;
+         ;; "~/bin/"
+         ;; "/usr/local/bin/"
+         ;; Low Priority ;;
+         )))
+
+(dolist (p my-exec-path)
+  (prepend-exec-path p))
+
 ;; TODO:
 ;; makeinfo.exe crashed while building emacs.
 ;; So, I use emacs-w32's Info directory

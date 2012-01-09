@@ -1,4 +1,6 @@
 
+My own clean and reusable *.emacs.d* configs.
+
 * Directory tree structure
 
 ~~~
@@ -6,7 +8,6 @@
 ├── README.md
 ├── TODO.md
 ├── bin
-├── elpa
 ├── etc
 │   └── my-yasnippets
 ├── init.el
@@ -14,7 +15,9 @@
 │   └── init_evernote.el
 ├── site-start.d
 │   └── init_*.el
-├── lisp                         ;; elisp
+├── elpa                         ;; ELPA packages
+├── el-get                       ;; el-get package system
+├── lisp                         ;; auto-install package system
 │   └── auto-install.el
 ├── local-lisp                   ;; modified elisp
 ├── my-elisp                     ;; my elisp scripts

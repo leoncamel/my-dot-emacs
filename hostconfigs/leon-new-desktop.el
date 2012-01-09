@@ -37,7 +37,9 @@
          ;; Low Priority ;;
          )))
 
-;; dired
+;; dired -- use external ls program
+(setq insert-directory-program "ls")
+(setq ls-lisp-use-insert-directory-program t)
 (setq dired-listing-switches "-la --group-directories-first")
 
 (provide 'leon-new-desktop)

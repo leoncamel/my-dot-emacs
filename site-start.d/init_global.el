@@ -57,6 +57,10 @@
         (".*" . "~/.emacs.d/var/backups")
         ))
 
+;; bookmarks
+(setq bookmark-default-file
+      (my-file-path-join dotfiles-dir "var/bookmarks"))
+
 ;; places
 (setq save-place-file
       (my-file-path-join dotfiles-dir "var/places"))

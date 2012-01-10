@@ -43,10 +43,13 @@
                 ("*aHg diff*" :position top :height 50)
                 ("\\*hg command" :regexp t :noselect)
                 ("\\*magit: [a-zA-Z0-9_]+" :regexp t :height 20)
+                ("*magit-edit-log*" :height 20)
                 ("*Occur*" :height 20)
                 ("*Moccur*" :height 20)
                 ("*quickrun*" :height 20)
                 ("*workroups help*" :height 20)
+                ("*grep*" :height 15)
+                ("\\*anything grep:.*" :regexp t :height 20)
                 )
                popwin:special-display-config))
 

@@ -73,16 +73,26 @@
 (require 'color-theme-sunburst)
 ;; (color-theme-sunburst)
 (require 'color-theme-sunburst-new)
-(color-theme-sunburst-new)
+;; (color-theme-sunburst-new)
 
-;(require 'color-theme-blackboard)
-;(color-theme-blackboard)
+(require 'color-theme-solarized)
+;; (setq solarized-contrast 'high)
+;; (color-theme-solarized-dark)
 
-;(require 'color-theme-zenburn)
-;(color-theme-zenburn)
+(require 'color-theme-sanityinc-solarized)
+;; (color-theme-sanityinc-solarized-dark)
 
-;(require 'color-theme-tango)
-;(color-theme-tango)
+(require 'color-theme-blackboard)
+;; (color-theme-blackboard)
+
+(require 'color-theme-wombat+)
+(color-theme-wombat+)
+
+;; (require 'color-theme-zenburn)
+;; (color-theme-zenburn)
+
+;; (require 'color-theme-tango)
+;; (color-theme-tango)
 
 (provide 'init_font_color)
 ;;; init_font_color.el ends here

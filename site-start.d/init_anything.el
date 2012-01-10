@@ -35,6 +35,21 @@
 ;; anything-grep ;;
 ;;;;;;;;;;;;;;;;;;;
 (require 'anything-grep)
+(setq anything-grep-goto-hook
+      (lambda ()
+        (when anything-in-persistent-action
+          (anything-persistent-highlight-point (point-at-bol) (point-at-eol)))))
+(defalias 'ag 'anything-grep)
+
+(global-set-key (kbd "C-;") 'anything)
+
+;;;;;;;;;;;;;;;;;;;;;;;
+;; anything-complete ;;
+;;;;;;;;;;;;;;;;;;;;;;;
+(require 'anything-complete)
+
+;; (global-set-key (kbd "C-x C-f") 'anything-find-files)
+(defalias 'aff 'anything-find-files)
 
 (provide 'init_anything)
 ;;; init_anything.el ends here

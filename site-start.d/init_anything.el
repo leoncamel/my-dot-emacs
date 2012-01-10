@@ -31,5 +31,10 @@
 (global-set-key (kbd "C-x C-b") 'anything-buffers+)
 ;; (global-set-key (kbd "M-x") 'anything-M-x)
 
+;;;;;;;;;;;;;;;;;;;
+;; anything-grep ;;
+;;;;;;;;;;;;;;;;;;;
+(require 'anything-grep)
+
 (provide 'init_anything)
 ;;; init_anything.el ends here

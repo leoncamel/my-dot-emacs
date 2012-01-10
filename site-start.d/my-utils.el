@@ -29,6 +29,7 @@
   ""
   (setq my-list-dir '("lisp"
                       "lisp/auto-install"
+                      "vendor/color-theme-wombat-dark.git/"
                       "site-start.d"))
   (dolist (d my-list-dir)
     (byte-recompile-directory (my-file-path-join dotfiles-dir d) 0)))

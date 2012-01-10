@@ -86,7 +86,12 @@
 ;; (color-theme-blackboard)
 
 (require 'color-theme-wombat+)
-(color-theme-wombat+)
+;; (color-theme-wombat+)
+
+(add-to-list 'load-path
+             (my-file-path-join dotfiles-dir "vendor/color-theme-wombat-dark.git/"))
+(require 'color-theme-wombat-dark)
+(color-theme-wombat-dark)
 
 ;; (require 'color-theme-zenburn)
 ;; (color-theme-zenburn)

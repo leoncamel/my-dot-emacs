@@ -32,6 +32,8 @@
 ;;       So, ...
 (require 'el-get)
 
+(setq el-get-notify-type 'message)
+
 ;; (unless (require 'el-get nil t)
 ;;   (with-current-buffer
 ;;       (url-retrieve-synchronously

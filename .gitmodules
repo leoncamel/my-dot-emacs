@@ -12,4 +12,4 @@
 	url = https://github.com/dimitri/el-get.git
 [submodule "vendor/color-theme-wombat-dark.git"]
 	path = vendor/color-theme-wombat-dark.git
-	url = git@github.com:leoncamel/color-theme-wombat-dark.git
+	url = https://leoncamel@github.com/leoncamel/color-theme-wombat-dark.git

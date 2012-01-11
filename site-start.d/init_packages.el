@@ -41,6 +41,7 @@
                       color-theme-blackboard
                       color-theme-solarized
                       color-theme-library
+                      color-theme-sanityinc-solarized
                       scpaste
                       lua-mode
                       clojure-mode

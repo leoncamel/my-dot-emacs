@@ -85,7 +85,7 @@
 (require 'color-theme-blackboard)
 ;; (color-theme-blackboard)
 
-(require 'color-theme-wombat+)
+;; (require 'color-theme-wombat+)
 ;; (color-theme-wombat+)
 
 (add-to-list 'load-path

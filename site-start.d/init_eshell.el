@@ -71,5 +71,11 @@
     "Use Emacs grep facility instead of calling external grep."
     (eshell-grep "rgrep" args t)))
 
+;;;###autoload
+(eval-after-load "em-alias"
+  '(progn (eshell/alias "ff" "find-file $1")
+          (eshell/alias "ffo" "find-file-other-window $1")
+          ))
+
 (provide 'init_eshell)
 ;;; init_eshell.el ends here

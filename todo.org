@@ -6,8 +6,8 @@
 * General
 
   - [X] set ~/.emacs.d/url/cookies to `private`
-  - [ ] why emacs create temporary files in `site-start.d`. for example, #init_cpp.el#
-  - [ ] `package-list-packages` generates ".smex-items" and "places". Fix it.
+  - [X] why emacs create temporary files in `site-start.d`. for example, #init_cpp.el#
+  - [X] `package-list-packages` generates ".smex-items" and "places". Fix it.
   - [ ] spell check, for latex or org-mode
   - [X] fix "setenv" for all platform. Especially on windows.
   - [X] color-theme library from "/vendor/color-theme-6.6.0"
@@ -21,18 +21,18 @@
 
 * Packages
   
-  - [ ] emacs-prelude : https://github.com/bbatsov/emacs-prelude
+  - [X] emacs-prelude : https://github.com/bbatsov/emacs-prelude
 
   - [X] org-mode
 
-  - [ ] wget
+  - [X] wget
 
   - [ ] google data : http://code.google.com/p/emacs-google/
 
   - [X] install-elisp.el : http://www.emacswiki.org/emacs/install-elisp.el
         try el-get.el
 
-  - [ ] el-get.el : https://github.com/dimitri/el-get
+  - [X] el-get.el : https://github.com/dimitri/el-get
 
   - [X] smart-compile.el : http://www.emacswiki.org/emacs/smart-compile+.el
         use quickrun
@@ -53,10 +53,13 @@
 
   - [ ] mew : a mail client
 
+  - [ ] Wanderlust : http://www.emacswiki.org/emacs/WanderLust
+
 * Linux
 
 * Mac OSX
 
 * Windows
 
-  - [ ] magit : magit-1.1.0 can work correctly on Windows. But emacs response slowly while using git commands.
+  - [X] magit : magit-1.1.0 can work correctly on Windows. But emacs response slowly while using git commands.
+                Solved: after add `el-get` package manager, we can handle git version of magit now.

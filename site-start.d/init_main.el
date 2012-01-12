@@ -96,7 +96,8 @@
 (when mac-p
   (require 'init_objc))
 (require 'init_cedet)
-
+(require 'init_gtags)
+ 
 (require 'init_quickrun)
 (require 'init_skeleton)
 (require 'init_yasnippet)

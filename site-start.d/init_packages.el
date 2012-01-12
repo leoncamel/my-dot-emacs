@@ -66,6 +66,7 @@
                       dired-single
                       dired-isearch
                       buffer-move
+                      gtags
                       org
                       org-table-comment
                       slime

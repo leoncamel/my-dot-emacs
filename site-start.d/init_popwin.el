@@ -35,6 +35,7 @@
                 ("*Anything Completions*" :height 10)
                 ("*Anything Find Files*" :height 15)
                 ("*anything*" :height 30)
+                ("\\*anything gtags\\*.*" :regexp t :height 30)
                 ("*Compile-Log*" :height 10 :noselect t)
                 (dired-mode :position top)
                 ;; ("*terminal<1>*")

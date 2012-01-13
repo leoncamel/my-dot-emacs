@@ -32,10 +32,14 @@
        '(
          ;; High Priority ;;
          "~/bin/"
+         "~/bin/global-5.9.5/bin"
          ;;
          "~/.cabal/bin"
          ;; Low Priority ;;
          )))
+
+(dolist (p my-exec-path)
+  (prepend-exec-path p))
 
 ;; dired -- use external ls program
 (setq insert-directory-program "ls")

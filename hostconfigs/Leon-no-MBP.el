@@ -41,6 +41,7 @@
          "/opt/local/bin/"
          "/opt/local/sbin/"
          ;;
+         "/usr/X11/bin/"
          "/usr/local/bin/"
          ;; Low Priority ;;
          )))

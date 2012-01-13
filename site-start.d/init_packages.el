@@ -62,6 +62,7 @@
                       ghc
                       magit
                       wget
+                      smex
                       dired-details+
                       dired-single
                       dired-isearch

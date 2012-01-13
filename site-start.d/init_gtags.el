@@ -36,6 +36,10 @@
       (gtags-mode 1)
 ))
 
+(add-hook 'gtags-mode-hook
+          '(lambda ()
+             (setq gtags-path-style 'relative)))
+
 ;; (setq gtags-suggested-key-mapping t)
 (add-hook 'gtags-mode-hook 
   '(lambda()

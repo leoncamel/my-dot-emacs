@@ -46,5 +46,8 @@
 (setq ls-lisp-use-insert-directory-program t)
 (setq dired-listing-switches "-la --group-directories-first")
 
+;; haskell's scion settings
+(setq my-cfg/enable-scion t)
+
 (provide 'leon-new-desktop)
 ;;; leon-new-desktop.el ends here

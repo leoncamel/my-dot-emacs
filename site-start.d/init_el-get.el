@@ -43,48 +43,23 @@
 
 (setq el-get-sources
       '((:name magit
-               :after (lambda ()
-                        (global-set-key (kbd "C-x g") 'magit-status)))
-        (:name yasnippet
-       :website "http://code.google.com/p/yasnippet/"
-       :description "YASnippet is a template system for Emacs."
-       :type git
-       :url "https://github.com/capitaomorte/yasnippet.git"
-       :features "yasnippet"
-       :prepare (lambda ()
-                      ;; Set up the default snippets directory
-                      ;;
-                      ;; Principle: don't override any user settings
-                      ;; for yas/snippet-dirs, whether those were made
-                      ;; with setq or customize.  If the user doesn't
-                      ;; want the default snippets, she shouldn't get
-                      ;; them!
-                      (unless (or (boundp 'yas/snippet-dirs) (get 'yas/snippet-dirs 'customized-value))
-                        (setq yas/snippet-dirs
-                              (list (concat el-get-dir (file-name-as-directory "yasnippet") "snippets")))))
-
-       :post-init (lambda ()
-                      ;; Trick customize into believing the standard
-                      ;; value includes the default snippets.
-                      ;; yasnippet would probably do this itself,
-                      ;; except that it doesn't include an
-                      ;; installation procedure that sets up the
-                      ;; snippets directory, and thus doesn't know
-                      ;; where those snippets will be installed.  See
-                      ;; http://code.google.com/p/yasnippet/issues/detail?id=179
-                      (put 'yas/snippet-dirs 'standard-value
-                           ;; as cus-edit.el specifies, "a cons-cell
-                           ;; whose car evaluates to the standard
-                           ;; value"
-                           (list (list 'quote
-                                 (list (concat el-get-dir (file-name-as-directory "yasnippet") "snippets"))))))
-       ;; byte-compile load vc-svn and that fails
-       ;; see https://github.com/dimitri/el-get/issues/200
-       :compile nil)))
+         :after (lambda ()
+                  (global-set-key (kbd "C-x g") 'magit-status)))
+        ( :name cedet
+          :website "http://cedet.sourceforge.net/"
+          :description "CEDET is a Collection of Emacs Development Environment Tools written with the end goal of creating an advanced development environment in Emacs."
+          :type bzr
+          :url "bzr://cedet.bzr.sourceforge.net/bzrroot/cedet/code/trunk"
+          :build ("touch `find . -name Makefile`" "make")
+          :build/windows-nt ("echo #!/bin/sh > tmp.sh & echo touch `/usr/bin/find . -name Makefile` >> tmp.sh & echo make FIND=/usr/bin/find >> tmp.sh"
+		     "sed 's/^M$//' tmp.sh  > tmp2.sh"
+		     "sh ./tmp2.sh" "rm ./tmp.sh ./tmp2.sh")
+          :load "common/cedet.el")
+        ))
 
 (setq my-el-get-packages
       (append
-       '(workgroups)
+       '(workgroups yasnippet)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-el-get-packages)

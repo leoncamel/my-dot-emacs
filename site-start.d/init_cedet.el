@@ -25,6 +25,8 @@
 ;;; Code:
 
 
+;; reference :: http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html#sec5
+
 ;; Disable global EDE (Project Management)
 (global-ede-mode nil)
 
@@ -38,6 +40,22 @@
 ;; * This enables even more coding tools such as intellisense mode
 ;;   decoration mode, and stickyfunc mode (plus regular code helpers)
 ;; (semantic-load-enable-gaudy-code-helpers)
+
+;; (require 'semantic-gcc)
+;; (semantic-add-system-include "~/exp/include/boost_1_37" 'c++-mode)
+
+(require 'semanticdb)
+(global-semanticdb-minor-mode 1)
+
+;; if you want to enable support for gnu global
+(require 'semanticdb-global)
+(semanticdb-enable-gnu-global-databases 'c-mode)
+(semanticdb-enable-gnu-global-databases 'c++-mode)
+
+;; enable ctags for some languages:
+;;  Unix Shell, Perl, Pascal, Tcl, Fortran, Asm
+;; (semantic-load-enable-primary-exuberent-ctags-support)
+
 
 (provide 'init_cedet)
 ;;; init_cedet.el ends here

@@ -25,6 +25,19 @@
 ;;; Code:
 
 
+;; Disable global EDE (Project Management)
+(global-ede-mode nil)
+
+;; * This enables the database and idle reparse ePngines
+(semantic-load-enable-minimum-features)
+
+;; * This enables some tools useful for coding, such as summary mode
+;;   imenu support, and the semantic navigator
+;; (semantic-load-enable-code-helpers)
+
+;; * This enables even more coding tools such as intellisense mode
+;;   decoration mode, and stickyfunc mode (plus regular code helpers)
+;; (semantic-load-enable-gaudy-code-helpers)
 
 (provide 'init_cedet)
 ;;; init_cedet.el ends here

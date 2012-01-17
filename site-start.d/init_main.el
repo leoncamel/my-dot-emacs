@@ -104,9 +104,9 @@
 
 (require 'init_autoinsert)
 
-;; internet service
-(require 'init_tumblr)                  ;; tumblr-mode from git repo
-(require 'init_twit)                    ;; twittering-mode
+;; internet services
+;; (require 'init_tumblr)                  ;; tumblr-mode from git repo
+;; (require 'init_twit)                    ;; twittering-mode
 ;; (require 'init_mew)
 ;; (require 'init_wanderlust)
 

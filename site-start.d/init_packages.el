@@ -76,6 +76,7 @@
                       rainbow-delimiters
                       bookmark+
                       popwin
+                      win-switch
                       quickrun
                       yasnippet
                       yasnippet-bundle))

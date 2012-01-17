@@ -62,6 +62,5 @@
                                    (popwin:find-file (dired-get-file-for-visit))))
 ;; (key-chord-define-global "mn" 'popwin:messages)
 
-
 (provide 'init_popwin)
 ;;; init_popwin.el ends here

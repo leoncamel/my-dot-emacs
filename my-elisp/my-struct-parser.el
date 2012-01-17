@@ -67,6 +67,15 @@
 \"];"
   "Format of node.")
 
+(defun my-struct-member-tag-format (elem)
+  ""
+  (let* ((elem-type (semantic-tag-type elem))
+         (elem-type-name (semantic-tag-name elem-type))
+         (elem-type-type (semantic-tag-type elem-type)))
+    (cond ((string= "struct" elem-type-type) (format "struct %s" elem-type-name))
+          ((string= "class" elem-type-type) (format "%s" elem-type-name))
+          (t ""))))
+
 (defun my-struct-member-format (assoc-elem)
   ""
   (let* ((elem (cdr assoc-elem))
@@ -75,13 +84,8 @@
          (elem-name (semantic-tag-name elem)))
     (format "<f%d>%s %s\\l|\\"
             idx
-            (if (semantic-tag-p elem-type)
-                (format "%s %s"
-                 (semantic-tag-type elem-type)
-                 (semantic-tag-name elem-type))
-              elem-type)
-            elem-name)
-   ))
+            (my-struct-member-tag-format elem)
+            elem-name)))
 
 (defun my-struct-format (elem)
   ""
@@ -101,7 +105,16 @@
    (format yyc/dot-node-tail)
    (format yyc/dot-tail)))
 
-(defun my-region-test (start end)
+(defun my-struct-format-semantic-tags (tag-res buf-name)
+  ""
+  (concat
+   (format yyc/dot-file-head buf-name)
+   (mapconcat 'my-struct-format
+              (remove-if-not 'my-struct-filter parsed-results)
+              "\n\n\n")
+   (format yyc/dot-file-tail)))
+
+(defun my-struct-parser-region (start end)
   "my-region-test"
   (interactive "rp")
   (let ((parsed-results (semantic-parse-region start end)))
@@ -110,18 +123,23 @@
     (erase-buffer)
     (goto-char (point-max))
     
-    ;; (insert (prin1-to-string parsed-results))
-    ;; (insert "\n--------------------------------\n")
-    ;; (insert (prin1-to-string (semantic-tag parse-result :members)))
-    (insert (format yyc/dot-file-head "USBxx"))
-    (insert
-     (mapconcat 'my-struct-format
-                (remove-if-not 'my-struct-filter parsed-results)
-                "\n\n\n"))
-    (insert (format yyc/dot-file-tail))
+    (insert (my-struct-format-semantic-tags parsed-results "tmp_region"))
+
+    (setq my-parse-result parsed-results)))
+
+(defun my-struct-parser ()
+  "my-struct parser on current buffer"
+  (interactive "")
+  (let ((parsed-results (semantic-parse-region (point-min) (point-max))))
+    (set-buffer (get-buffer-create "tmp.dot"))
+    (graphviz-dot-mode)
+    (erase-buffer)
+    (goto-char (point-max))
+    
+    (insert (my-struct-format-semantic-tags parsed-results (buffer-name)))
+
     ;; (insert "Hello, world")
-    (setq my-parse-result parsed-results)
-    ))
+    (setq my-parse-result parsed-results)))
 
 (defun my-struct-filter (elem)
   "filter all structs"

@@ -1,0 +1,23 @@
+# -*- mode: snippet -*-
+# contributor : Leon Zhang <leoncamel@gmail.com>
+# name : GNU General Public License Version 2 - Source header
+# --
+${1:`(buffer-name)`}
+
+Copyright (c) ${2:`(nth 5 (decode-time))`} ${3:`(user-full-name)`} ${4:<`(replace-regexp-in-string "@" "@" user-mail-address)`>}
+
+This program is free software; you can redistribute it and/or
+modify it under the terms of the GNU General Public License
+as published by the Free Software Foundation; either version 2
+of the License, or (at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program; if not, write to the Free Software
+Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+$0
+`(comment-region 1 (point))`

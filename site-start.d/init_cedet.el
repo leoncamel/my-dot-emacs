@@ -41,6 +41,10 @@
 ;;   decoration mode, and stickyfunc mode (plus regular code helpers)
 ;; (semantic-load-enable-gaudy-code-helpers)
 
+;; Enable SRecode (Template management) minor-mode.
+(require 'srecode-map)
+(global-srecode-minor-mode 1)
+
 ;; (require 'semantic-gcc)
 ;; (semantic-add-system-include "~/exp/include/boost_1_37" 'c++-mode)
 

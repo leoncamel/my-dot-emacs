@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-
+(setq comment-style 'multi-line)
 
 (provide 'init_cpp)
 ;;; init_cpp.el ends here

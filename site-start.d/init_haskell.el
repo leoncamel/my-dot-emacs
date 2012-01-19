@@ -41,7 +41,7 @@
   (require 'scion)
 
   ;; if scion-server is not in your $PATH
-  (setq scion-program "~/.cabal/bin/scion-server")
+  (setq scion-program (executable-find "scion-server"))
 
   (defun my-haskell-hook ()
     ;; Whenever we open a file in Haskell mode, also activate Scion

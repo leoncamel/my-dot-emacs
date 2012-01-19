@@ -34,6 +34,8 @@
          "~/bin/"
          ;; texlive 2011
          "/usr/local/texlive/2011/bin/x86_64-darwin/"
+         ;; haskell cabal
+         "~/Library/Haskell/bin/"
          ;; homebrew
          "~/bin/homebrew/bin/"
          "~/bin/homebrew/sbin/"
@@ -53,6 +55,9 @@
 (setq insert-directory-program "gls")
 (setq ls-lisp-use-insert-directory-program t)
 (setq dired-listing-switches "-la --group-directories-first")
+
+;; haskell's scion settings
+(setq my-cfg/enable-scion t)
 
 (provide 'Leon-no-MBP)
 ;;; Leon-no-MBP.el ends here

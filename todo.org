@@ -18,6 +18,7 @@
   - [X] add `lisp` and `locallisp` directory
   - [ ] parentheses :: http://www.emacswiki.org/emacs/NavigatingParentheses 
         and http://www.emacswiki.org/emacs/ParenthesisMatching  
+  - [ ] replace all file templates to yasnippet "headx"
 
 * Packages
   
@@ -39,6 +40,14 @@
 
   - [ ] skeleton mode
 
+  - [ ] el-yas.el : https://github.com/mlf176f2/el-autoyas.el
+
+  - [ ] yasnippet licenses : https://github.com/jonatkinson/yasnippet-licenses
+
+  - [ ] header2.el : automatically update file header information, for example
+                     last-modification, etc.
+                     http://www.emacswiki.org/emacs/header2.el
+
   - [ ] eproject
     1. two *totally* different eproject http://www.emacswiki.org/emacs/eproject 
        and https://github.com/jrockway/eproject/wiki/EprojectExamples
@@ -54,6 +63,11 @@
   - [ ] mew : a mail client
 
   - [ ] Wanderlust : http://www.emacswiki.org/emacs/WanderLust
+
+  - [ ] win-switch : https://github.com/genovese/emacs-utils/issues/6
+                    This package can not automatically install by init_packages.el.
+                    But, it can work correctly if I installed by "package-install". It
+                    can work correctly even if restart emacs. Problem of "autoload"?
 
 * Linux
 

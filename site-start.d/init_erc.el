@@ -24,6 +24,9 @@
 
 ;;; Code:
 
+;; load irc settings in customize.el
+(try-load-custom-file)
+
 (require 'erc)
 (require 'erc-log)
 (require 'erc-notify)

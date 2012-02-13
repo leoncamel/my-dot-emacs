@@ -55,11 +55,22 @@
 		     "sed 's/^M$//' tmp.sh  > tmp2.sh"
 		     "sh ./tmp2.sh" "rm ./tmp.sh ./tmp2.sh")
           :load "common/cedet.el")
+        ;; (:name slime
+        ;;  :description "Superior Lisp Interaction Mode for Emacs"
+        ;;  :type git
+        ;;  :features slime-autoloads
+        ;;  ;; :info "doc"
+        ;;  :url "https://github.com/nablaone/slime.git"
+        ;;  :load-path ("." "contrib")
+        ;;  :compile (".")
+        ;;  ;; :build ("make -C doc")
+        ;;  ;; :post-init slime-setup
+        ;;  )
         ))
 
 (setq my-el-get-packages
       (append
-       '(workgroups yasnippet)
+       '(workgroups yasnippet evil)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-el-get-packages)

@@ -24,14 +24,33 @@
 
 ;;; Code:
 
-;; (setq inferior-lisp-program "sbcl")
-;; (setq slime-net-coding-system 'utf-8-unix) ; 文字コードの指定
-;; (setq slime-startup-animation nil)
-;; (setq slime-truncate-lines nil)
 
-;; slime
-;; (eval-after-load "slime"
-;;   '(progn (slime-setup '(slime-repl))))
+(add-to-list 'load-path
+             (my-file-path-join dotfiles-dir "vendor/slime.git"))
+(add-to-list 'load-path
+             (my-file-path-join dotfiles-dir "vendor/slime.git/contrib/"))
+
+(setq inferior-lisp-program "sbcl")
+(setq slime-net-coding-system 'utf-8-unix) ; 文字コードの指定
+(setq slime-startup-animation nil)
+(setq slime-truncate-lines nil)
+
+
+(require 'slime)
+(slime-setup '(slime-fancy))
+
+;; slime implementations
+(eval-after-load "slime"
+  '(progn
+     (slime-setup '(slime-repl))
+     (add-to-list 'slime-lisp-implementations '(sbcl ("sbcl")))
+     (defun slime-clojure ()
+       (interactive)
+       (slime 'clojure))
+     (defun slime-sbcl ()
+       (interactive)
+       (slime 'sbcl))
+     ))
 
 (provide 'init_slime)
 ;;; init_slime.el ends here

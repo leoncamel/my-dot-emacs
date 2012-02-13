@@ -60,14 +60,21 @@
 
 ;; In order to avoid conflict with cua-mode.
 ;; reference: http://www.emacswiki.org/emacs/WinnerMode
-(require 'windmove)
-(windmove-default-keybindings 'meta)
 
+(eval-after-load "windmove"
+  '(progn
+     (windmove-default-keybindings 'meta)
+     ))
+(require 'windmove)
+
+(eval-after-load "buffer-move"
+  '(progn
+     (global-set-key (kbd "<C-S-up>")     'buf-move-up)
+     (global-set-key (kbd "<C-S-down>")   'buf-move-down)
+     (global-set-key (kbd "<C-S-left>")   'buf-move-left)
+     (global-set-key (kbd "<C-S-right>")  'buf-move-right)
+     ))
 (require 'buffer-move)
-(global-set-key (kbd "<C-S-up>")     'buf-move-up)
-(global-set-key (kbd "<C-S-down>")   'buf-move-down)
-(global-set-key (kbd "<C-S-left>")   'buf-move-left)
-(global-set-key (kbd "<C-S-right>")  'buf-move-right)
 
 ;; win-switch
 (eval-after-load "win-switch"
@@ -100,8 +107,10 @@ should be a list of keys that will be bound globally to
        (dolist (key dispatch-keys)
          (global-set-key key 'win-switch-dispatch)))
      (setq win-switch-idle-time 5)
+     (setq win-switch-window-threshold 1)
      (win-switch-setup-keys-hjkl "\C-xo")
      ))
+(require 'win-switch)
 
 ;; smex
 (require 'smex)

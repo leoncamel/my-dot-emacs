@@ -76,7 +76,7 @@
                       rainbow-delimiters
                       bookmark+
                       popwin
-                      ;; win-switch               ;; can only install manually
+                      win-switch               ;; can only install manually
                       quickrun
                       yasnippet
                       yasnippet-bundle))

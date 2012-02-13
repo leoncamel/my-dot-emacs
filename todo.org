@@ -56,9 +56,9 @@
 
   - [ ] gh : github library. problem with a eieio error
 
-  - [ ] ess : emacs speak statistics http://ess.r-project.org/index.php
+  - [X] ess : emacs speak statistics http://ess.r-project.org/index.php
 
-  - [ ] filladapt.el :: it seems a old package. try it later
+  - [ ] filladapt.el : it seems a old package. try it later
 
   - [ ] mew : a mail client
 
@@ -68,6 +68,8 @@
                     This package can not automatically install by init_packages.el.
                     But, it can work correctly if I installed by "package-install". It
                     can work correctly even if restart emacs. Problem of "autoload"?
+
+  - [ ] workgroups for Windows :: bug with fullscreen
 
 * Linux
 

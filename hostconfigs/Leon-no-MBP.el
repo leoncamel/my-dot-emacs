@@ -36,6 +36,8 @@
          "/usr/local/texlive/2011/bin/x86_64-darwin/"
          ;; haskell cabal
          "~/Library/Haskell/bin/"
+         ;; Racket-v5.2
+         "~/bin/Racket-v5.2/bin"
          ;; homebrew
          "~/bin/homebrew/bin/"
          "~/bin/homebrew/sbin/"

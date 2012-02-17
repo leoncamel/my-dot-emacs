@@ -58,5 +58,18 @@
 ;;   (add-hook (intern (concat (symbol-name mode) "-mode-hook"))
 ;;             'esk-turn-on-paredit))
 
+;;;;;;;;;;;;
+;; Scheme ;;
+;;;;;;;;;;;;
+(add-to-list 'load-path (my-file-path-join dotfiles-dir "/vendor/quack"))
+(eval-after-load "quack"
+  '(progn
+     (setq quack-default-program "mzscheme")
+     (setq quack-global-menu-p nil)
+     (setq quack-dir (my-file-path-join dotfiles-dir "/var/quack"))
+     (make-directory quack-dir t)
+     ))
+(require 'quack)
+
 (provide 'init_lisp)
 ;;; init_lisp.el ends here

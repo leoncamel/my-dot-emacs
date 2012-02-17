@@ -178,6 +178,13 @@
 ;; C-v や M-v した時に以前の画面にあった文字を何行分残すか(初期設定 2)
 ;;(setq next-screen-context-lines 5)
 
+;; uniquify buffer name
+(eval-after-load "uniquify"
+  '(progn
+     (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+     ))
+(require 'uniquify)
+
 ;; 終了時に聞く
 (setq confirm-kill-emacs 'y-or-n-p)
 

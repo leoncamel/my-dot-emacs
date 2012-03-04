@@ -59,7 +59,7 @@
 (setq dired-listing-switches "-la --group-directories-first")
 
 ;; haskell's scion settings
-;; (setq my-cfg/enable-scion t)
+(setq my-cfg/enable-scion t)
 
 (provide 'Leon-no-MBP)
 ;;; Leon-no-MBP.el ends here

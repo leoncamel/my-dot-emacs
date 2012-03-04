@@ -3,9 +3,9 @@
 
 # Features
 
-    * Three emacs pacakge systems: [ELPA](http://tromey.com/elpa/), [el-get](https://github.com/dimitri/el-get) and [auto-install](http://www.emacswiki.org/AutoInstall)
-    * Clean directory structure.
-    * Modulize emacs elisp configs. 
+* Three emacs package management systems: [ELPA](http://tromey.com/elpa/), [el-get](https://github.com/dimitri/el-get) and [auto-install](http://www.emacswiki.org/AutoInstall)
+* Clean directory structure.
+* Modulize emacs elisp configs. 
     
 ## Directory tree structure
 
@@ -58,3 +58,4 @@
 
     1. brew install curl gnutls openssl
 
+    

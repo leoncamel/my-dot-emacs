@@ -29,6 +29,10 @@
 (autoload 'ghc-init "ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
 
+;; ghci-completion
+(require 'ghci-completion)
+(add-hook 'inferior-haskell-mode-hook 'turn-on-ghci-completion)
+
 ;;;;;;;;;;;
 ;; scion ;;
 ;;;;;;;;;;;

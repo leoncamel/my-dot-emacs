@@ -1,7 +1,13 @@
 
-My own clean and reusable *.emacs.d* configs.
+   My clean and extensible *.emacs.d* configurations.
 
-* Directory tree structure
+# Features
+
+    * Three emacs pacakge systems: [ELPA](http://tromey.com/elpa/), [el-get](https://github.com/dimitri/el-get) and [auto-install](http://www.emacswiki.org/AutoInstall)
+    * Clean directory structure.
+    * Modulize emacs elisp configs. 
+    
+## Directory tree structure
 
 ~~~
 .
@@ -39,12 +45,16 @@ My own clean and reusable *.emacs.d* configs.
     └── japanese-holidays
 ~~~
 
-* Haskell-mode and ghc-mod
+# Prequisite
+
+## Haskell-mode and ghc-mod
 
     1. cabal install ghc-mod
     2. cabal install hlint
 
-* Twittering-mode
+    3. (optional) cabal install [scion](https://github.com/nominolo/scion)
+
+## Twittering-mode
 
     1. brew install curl gnutls openssl
 

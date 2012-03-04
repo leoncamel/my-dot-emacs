@@ -81,5 +81,29 @@
           (message "Warning: invalid input"))))
   )
 
+;;
+;; load environment for MacOSX
+;;   copied from : https://github.com/jwiegley/dot-emacs/blob/master/emacs.el
+(defun load-mac-environment-plist ()
+  "Load environment variables for MacOSX from "
+  (interactive)
+  
+  ;;;_ , Read system environment
+  (let ((plist (expand-file-name "~/.MacOSX/environment.plist")))
+    (when (file-readable-p plist)
+      (let ((dict (cdr (assq #'dict (cdar (xml-parse-file plist))))))
+        (while dict
+          (if (and (listp (car dict))
+                   (eq 'key (caar dict)))
+              (setenv (car (cddr (car dict)))
+                      (car (cddr (car (cddr dict))))))
+          (setq dict (cdr dict))))
+
+      ;; Configure exec-path based on the new PATH
+      (setq exec-path nil)
+      (mapc #'(lambda (path)
+                (add-to-list 'exec-path path))
+            (nreverse (split-string (getenv "PATH") ":"))))))
+
 (provide 'init_setenv)
 ;;; init_setenv.el ends here

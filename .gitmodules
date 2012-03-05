@@ -19,3 +19,6 @@
 [submodule "vendor/win-switch.git"]
 	path = vendor/win-switch.git
 	url = https://leoncamel@github.com/leoncamel/emacs-utils.git
+[submodule "vendor/Mew.git"]
+	path = vendor/Mew.git
+	url = https://github.com/kazu-yamamoto/Mew.git

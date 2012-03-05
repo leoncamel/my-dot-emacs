@@ -74,6 +74,8 @@
                       swank-clojure
                       rainbow-mode
                       rainbow-delimiters
+                      volatile-highlights
+                      autopair
                       bookmark+
                       popwin
                       win-switch               ;; can only install manually

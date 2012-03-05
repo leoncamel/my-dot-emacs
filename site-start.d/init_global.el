@@ -151,7 +151,7 @@
 (show-paren-mode t)
 ;; カッコ対応表示のスタイル
 ;; カッコその物に色が付く(デフォルト)
-;; (setq show-paren-style 'parenthesis)
+(setq show-paren-style 'parenthesis)
 ;; カッコ内に色が付く
 ;; (setq show-paren-style 'expression)
 ;; 画面内に収まる場合はカッコのみ、画面外に存在する場合はカッコ内全体に色が付く
@@ -184,6 +184,14 @@
      (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
      ))
 (require 'uniquify)
+
+;; volatile-highlights
+(require 'volatile-highlights)
+(volatile-highlights-mode t)
+
+;; autopair ;; don't want global mode
+;; (require 'autopair)
+;; (autopair-global-mode)
 
 ;; 終了時に聞く
 (setq confirm-kill-emacs 'y-or-n-p)

@@ -70,7 +70,7 @@
 
 (setq my-el-get-packages
       (append
-       '(workgroups yasnippet evil)
+       '(workgroups yasnippet)
        (mapcar 'el-get-source-name el-get-sources)))
 
 (el-get 'sync my-el-get-packages)

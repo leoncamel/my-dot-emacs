@@ -60,6 +60,7 @@
                       loccur
                       haskell-mode
                       ghc
+                      ghci-completion
                       magit
                       wget
                       smex

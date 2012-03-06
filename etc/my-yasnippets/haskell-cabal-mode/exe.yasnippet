@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: exe
+# key: exe
+# expand-env: ((yas/indent-line 'fixed))
+# --
+Executable ${5:`(file-name-nondirectory (file-name-sans-extension (buffer-file-name)))`}
+  Main-is:             ${1:main.hs}
+  Build-depends:       ${2:base}
+  Other-modules:
+  Build-tools:
+  ghc-options:         ${3:-Wall}
+  hs-source-dirs:      ${4:src}

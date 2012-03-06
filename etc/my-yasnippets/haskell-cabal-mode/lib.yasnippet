@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: lib
+# key: lib
+# expand-env: ((yas/indent-line 'fixed))
+# --
+Library
+  Exposed-modules:     ${1:}
+  Other-modules:       ${2:}
+  Build-depends:       ${3:base}
+  ghc-options:         -Wall
+  hs-source-dirs:      ${4:src}

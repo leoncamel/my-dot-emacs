@@ -1,4 +1,5 @@
 # contributor: https://github.com/polypus74
-# key: new
+# key: newtype
+# expand-env: ((yas/indent-line 'fixed))
 # --
 newtype ${1:Name} = $1 ${2:T}

@@ -1,3 +1,4 @@
 # contributor: https://github.com/polypus74
+# expand-env: ((yas/indent-line 'fixed))
 # --
 let ${1:x} = ${2:undefined}

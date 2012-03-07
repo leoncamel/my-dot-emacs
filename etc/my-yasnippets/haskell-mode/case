@@ -1,4 +1,5 @@
 # contributor: https://github.com/polypus74
+# expand-env: ((yas/indent-line 'fixed))
 # --
 case ${1:x} of
-${2:undefined} -> ${3:undefined}
+  ${2:undefined} -> ${3:undefined}

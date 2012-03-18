@@ -79,7 +79,7 @@
                       autopair
                       bookmark+
                       popwin
-                      win-switch               ;; can only install manually
+                      win-switch
                       quickrun
                       yasnippet
                       yasnippet-bundle))

@@ -59,7 +59,7 @@
                       anything-extension
                       loccur
                       haskell-mode
-                      ghc
+                      ;; ghc                        ;; use vendor/ghc-mod.git now
                       ghci-completion
                       magit
                       wget

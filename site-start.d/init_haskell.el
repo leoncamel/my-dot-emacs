@@ -25,7 +25,10 @@
 ;;; Code:
 
 
+;; TODO: use "vendor/ghc-mod.git" for now
 ;; ghc mode
+(add-to-list 'load-path
+             (my-file-path-join dotfiles-dir "vendor/ghc-mod.git/elisp/"))
 (autoload 'ghc-init "ghc" nil t)
 (add-hook 'haskell-mode-hook (lambda () (ghc-init) (flymake-mode)))
 

@@ -22,3 +22,6 @@
 [submodule "vendor/Mew.git"]
 	path = vendor/Mew.git
 	url = https://github.com/kazu-yamamoto/Mew.git
+[submodule "vendor/ghc-mod.git"]
+	path = vendor/ghc-mod.git
+	url = https://github.com/kazu-yamamoto/ghc-mod.git

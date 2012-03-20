@@ -193,6 +193,10 @@
 ;; (require 'autopair)
 ;; (autopair-global-mode)
 
+;; whitespace mode
+(setq whitespace-style '(face trailing lines-tail tabs))
+(setq whitespace-line-column 80)
+
 ;; 終了時に聞く
 (setq confirm-kill-emacs 'y-or-n-p)
 

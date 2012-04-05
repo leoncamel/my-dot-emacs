@@ -197,6 +197,10 @@
 (setq whitespace-style '(face trailing lines-tail tabs))
 (setq whitespace-line-column 80)
 
+;; highlight-symbol
+(require 'highlight-symbol)
+(global-set-key [(control *)] 'highlight-symbol-at-point)
+
 ;; 終了時に聞く
 (setq confirm-kill-emacs 'y-or-n-p)
 

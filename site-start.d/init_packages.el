@@ -77,6 +77,7 @@
                       rainbow-delimiters
                       volatile-highlights
                       autopair
+                      highlight-symbol
                       bookmark+
                       popwin
                       win-switch

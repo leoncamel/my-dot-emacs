@@ -1,0 +1,94 @@
+digraph USB {
+    node [shape=record fontsize=12 fontname=Courier style=filled];
+    edge[color=blue];
+    rankdir=LR;
+
+subgraph cluster_us_data  {
+    node [shape=record fontsize=12 fontname=Courier style=filled];
+    color = lightgray;
+    style=filled;
+    label = "Struct us_data ";
+    edge[color="#2e3436"];
+        node_us_data [shape=record label="<f0>*** STRUCT us_data  ***|\
+<f2>struct mutex     dev_mutex\l|\
+<f3>struct usb_device *pusb_dev\l|\
+<f4>struct usb_interface *pusb_intf\l|\
+<f5>struct us_unusual_dev   *unusual_dev\l|\
+<f6>unsigned long    fflags\l|\
+<f7>unsigned long    dflags\l|\
+<f8>unsigned int     send_bulk_pipe\l|\
+<f9>unsigned int     recv_bulk_pipe\l|\
+<f10>unsigned int    send_ctrl_pipe\l|\
+<f11>unsigned int    recv_ctrl_pipe\l|\
+<f12>unsigned int    recv_intr_pipe\l|\
+<f13>char        *transport_name\l|\
+<f14>char        *protocol_name\l|\
+<f15>__le32      bcs_signature\l|\
+<f16>u8      subclass\l|\
+<f17>u8      protocol\l|\
+<f18>u8      max_lun\l|\
+<f19>u8      ifnum\l|\
+<f20>u8      ep_bInterval\l|\
+<f21>trans_cmnd  transport\l|\
+<f22>trans_reset     transport_reset\l|\
+<f23>proto_cmnd  proto_handler\l|\
+<f24>struct scsi_cmnd *srb\l|\
+<f25>unsigned int    tag\l|\
+<f26>char        scsi_name[32]\l|\
+<f27>struct urb  *current_urb\l|\
+<f28>struct usb_ctrlrequest *cr\l|\
+<f29>struct usb_sg_request current_sg\l|\
+<f30>unsigned char   *iobuf\l|\
+<f31>dma_addr_t  iobuf_dma\l|\
+<f32>struct task_struct *ctl_thread\l|\
+<f33>struct completion cmnd_ready\l|\
+<f34>struct completion notify\l|\
+<f35>wait_queue_head_t delay_wait\l|\
+<f36>struct completion scanning_done\l|\
+<f37>void        *extra\l|\
+<f38>extra_data_destructor extra_destructor\l|\
+<f39>pm_hook         suspend_resume_hook\l|\
+<f40>int         use_last_sector_hacks\l|\
+<f41>int         last_sector_retries\l|<f999>\
+"];
+}
+
+subgraph cluster_usb_ctrlrequest  {
+    node [shape=record fontsize=12 fontname=Courier style=filled];
+    color = lightgray;
+    style=filled;
+    label = "Struct usb_ctrlrequest ";
+    edge[color="#2e3436"];
+        node_usb_ctrlrequest [shape=record label="<f0>*** STRUCT usb_ctrlrequest  ***|\
+<f2>__u8 bRequestType\l|\
+<f3>__u8 bRequest\l|\
+<f4>__le16 wValue\l|\
+<f5>__le16 wIndex\l|\
+<f6>__le16 wLength\l|<f999>\
+"];
+}
+
+subgraph cluster_usb_sg_request  {
+    node [shape=record fontsize=12 fontname=Courier style=filled];
+    color = lightgray;
+    style=filled;
+    label = "Struct usb_sg_request ";
+    edge[color="#2e3436"];
+        node_usb_sg_request [shape=record label="<f0>*** STRUCT usb_sg_request  ***|\
+<f2>int      status\l|\
+<f3>size_t       bytes\l|\
+<f4>spinlock_t   lock\l|\
+<f5>struct usb_device *dev\l|\
+<f6>int      pipe\l|\
+<f7>int      entries\l|\
+<f8>struct urb   **urbs\l|\
+<f9>int      count\l|\
+<f10>struct completion complete\l|<f999>\
+"];
+}
+
+node_us_data:f28 -> node_usb_ctrlrequest:f0;
+node_us_data:f29 -> node_usb_sg_request:f0[color=brown];
+node_us_data:f29 -> node_usb_sg_request:f999[color=brown];
+
+}

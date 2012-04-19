@@ -28,6 +28,3 @@
 [submodule "vendor/cmm-mode.git"]
 	path = vendor/cmm-mode.git
 	url = https://github.com/tibbe/cmm-mode.git
-[submodule "vendor/ghc-core-mode.git"]
-	path = vendor/ghc-core-mode.git
-	url = https://github.com/tibbe/ghc-core-mode.git

@@ -27,8 +27,9 @@
 ;; Load up ELPA, the package manager
 (require 'package)
 (dolist
-    (source '(("marmalade" . "http://marmalade-repo.org/packages/")
-              ("elpa" . "http://tromey.com/elpa/")))
+    (source '(("melpa"     . "http://melpa.milkbox.net/packages/")
+              ("marmalade" . "http://marmalade-repo.org/packages/")
+              ("elpa"      . "http://tromey.com/elpa/")))
   (add-to-list 'package-archives source t))
 (package-initialize)
 

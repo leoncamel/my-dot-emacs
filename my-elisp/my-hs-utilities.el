@@ -58,6 +58,19 @@
       (ghc-core-mode))
     ))
 
+(defun my-hs-compile-stg ()
+  "Compiled and load current buffer as STG"
+  (interactive)
+  (save-buffer)
+  (let* ((bfn (file-name-nondirectory (buffer-file-name)))
+         (bfp (file-name-directory (buffer-file-name)))
+         (tmpbuf (format "* GHC STG: %s *" bfn))
+         (core-buffer (generate-new-buffer tmpbuf)))
+    ;; (message "GHC command : %s" ghccmd)
+    (call-process "ghc" nil core-buffer nil "-c" "-fforce-recomp" "-ddump-stg" "-outputdir" "/tmp" "-O2" bfn)
+    (display-buffer core-buffer)
+    ))
+
 (defun my-hs-compile-cmm ()
   "Compiled and load current buffer as CMM"
   (interactive)
@@ -72,6 +85,32 @@
     (with-current-buffer core-buffer
       (cmm-mode))
     ))
+
+(defun my-hs-compile-asm ()
+  "Compiled and load current buffer as asm"
+  (interactive)
+  (save-buffer)
+  (let* ((bfn (file-name-nondirectory (buffer-file-name)))
+         (bfp (file-name-directory (buffer-file-name)))
+         (tmpbuf (format "* GHC ASM: %s *" bfn))
+         (core-buffer (generate-new-buffer tmpbuf)))
+    ;; (message "GHC command : %s" ghccmd)
+    (call-process "ghc" nil core-buffer nil "-c" "-fforce-recomp" "-ddump-asm" "-outputdir" "/tmp" "-O2" bfn)
+    (with-current-buffer core-buffer
+      (asm-mode))
+    (display-buffer core-buffer)))
+
+(defun my-hs-compile-llvm ()
+  "Compiled and load current buffer as LLVM"
+  (interactive)
+  (save-buffer)
+  (let* ((bfn (file-name-nondirectory (buffer-file-name)))
+         (bfp (file-name-directory (buffer-file-name)))
+         (tmpbuf (format "* GHC LLVM: %s *" bfn))
+         (core-buffer (generate-new-buffer tmpbuf)))
+    ;; (message "GHC command : %s" ghccmd)
+    (call-process "ghc" nil core-buffer nil "-c" "-fforce-recomp" "-ddump-llvm" "-outputdir" "/tmp" "-O2" bfn)
+    (display-buffer core-buffer)))
 
 (provide 'my-hs-utilities)
 ;;; my-hs-utilities.el ends here

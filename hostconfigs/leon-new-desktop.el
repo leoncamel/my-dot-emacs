@@ -35,6 +35,7 @@
          "~/bin/global-5.9.5/bin"
          ;;
          "~/.cabal/bin"
+         "~/bin/ghc-7.4.1/bin"
          ;; Low Priority ;;
          )))
 

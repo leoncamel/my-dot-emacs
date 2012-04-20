@@ -37,10 +37,6 @@
 ;; -----
 (require 'init_setenv)
 
-;; Package system
-(require 'init_packages)
-(require 'init_el-get)
-
 ;;
 ;; FIXME:
 ;;  Load "vendor/cedet" should before "(require 'auto-install)", it quite
@@ -48,6 +44,11 @@
 ;;
 (load-file
  (my-file-path-join dotfiles-dir "vendor/cedet.git/common/cedet.el"))
+
+
+;; Package system
+(require 'init_packages)
+(require 'init_el-get)
 
 (require 'init_auto-install)            ;; auto-install packages from gist/emacswiki
 

@@ -83,6 +83,7 @@
                       highlight-symbol
                       workgroups
                       magit
+                      ido-ubiquitous
                       bookmark+
                       popwin
                       win-switch

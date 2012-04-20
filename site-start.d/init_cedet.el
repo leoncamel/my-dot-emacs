@@ -27,6 +27,9 @@
 
 ;; reference :: http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html#sec5
 
+;; (load-file
+;;  (my-file-path-join dotfiles-dir "vendor/cedet.git/common/cedet.el"))
+
 ;; Disable global EDE (Project Management)
 (global-ede-mode nil)
 

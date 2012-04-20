@@ -40,6 +40,15 @@
 ;; Package system
 (require 'init_packages)
 (require 'init_el-get)
+
+;;
+;; FIXME:
+;;  Load "vendor/cedet" should before "(require 'auto-install)", it quite
+;;  wired. So, I copy the following two lines from "init_cedet.el".
+;;
+(load-file
+ (my-file-path-join dotfiles-dir "vendor/cedet.git/common/cedet.el"))
+
 (require 'init_auto-install)            ;; auto-install packages from gist/emacswiki
 
 ;; global settings

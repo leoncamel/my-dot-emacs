@@ -28,3 +28,6 @@
 [submodule "vendor/cmm-mode.git"]
 	path = vendor/cmm-mode.git
 	url = https://github.com/tibbe/cmm-mode.git
+[submodule "vendor/cedet.git"]
+	path = vendor/cedet.git
+	url = https://github.com/emacsmirror/cedet.git

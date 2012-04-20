@@ -60,6 +60,7 @@
 
 ;; haskell's scion settings
 (setq my-cfg/enable-scion t)
+(setq my-cfg/enable-ghc-mod t)
 
 (provide 'Leon-no-MBP)
 ;;; Leon-no-MBP.el ends here

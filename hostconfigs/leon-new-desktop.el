@@ -49,6 +49,7 @@
 
 ;; haskell's scion settings
 (setq my-cfg/enable-scion t)
+(setq my-cfg/enable-ghc-mod t)
 
 (provide 'leon-new-desktop)
 ;;; leon-new-desktop.el ends here

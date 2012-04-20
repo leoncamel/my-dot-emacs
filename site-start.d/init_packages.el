@@ -78,6 +78,7 @@
                       rainbow-delimiters
                       volatile-highlights
                       autopair
+                      expand-region
                       highlight-symbol
                       bookmark+
                       popwin

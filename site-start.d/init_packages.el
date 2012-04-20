@@ -73,11 +73,13 @@
                       org
                       org-table-comment
                       slime
+                      elisp-slime-nav
                       swank-clojure
                       rainbow-mode
                       rainbow-delimiters
                       volatile-highlights
                       autopair
+                      paredit
                       expand-region
                       undo-tree
                       highlight-symbol

@@ -201,6 +201,10 @@
 (require 'highlight-symbol)
 (global-set-key [(control *)] 'highlight-symbol-at-point)
 
+;; expand-region
+(require 'expand-region)
+(global-set-key (kbd "C-=") 'er/expand-region)
+
 ;; 終了時に聞く
 (setq confirm-kill-emacs 'y-or-n-p)
 

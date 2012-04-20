@@ -79,6 +79,7 @@
                       volatile-highlights
                       autopair
                       expand-region
+                      undo-tree
                       highlight-symbol
                       bookmark+
                       popwin

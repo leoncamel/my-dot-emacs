@@ -81,6 +81,8 @@
                       expand-region
                       undo-tree
                       highlight-symbol
+                      workgroups
+                      magit
                       bookmark+
                       popwin
                       win-switch

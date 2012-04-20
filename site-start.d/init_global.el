@@ -205,6 +205,10 @@
 (require 'expand-region)
 (global-set-key (kbd "C-=") 'er/expand-region)
 
+;; magit
+(require 'magit)
+(global-set-key (kbd "C-x g") 'magit-status)
+
 ;; 終了時に聞く
 (setq confirm-kill-emacs 'y-or-n-p)
 

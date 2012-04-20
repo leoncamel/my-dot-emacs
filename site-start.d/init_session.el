@@ -69,6 +69,5 @@
 (when (file-exists-p wg-file)
   (wg-load wg-file))
 
-
 (provide 'init_session)
 ;;; init_session.el ends here

@@ -63,6 +63,12 @@
 (setq bookmark-default-file
       (my-file-path-join dotfiles-dir "var/bookmarks"))
 
+;; bookmark+
+(setq bmkp-bmenu-state-file
+      (my-file-path-join dotfiles-dir "var/emacs-bmk-bmenu-state.el"))
+(setq bmkp-bmenu-commands-file
+      (my-file-path-join dotfiles-dir "var/emacs-bmk-bmenu-commands.el"))
+
 ;; places
 (setq save-place-file
       (my-file-path-join dotfiles-dir "var/places"))

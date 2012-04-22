@@ -25,9 +25,9 @@
 ;;; Code:
 
 (add-to-list 'load-path
-             (my-file-path-join dotfiles-dir "vendor/Mew"))
+             (my-dotfile "vendor/Mew"))
 
-(setq mew-rc-file (my-file-path-join dotfiles-dir "etc/mew-rc.el"))
+(setq mew-rc-file (my-dotfile "etc/mew-rc.el"))
 
 ;; Mew
 (autoload 'mew "mew" nil t)

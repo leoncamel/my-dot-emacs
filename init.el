@@ -27,24 +27,75 @@
 ;; load-path utility function
 (require 'cl)
 (defun my-file-path-join (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y)) paths))
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          paths))
+
+;; Utilities function to add load-path
+(defun my-dotfile (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (cons dotfiles-dir paths)))
+
+(defun my-dotfile-bin (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (append (list dotfiles-dir "bin/") paths)))
+
+(defun my-dotfile-etc (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (append (list dotfiles-dir "etc/") paths)))
+
+(defun my-dotfile-var (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (append (list dotfiles-dir "var/") paths)))
+
+(defun my-dotfile-hostconfigs (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (append (list dotfiles-dir "hostconfigs/") paths)))
+
+(defun my-dotfile-userconfigs (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (append (list dotfiles-dir "userconfigs/") paths)))
+
+(defun my-dotfile-vendor (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (append (list dotfiles-dir "vendor/") paths)))
+
+(defun my-dotfile-lisp (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (append (list dotfiles-dir "lisp/") paths)))
+
+(defun my-dotfile-local-lisp (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (append (list dotfiles-dir "local-lisp/") paths)))
+
+(defun my-dotfile-elisp (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (append (list dotfiles-dir "elisp/") paths)))
+
+(defun my-dotfile-my-elisp (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (append (list dotfiles-dir "my-elisp/") paths)))
+
+(defun my-dotfile-private (&rest paths)
+  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
+          (append (list dotfiles-dir "private/") paths)))
+
+(defun add-vendor-subdir (vendor-path)
+  (add-to-list 'load-path
+               (my-dotfile "vendor/" vendor-path)))
 
 ;; add "~/.emacs.d/site-start.d/" to load-path
-(setq site-start-dir (my-file-path-join dotfiles-dir "site-start.d/"))
+(setq site-start-dir (my-dotfile "site-start.d/"))
 (add-to-list 'load-path site-start-dir)
 
 ;; (if (file-exists-p site-start-dir)
 ;;     (mapc #'load (directory-files site-start-dir nil ".*el$")))
 
-(setq system-specific-config (my-file-path-join dotfiles-dir
-                                                "hostconfigs/"
-                                                (concat system-name ".el"))
-      user-specific-config   (my-file-path-join dotfiles-dir
-                                                "userconfigs/"
-                                                (concat user-login-name ".el"))
-      user-specific-dir      (my-file-path-join dotfiles-dir
-                                                "userconfigs/"
-                                                user-login-name))
+(setq system-specific-config (my-dotfile-hostconfigs
+                              (concat system-name ".el"))
+      user-specific-config   (my-dotfile-userconfigs
+                              (concat user-login-name ".el"))
+      user-specific-dir      (my-dotfile-userconfigs
+                              user-login-name))
 
 (if (file-exists-p system-specific-config)
     (load system-specific-config))

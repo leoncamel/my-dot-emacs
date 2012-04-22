@@ -29,7 +29,7 @@
 
 ;; Or use custom, *NOTE* Trailing slash important :: TODO ?
 (setq auto-insert-directory
-      (my-file-path-join dotfiles-dir "/etc/autoinsert-template/"))
+      (my-dotfile "/etc/autoinsert-template/"))
 
 ;(setq auto-insert-query nil) ;;; If you don't want to be prompted before insertion
 ;(define-auto-insert "\.py" "my-python-template.py")

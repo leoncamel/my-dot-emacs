@@ -32,7 +32,7 @@
                       "vendor/color-theme-wombat-dark.git/"
                       "site-start.d"))
   (dolist (d my-list-dir)
-    (byte-recompile-directory (my-file-path-join dotfiles-dir d) 0)))
+    (byte-recompile-directory (my-dotfile d) 0)))
 
 ;; show emacs startup time
 (defun message-startup-time ()

@@ -26,7 +26,7 @@
 
 (require 'ido)
 (setq ido-save-directory-list-file
-      (my-file-path-join dotfiles-dir "var/ido.last"))
+      (my-dotfile "var/ido.last"))
 
 (ido-mode t)
 (ido-ubiquitous t)

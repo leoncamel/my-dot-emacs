@@ -43,7 +43,7 @@
 ;;  wired. So, I copy the following two lines from "init_cedet.el".
 ;;
 (load-file
- (my-file-path-join dotfiles-dir "vendor/cedet.git/common/cedet.el"))
+ (my-dotfile "vendor/cedet.git/common/cedet.el"))
 
 
 ;; Package system

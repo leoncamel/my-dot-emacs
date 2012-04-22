@@ -73,12 +73,12 @@
 ;;;;;;;;;;;;
 ;; Scheme ;;
 ;;;;;;;;;;;;
-(add-to-list 'load-path (my-file-path-join dotfiles-dir "/vendor/quack"))
+(add-to-list 'load-path (my-dotfile "/vendor/quack"))
 (eval-after-load "quack"
   '(progn
      (setq quack-default-program "mzscheme")
      (setq quack-global-menu-p nil)
-     (setq quack-dir (my-file-path-join dotfiles-dir "/var/quack"))
+     (setq quack-dir (my-dotfile "/var/quack"))
      (make-directory quack-dir t)
      ))
 (require 'quack)

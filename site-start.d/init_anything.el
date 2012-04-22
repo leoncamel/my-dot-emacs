@@ -26,7 +26,7 @@
 
 (require 'anything-config)
 (setq anything-c-adaptive-history-file
-      (my-file-path-join dotfiles-dir "var/anything-c-adaptive-history"))
+      (my-dotfile "var/anything-c-adaptive-history"))
 
 (global-set-key (kbd "C-x C-b") 'anything-buffers+)
 ;; (global-set-key (kbd "M-x") 'anything-M-x)

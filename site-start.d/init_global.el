@@ -61,37 +61,38 @@
 
 ;; bookmarks
 (setq bookmark-default-file
-      (my-file-path-join dotfiles-dir "var/bookmarks"))
+      (my-dotfile "var/bookmarks"))
 
 ;; bookmark+
 (setq bmkp-bmenu-state-file
-      (my-file-path-join dotfiles-dir "var/emacs-bmk-bmenu-state.el"))
+      (my-dotfile "var/emacs-bmk-bmenu-state.el"))
 (setq bmkp-bmenu-commands-file
-      (my-file-path-join dotfiles-dir "var/emacs-bmk-bmenu-commands.el"))
+      (my-dotfile "var/emacs-bmk-bmenu-commands.el"))
 
 ;; places
 (setq save-place-file
-      (my-file-path-join dotfiles-dir "var/places"))
+      (my-dotfile "var/places"))
 
 ;; smex-items
 (setq smex-save-file
-      (my-file-path-join dotfiles-dir "var/smex-items"))
+      (my-dotfile "var/smex-items"))
 
 ;; tetris score
 (setq tetris-score-file
-      (my-file-path-join dotfiles-dir "var/tetris-scores"))
+      (my-dotfile "var/tetris-scores"))
 
 ;; cookie path
 (require 'url-cookie)
 (setq url-cookie-file
-      (my-file-path-join dotfiles-dir "var/url-cookies"))
+      (my-dotfile "var/url-cookies"))
 
 ;; auto-save-list
 (setq auto-save-list-file-prefix
-      (my-file-path-join dotfiles-dir "var/auto-save-list/.saves-"))
+      (my-dotfile "var/auto-save-list/.saves-"))
 
 ;; custom-file
-(setq custom-file (my-file-path-join dotfiles-dir "private/customize.el"))
+(setq custom-file
+      (my-dotfile "private/customize.el"))
 
 (defun try-load-custom-file ()
   "load customize.el if the file existed."

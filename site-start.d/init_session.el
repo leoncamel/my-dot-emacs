@@ -29,7 +29,7 @@
 ;(setq-default save-place t)
 
 ;;; Desktop
-(setq *foo-desktop-dir* (my-file-path-join dotfiles-dir "desktop"))
+(setq *foo-desktop-dir* (my-dotfile "desktop"))
 (setq desktop-dir *foo-desktop-dir*)
 (setq desktop-path (list *foo-desktop-dir*))
 (desktop-save-mode 1)
@@ -59,13 +59,13 @@
 (workgroups-mode 1)
 
 ;; create "~/.emacs.d/var/workgroups" if not existed
-(let ((wg-file-root (my-file-path-join dotfiles-dir "var/workgroups/")))
+(let ((wg-file-root (my-dotfile "var/workgroups/")))
   (unless (file-directory-p wg-file-root)
     (make-directory wg-file-root t)))
 
 ;; load workgroup if existed
 (setq wg-file
-      (my-file-path-join dotfiles-dir "var/workgroups/wg-save"))
+      (my-dotfile "var/workgroups/wg-save"))
 (when (file-exists-p wg-file)
   (wg-load wg-file))
 

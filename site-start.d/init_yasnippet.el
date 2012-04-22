@@ -25,7 +25,7 @@
 ;;; Code:
 
 (setq yas/my-snippets-dir
-      (my-file-path-join dotfiles-dir "/etc/my-yasnippets/"))
+      (my-dotfile "/etc/my-yasnippets/"))
 (yas/load-directory yas/my-snippets-dir)
 
 (provide 'init_yasnippet)

@@ -25,9 +25,9 @@
 ;;; Code:
 
 ;; TODO : append "~/.emacs.d/lisp", "~/.emacs.d/local-lisp" to load-list
-(setq lisp-dir       (my-file-path-join dotfiles-dir "lisp"))
-(setq local-lisp-dir (my-file-path-join dotfiles-dir "local-lisp"))
-;;(setq my-elisp-dir (my-file-path-join dotfiles-dir "my-lisp"))
+(setq lisp-dir       (my-dotfile "lisp"))
+(setq local-lisp-dir (my-dotfile "local-lisp"))
+;;(setq my-elisp-dir (my-dotfile "my-lisp"))
 (add-to-list 'load-path lisp-dir)
 (add-to-list 'load-path local-lisp-dir)
 

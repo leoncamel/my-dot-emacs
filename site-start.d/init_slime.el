@@ -26,9 +26,9 @@
 
 
 (add-to-list 'load-path
-             (my-file-path-join dotfiles-dir "vendor/slime.git"))
+             (my-dotfile "vendor/slime.git"))
 (add-to-list 'load-path
-             (my-file-path-join dotfiles-dir "vendor/slime.git/contrib/"))
+             (my-dotfile "vendor/slime.git/contrib/"))
 
 (setq inferior-lisp-program "sbcl")
 (setq slime-net-coding-system 'utf-8-unix) ; 文字コードの指定

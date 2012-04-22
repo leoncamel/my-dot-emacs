@@ -24,7 +24,7 @@
 
 ;;; Code:
 
-(add-to-list 'load-path (my-file-path-join dotfiles-dir "vendor/tumble.git/"))
+(add-to-list 'load-path (my-dotfile "vendor/tumble.git/"))
 (require 'tumble)
 
 ;; set api to https for secure posting

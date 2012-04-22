@@ -31,7 +31,7 @@
 ;; (require 'recentf-ext)
 
 ;; recentf cache file path
-(setq recentf-save-file (my-file-path-join dotfiles-dir "var/recentf.cache"))
+(setq recentf-save-file (my-dotfile "var/recentf.cache"))
 
 ;; ;; @see http://masutaka.net/chalow/2011-10-30-2.html
 ;; (defvar my-recentf-list-prev nil)

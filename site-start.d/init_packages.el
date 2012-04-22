@@ -3,7 +3,7 @@
 ;; Copyright (C) 2012  Le0n Zh4ng
 
 ;; Author: Le0n Zh4ng <leoncamel@gmail.com>
-;; Keywords: 
+;; Keywords:
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -20,7 +20,7 @@
 
 ;;; Commentary:
 
-;; 
+;;
 
 ;;; Code:
 
@@ -38,60 +38,86 @@
   (package-refresh-contents))
 
 ;; TODO: color-theme from package.el is buggy, use vendor one
-(defvar my-packages '(color-theme
-                      color-theme-blackboard
-                      color-theme-solarized
-                      color-theme-library
-                      color-theme-sanityinc-solarized
-                      scpaste
-                      lua-mode
-                      clojure-mode
-                      cmake-mode
-                      coffee-mode
-                      markdown-mode
-                      yaml-mode
-                      tuareg
-                      marmalade
-                      oddmuse
-                      scpaste
-                      anything
-                      anything-complete
-                      anything-config
-                      anything-extension
-                      loccur
-                      haskell-mode
-                      ;; ghc                        ;; use vendor/ghc-mod.git now
-                      ghci-completion
-                      magit
-                      wget
-                      smex
-                      dired-details+
-                      dired-single
-                      dired-isearch
-                      buffer-move
-                      gtags
-                      org
-                      org-table-comment
-                      slime
-                      elisp-slime-nav
-                      swank-clojure
-                      rainbow-mode
-                      rainbow-delimiters
-                      volatile-highlights
-                      autopair
-                      paredit
-                      expand-region
-                      undo-tree
-                      highlight-symbol
-                      workgroups
-                      magit
-                      ido-ubiquitous
-                      bookmark+
-                      popwin
-                      win-switch
-                      quickrun
-                      yasnippet
-                      yasnippet-bundle))
+(defvar my-packages
+  '(
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; color-theme
+    color-theme
+    color-theme-blackboard
+    color-theme-solarized
+    color-theme-library
+    color-theme-sanityinc-solarized
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; Programming Mode
+    lua-mode
+    clojure-mode
+    cmake-mode
+    coffee-mode
+    markdown-mode
+    yaml-mode
+    tuareg
+    marmalade
+    oddmuse
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; Haskell
+    haskell-mode
+    ;; ghc                        ;; use vendor/ghc-mod.git now
+    ghci-completion
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; Anything
+    anything
+    anything-complete
+    anything-config
+    anything-extension
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; Text Editing
+    org
+    org-table-comment
+    yasnippet
+    yasnippet-bundle
+    autopair
+    paredit
+    expand-region
+    volatile-highlights
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; SLIME
+    slime
+    elisp-slime-nav
+    swank-clojure
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; Lisp Modes
+    rainbow-mode
+    rainbow-delimiters
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; Buffer and Window
+    buffer-move
+    popwin
+    win-switch
+    workgroups
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; Utilities
+    melpa
+    loccur
+    gtags
+    wget
+    smex
+    scpaste
+    dired-details+
+    dired-single
+    dired-isearch
+    undo-tree
+    highlight-symbol
+    ido-ubiquitous
+    bookmark+
+    quickrun))
 
 (dolist (p my-packages)
   (when (not (package-installed-p p))

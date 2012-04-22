@@ -47,6 +47,9 @@
 (setq ls-lisp-use-insert-directory-program t)
 (setq dired-listing-switches "-la --group-directories-first")
 
+;; browser
+(setq browse-url-browser-function 'browse-url-firefox)
+
 ;; haskell's scion settings
 (setq my-cfg/enable-scion t)
 (setq my-cfg/enable-ghc-mod t)

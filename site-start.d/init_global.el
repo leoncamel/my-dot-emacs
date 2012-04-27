@@ -216,6 +216,15 @@
 (require 'magit)
 (global-set-key (kbd "C-x g") 'magit-status)
 
+;; time-stamp
+(add-hook 'before-save-hook 'time-stamp)
+(eval-after-load "time-stamp"
+  '(progn
+     (setq time-stamp-start "Last Update: ")
+     (setq time-stamp-format "%04y-%02m-%02d@%02H:%02M")
+     (setq time-stamp-end "$")
+     (setq time-stamp-line-limit 10)))
+
 ;; 終了時に聞く
 (setq confirm-kill-emacs 'y-or-n-p)
 

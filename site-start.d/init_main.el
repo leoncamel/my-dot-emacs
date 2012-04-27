@@ -114,6 +114,9 @@
 
 (require 'init_autoinsert)
 
+;; Notes Taking mode : deft
+(require 'init_notes)
+
 ;; internet services
 ;; (require 'init_tumblr)                  ;; tumblr-mode from git repo
 ;; (require 'init_twit)                    ;; twittering-mode

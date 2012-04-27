@@ -112,6 +112,8 @@
   ;;     (interactive)
   ;;     (haskell-move-nested -1)))
 
+  ;; Utility function wrote by myself
+  (add-to-list 'load-path (my-dotfile-my-elisp))
   (require 'my-hs-utilities)
   )
 
@@ -168,6 +170,7 @@
 ;;   ;; WARNING: This causes some versions of Emacs to fail so badly
 ;;   ;; that Emacs needs to be restarted.
 ;;   (setq scion-completing-read-function 'ido-completing-read))
+
 
 (provide 'init_haskell)
 ;;; init_haskell.el ends here

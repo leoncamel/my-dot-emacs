@@ -83,6 +83,7 @@
     paredit
     expand-region
     volatile-highlights
+    deft
 
     ;;;;;;;;;;;;;;;;;;;;
     ;; SLIME

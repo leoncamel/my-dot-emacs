@@ -54,10 +54,10 @@
             (local-set-key [(meta shift left)] 'magit-status)
             ))
 
-(setq org-directory "~/org-doc/")
+(setq org-directory "~/work/org-doc/")
 (setq org-mobile-directory "~/Dropbox/MobileOrg/")
-(setq org-agenda-files (file-expand-wildcards "~/org-doc/mobile.org"))
-(setq org-mobile-inbox-for-pull "~/org-doc/mobile-inbox.org")
+(setq org-agenda-files (file-expand-wildcards "~/work/org-doc/mobile.org"))
+(setq org-mobile-inbox-for-pull "~/work/org-doc/mobile-inbox.org")
 
 ;; Enable encryption
 ;(setq org-mobile-use-encryption t)
@@ -76,7 +76,7 @@
 
 (defun gtd ()
    (interactive)
-   (find-file "~/org-doc/gtd/gtd.org")
+   (find-file "~/work/org-doc/gtd/gtd.org")
    )
 ;; (setq org-export-with-LaTeX-fragments t)
 

@@ -25,17 +25,26 @@
 ;;; Code:
 
 (require 'popwin)
+
 (defvar popwin:special-display-config-backup popwin:special-display-config)
+
 (setq display-buffer-function 'popwin:display-buffer)
 (setq popwin:popup-window-height 0.4)
 (setq anything-samewindow nil)
 (setq popwin:special-display-config
       (append '(
+                ;; Anything
                 ("*anything buffers*" :height 20)
                 ("*Anything Completions*" :height 10)
                 ("*Anything Find Files*" :height 15)
                 ("*anything*" :height 30)
                 ("\\*anything gtags\\*.*" :regexp t :height 30)
+
+                ;; Helm
+                ("*helm mini*" :height 30)
+                ("\\*helm [a-zA-Z0-9_]+\\*" :regexp t :height 20)
+                
+                ;;
                 ("*Compile-Log*" :height 10 :noselect t)
                 (dired-mode :position top)
                 ;; ("*terminal<1>*")

@@ -56,7 +56,6 @@
 ;; mode settings
 (require 'init_keys)                    ;; Global key bindings, only
 (require 'init_font_color)              ;; Font and color-theme
-(require 'init_anything)                ;; Anything
 (require 'init_session)                 ;; Session and desktop
 
 (require 'init_lisp)
@@ -114,6 +113,10 @@
 
 ;; Notes Taking mode : deft
 (require 'init_notes)
+
+;; helm
+;; (require 'init_anything)                ;; Anything
+(require 'init_helm)
 
 ;; internet services
 ;; (require 'init_tumblr)                  ;; tumblr-mode from git repo

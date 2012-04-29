@@ -74,6 +74,11 @@
     anything-extension
 
     ;;;;;;;;;;;;;;;;;;;;
+    ;; Helm
+    helm
+    helm-projectile
+ 
+    ;;;;;;;;;;;;;;;;;;;;
     ;; Text Editing
     org
     org-table-comment

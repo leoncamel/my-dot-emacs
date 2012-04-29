@@ -27,60 +27,65 @@
 
 ;; reference :: http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html#sec5
 
-(setq srecode-map-save-file (my-dotfile-var "srecode-map.el"))
-(setq ede-project-placeholder-cache-file (my-dotfile-var "ede-projects.el"))
-
 (load-file
- (my-dotfile "vendor/cedet.git/cedet-devel-load.el"))
+ (my-dotfile "vendor/cedet.git/common/cedet.el"))
 
+;; Disable global EDE (Project Management)
+(global-ede-mode nil)
+
+;; * This enables the database and idle reparse ePngines
+(semantic-load-enable-minimum-features)
+
+;; * This enables some tools useful for coding, such as summary mode
+;;   imenu support, and the semantic navigator
+;; (semantic-load-enable-code-helpers)
+
+;; * This enables even more coding tools such as intellisense mode
+;;   decoration mode, and stickyfunc mode (plus regular code helpers)
+;; (semantic-load-enable-gaudy-code-helpers)
+
+;; Enable SRecode (Template management) minor-mode.
+(require 'srecode-map)
+(global-srecode-minor-mode 1)
+
+;; (require 'semantic-gcc)
+;; (semantic-add-system-include "~/exp/include/boost_1_37" 'c++-mode)
+
+(require 'semanticdb)
+(global-semanticdb-minor-mode 1)
+
+;; if you want to enable support for gnu global
+(require 'semanticdb-global)
+(semanticdb-enable-gnu-global-databases 'c-mode)
+(semanticdb-enable-gnu-global-databases 'c++-mode)
+
+;; enable ctags for some languages:
+;;  Unix Shell, Perl, Pascal, Tcl, Fortran, Asm
+;; (semantic-load-enable-primary-exuberent-ctags-support)
+
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; CEDET latest version's settings
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; (setq srecode-map-save-file (my-dotfile-var "srecode-map.el"))
+;; (setq ede-project-placeholder-cache-file (my-dotfile-var "ede-projects.el"))
+;; 
 ;; (load-file
-;;  (my-dotfile "vendor/cedet.git/common/cedet.el"))
-
-;; ;; Disable global EDE (Project Management)
-;; (global-ede-mode nil)
-
-;; ;; * This enables the database and idle reparse ePngines
-;; (semantic-load-enable-minimum-features)
-
-;; ;; * This enables some tools useful for coding, such as summary mode
-;; ;;   imenu support, and the semantic navigator
-;; ;; (semantic-load-enable-code-helpers)
-
-;; ;; * This enables even more coding tools such as intellisense mode
-;; ;;   decoration mode, and stickyfunc mode (plus regular code helpers)
-;; ;; (semantic-load-enable-gaudy-code-helpers)
-
-;; ;; Enable SRecode (Template management) minor-mode.
-;; (require 'srecode-map)
-;; (global-srecode-minor-mode 1)
-
-;; ;; (require 'semantic-gcc)
-;; ;; (semantic-add-system-include "~/exp/include/boost_1_37" 'c++-mode)
-
-;; (require 'semanticdb)
-;; (global-semanticdb-minor-mode 1)
-
-;; ;; if you want to enable support for gnu global
-;; (require 'semanticdb-global)
-;; (semanticdb-enable-gnu-global-databases 'c-mode)
-;; (semanticdb-enable-gnu-global-databases 'c++-mode)
-
-;; ;; enable ctags for some languages:
-;; ;;  Unix Shell, Perl, Pascal, Tcl, Fortran, Asm
-;; ;; (semantic-load-enable-primary-exuberent-ctags-support)
-
-;; Add further minor-modes to be enabled by semantic-mode.
-;; See doc-string of `semantic-default-submodes' for other things
-;; you can use here.
-(add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
-(add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
-(add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
-
-;; Enable Semantic
-(semantic-mode 1)
-
-;; Enable EDE (Project Management) features
-(global-ede-mode 1)
+;;  (my-dotfile "vendor/cedet.git/cedet-devel-load.el"))
+;; 
+;; 
+;; ;; Add further minor-modes to be enabled by semantic-mode.
+;; ;; See doc-string of `semantic-default-submodes' for other things
+;; ;; you can use here.
+;; (add-to-list 'semantic-default-submodes 'global-semantic-idle-summary-mode t)
+;; (add-to-list 'semantic-default-submodes 'global-semantic-idle-completions-mode t)
+;; (add-to-list 'semantic-default-submodes 'global-cedet-m3-minor-mode t)
+;; 
+;; ;; Enable Semantic
+;; (semantic-mode 1)
+;; 
+;; ;; Enable EDE (Project Management) features
+;; (global-ede-mode 1)
 
 
 (provide 'init_cedet)

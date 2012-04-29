@@ -40,11 +40,9 @@
 ;;
 ;; FIXME:
 ;;  Load "vendor/cedet" should before "(require 'auto-install)", it quite
-;;  wired. So, I copy the following two lines from "init_cedet.el".
+;;  wired. So, I load cedet here...
 ;;
-(load-file
- (my-dotfile "vendor/cedet.git/common/cedet.el"))
-
+(require 'init_cedet)
 
 ;; Package system
 (require 'init_packages)
@@ -105,7 +103,7 @@
 (require 'init_cpp)
 (when mac-p
   (require 'init_objc))
-(require 'init_cedet)
+;; (require 'init_cedet)
 (require 'init_gtags)
  
 (require 'init_quickrun)

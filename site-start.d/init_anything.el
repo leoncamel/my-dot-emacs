@@ -28,9 +28,6 @@
 (setq anything-c-adaptive-history-file
       (my-dotfile "var/anything-c-adaptive-history"))
 
-(global-set-key (kbd "C-x C-b") 'anything-buffers+)
-;; (global-set-key (kbd "M-x") 'anything-M-x)
-
 ;;;;;;;;;;;;;;;;;;;
 ;; anything-grep ;;
 ;;;;;;;;;;;;;;;;;;;
@@ -39,16 +36,22 @@
       (lambda ()
         (when anything-in-persistent-action
           (anything-persistent-highlight-point (point-at-bol) (point-at-eol)))))
-(defalias 'ag 'anything-grep)
-
-(global-set-key (kbd "C-;") 'anything)
 
 ;;;;;;;;;;;;;;;;;;;;;;;
 ;; anything-complete ;;
 ;;;;;;;;;;;;;;;;;;;;;;;
 (require 'anything-complete)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; Anything keybindings ;;
+;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+;; (global-set-key (kbd "C-x C-b") 'anything-buffers+)
+;; (global-set-key (kbd "M-x") 'anything-M-x)
+;; (global-set-key (kbd "C-;") 'anything)
 ;; (global-set-key (kbd "C-x C-f") 'anything-find-files)
+
+(defalias 'ag 'anything-grep)
 (defalias 'aff 'anything-find-files)
 
 (provide 'init_anything)

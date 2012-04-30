@@ -115,7 +115,7 @@
 (require 'init_notes)
 
 ;; helm
-;; (require 'init_anything)                ;; Anything
+(require 'init_anything)                ;; Anything
 (require 'init_helm)
 
 ;; internet services

@@ -24,10 +24,11 @@
 
 ;;; Code:
 (defun prepend-exec-path (dir)
-  "prepend a exec-path to $PATH"
+  "prepend a path to exec-path, $PATH, and eshell-path-env"
   (when (and (file-exists-p dir) (not (member dir exec-path)))
     (let ((full-dir (expand-file-name dir)))
       (setenv "PATH" (concat full-dir ":" (getenv "PATH")))
+      (setq eshell-path-env (getenv "PATH"))
       (setq exec-path (append (list full-dir) exec-path))
       )))
 

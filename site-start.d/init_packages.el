@@ -77,7 +77,11 @@
     ;; Helm
     helm
     helm-projectile
- 
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; Auto-complete
+    auto-complete
+    
     ;;;;;;;;;;;;;;;;;;;;
     ;; Text Editing
     org
@@ -93,8 +97,9 @@
     ;;;;;;;;;;;;;;;;;;;;
     ;; SLIME
     slime
+    ;; swank-clojure
+    slime-repl
     elisp-slime-nav
-    swank-clojure
 
     ;;;;;;;;;;;;;;;;;;;;
     ;; Lisp Modes

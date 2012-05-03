@@ -36,11 +36,11 @@
 
 ; TODO: auto-complete mode has strange problems
 ;       this mode is quite strange while integration with yasnippet
-(add-to-list 'load-path
-             (my-dotfile "vendor/auto-complete/"))
+;; (add-to-list 'load-path
+;;              (my-dotfile "vendor/auto-complete/"))
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories
-             (my-dotfile "vendor/auto-complete/dict/"))
+;; (add-to-list 'ac-dictionary-directories
+;;              (my-dotfile "vendor/auto-complete/dict/"))
 (ac-config-default)
 
 ;; auto-complete for haskell-mode

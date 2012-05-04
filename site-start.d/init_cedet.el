@@ -27,6 +27,8 @@
 
 ;; reference :: http://alexott.net/en/writings/emacs-devenv/EmacsCedet.html#sec5
 
+(setq semanticdb-default-save-directory (my-dotfile-var "semanticdb"))
+
 (load-file
  (my-dotfile "vendor/cedet.git/common/cedet.el"))
 

@@ -132,7 +132,7 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 (when my-cfg/enable-ghc-mod
   (add-to-list 'load-path
-               (my-dotfile "vendor/ghc-mod.git/elisp/"))
+               (my-dotfile-vendor "ghc-mod.git/elisp/"))
   (autoload 'ghc-init "ghc" nil t)
 
   (add-hook 'haskell-mode-hook 'my-ghc-mod-hook)
@@ -150,7 +150,7 @@
 ;; ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; (when my-cfg/enable-scion
 ;;   (add-to-list 'load-path
-;;                (my-dotfile "vendor/scion/"))
+;;                (my-dotfile-vendor "scion/"))
 ;;   (require 'scion)
 
 ;;   ;; if scion-server is not in your $PATH

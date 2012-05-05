@@ -54,13 +54,13 @@
                                 "324" "329" "332" "333" "353" "477"))
 
 ;; logging
-(setq erc-log-channels-directory (my-dotfile "var/erc-logs/"))
+(setq erc-log-channels-directory (my-dotfile-var "erc-logs/"))
 
 (if (not (file-exists-p erc-log-channels-directory))
     (mkdir erc-log-channels-directory t))
 
 ;; auto identify
-(setq my-erc-pass-file (my-dotfile "var/ercpass"))
+(setq my-erc-pass-file (my-dotfile-var "ercpass"))
 (when (file-exists-p my-erc-pass-file)
   (load my-erc-pass-file)
   (require 'erc-services)

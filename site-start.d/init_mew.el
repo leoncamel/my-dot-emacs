@@ -24,10 +24,9 @@
 
 ;;; Code:
 
-(add-to-list 'load-path
-             (my-dotfile "vendor/Mew"))
+(add-to-list 'load-path (my-dotfile-vendor "Mew"))
 
-(setq mew-rc-file (my-dotfile "etc/mew-rc.el"))
+(setq mew-rc-file (my-dotfile-etc "mew-rc.el"))
 
 ;; Mew
 (autoload 'mew "mew" nil t)

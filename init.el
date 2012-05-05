@@ -31,53 +31,41 @@
           paths))
 
 ;; Utilities function to add load-path
-(defun my-dotfile (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (cons dotfiles-dir paths)))
+(defmacro my-dotfile (&rest path)
+  `(my-file-path-join dotfiles-dir ,@path))
 
-(defun my-dotfile-bin (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (append (list dotfiles-dir "bin/") paths)))
+(defmacro my-dotfile-bin (&rest paths)
+  `(my-dotfile "bin" ,@paths))
 
-(defun my-dotfile-etc (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (append (list dotfiles-dir "etc/") paths)))
+(defmacro my-dotfile-etc (&rest paths)
+  `(my-dotfile "etc" ,@paths))
 
-(defun my-dotfile-var (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (append (list dotfiles-dir "var/") paths)))
+(defmacro my-dotfile-var (&rest paths)
+  `(my-dotfile "var" ,@paths))
 
-(defun my-dotfile-hostconfigs (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (append (list dotfiles-dir "hostconfigs/") paths)))
+(defmacro my-dotfile-hostconfigs (&rest paths)
+  `(my-dotfile "hostconfigs" ,@paths))
 
-(defun my-dotfile-userconfigs (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (append (list dotfiles-dir "userconfigs/") paths)))
+(defmacro my-dotfile-userconfigs (&rest paths)
+  `(my-dotfile "userconfigs" ,@paths))
 
-(defun my-dotfile-vendor (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (append (list dotfiles-dir "vendor/") paths)))
+(defmacro my-dotfile-vendor (&rest paths)
+  `(my-dotfile "vendor" ,@paths))
 
-(defun my-dotfile-lisp (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (append (list dotfiles-dir "lisp/") paths)))
+(defmacro my-dotfile-lisp (&rest paths)
+  `(my-dotfile "lisp" ,@paths))
 
-(defun my-dotfile-local-lisp (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (append (list dotfiles-dir "local-lisp/") paths)))
+(defmacro my-dotfile-local-lisp (&rest paths)
+  `(my-dotfile "local-lisp" ,@paths))
 
-(defun my-dotfile-elisp (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (append (list dotfiles-dir "elisp/") paths)))
+(defmacro my-dotfile-elisp (&rest paths)
+  `(my-dotfile "elisp" ,@paths))
 
-(defun my-dotfile-my-elisp (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (append (list dotfiles-dir "my-elisp/") paths)))
+(defmacro my-dotfile-my-elisp (&rest paths)
+  `(my-dotfile "my-elisp" ,@paths))
 
-(defun my-dotfile-private (&rest paths)
-  (reduce #'(lambda (x y) (concat (file-name-as-directory x) y))
-          (append (list dotfiles-dir "private/") paths)))
+(defmacro my-dotfile-private (&rest paths)
+  `(my-dotfile "private" ,@paths))
 
 (defun add-vendor-subdir (vendor-path)
   (add-to-list 'load-path

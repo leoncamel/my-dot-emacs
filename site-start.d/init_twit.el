@@ -25,7 +25,7 @@
 ;;; Code:
 
 (add-to-list 'load-path
-             (my-dotfile "vendor/twittering-mode.git"))
+             (my-dotfile-vendor "twittering-mode.git"))
 
 (require 'twittering-mode)
 

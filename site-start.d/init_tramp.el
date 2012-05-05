@@ -26,7 +26,7 @@
 
 (require 'tramp-cache)
 (setq tramp-persistency-file-name
-      (my-dotfile "var/tramp"))
+      (my-dotfile-var "tramp"))
 
 (provide 'init_tramp)
 ;;; init_tramp.el ends here

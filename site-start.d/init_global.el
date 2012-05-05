@@ -61,38 +61,38 @@
 
 ;; bookmarks
 (setq bookmark-default-file
-      (my-dotfile "var/bookmarks"))
+      (my-dotfile-var "bookmarks"))
 
 ;; bookmark+
 (setq bmkp-bmenu-state-file
-      (my-dotfile "var/emacs-bmk-bmenu-state.el"))
+      (my-dotfile-var "emacs-bmk-bmenu-state.el"))
 (setq bmkp-bmenu-commands-file
-      (my-dotfile "var/emacs-bmk-bmenu-commands.el"))
+      (my-dotfile-var "emacs-bmk-bmenu-commands.el"))
 
 ;; places
 (setq save-place-file
-      (my-dotfile "var/places"))
+      (my-dotfile-var "places"))
 
 ;; smex-items
 (setq smex-save-file
-      (my-dotfile "var/smex-items"))
+      (my-dotfile-var "smex-items"))
 
 ;; tetris score
 (setq tetris-score-file
-      (my-dotfile "var/tetris-scores"))
+      (my-dotfile-var "tetris-scores"))
 
 ;; cookie path
 (require 'url-cookie)
 (setq url-cookie-file
-      (my-dotfile "var/url-cookies"))
+      (my-dotfile-var "url-cookies"))
 
 ;; auto-save-list
 (setq auto-save-list-file-prefix
-      (my-dotfile "var/auto-save-list/.saves-"))
+      (my-dotfile-var "auto-save-list/.saves-"))
 
 ;; custom-file
 (setq custom-file
-      (my-dotfile "private/customize.el"))
+      (my-dotfile-private "customize.el"))
 
 (defun try-load-custom-file ()
   "load customize.el if the file existed."

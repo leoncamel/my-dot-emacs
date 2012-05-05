@@ -26,7 +26,7 @@
 
 (require 'anything-config)
 (setq anything-c-adaptive-history-file
-      (my-dotfile "var/anything-c-adaptive-history"))
+      (my-dotfile-var "anything-c-adaptive-history"))
 
 ;;;;;;;;;;;;;;;;;;;
 ;; anything-grep ;;

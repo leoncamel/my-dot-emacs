@@ -30,7 +30,7 @@
 (setq semanticdb-default-save-directory (my-dotfile-var "semanticdb"))
 
 (load-file
- (my-dotfile "vendor/cedet.git/common/cedet.el"))
+ (my-dotfile-vendor "cedet.git/common/cedet.el"))
 
 ;; Disable global EDE (Project Management)
 (global-ede-mode nil)
@@ -73,7 +73,7 @@
 ;; (setq ede-project-placeholder-cache-file (my-dotfile-var "ede-projects.el"))
 ;; 
 ;; (load-file
-;;  (my-dotfile "vendor/cedet.git/cedet-devel-load.el"))
+;;  (my-dotfile-vendor "cedet.git/cedet-devel-load.el"))
 ;; 
 ;; 
 ;; ;; Add further minor-modes to be enabled by semantic-mode.

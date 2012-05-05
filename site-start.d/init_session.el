@@ -59,13 +59,13 @@
 (workgroups-mode 1)
 
 ;; create "~/.emacs.d/var/workgroups" if not existed
-(let ((wg-file-root (my-dotfile "var/workgroups/")))
+(let ((wg-file-root (my-dotfile-var "workgroups/")))
   (unless (file-directory-p wg-file-root)
     (make-directory wg-file-root t)))
 
 ;; load workgroup if existed
 (setq wg-file
-      (my-dotfile "var/workgroups/wg-save"))
+      (my-dotfile-var "workgroups/wg-save"))
 (when (file-exists-p wg-file)
   (wg-load wg-file))
 

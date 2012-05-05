@@ -31,16 +31,16 @@
 
 ;; (add-to-list 'load-path (my-dotfile-vendor "ac"))
 ;; (require 'auto-complete-config)
-;; (add-to-list 'ac-dictionary-directories (my-dotfile "/vendor/ac/ac-dict"))
+;; (add-to-list 'ac-dictionary-directories (my-dotfile-vendor "ac/ac-dict"))
 ;; (ac-config-default)
 
 ; TODO: auto-complete mode has strange problems
 ;       this mode is quite strange while integration with yasnippet
 ;; (add-to-list 'load-path
-;;              (my-dotfile "vendor/auto-complete/"))
+;;              (my-dotfile-vendor "auto-complete/"))
 (require 'auto-complete-config)
 ;; (add-to-list 'ac-dictionary-directories
-;;              (my-dotfile "vendor/auto-complete/dict/"))
+;;              (my-dotfile-vendor "auto-complete/dict/"))
 (ac-config-default)
 
 ;; auto-complete for haskell-mode
@@ -71,7 +71,7 @@
 ;;   ;; 单词的时候, 很有可能补全菜单还在, 这时候你要回车的话,
 ;;   ;; 必须要干掉补全菜单, 很麻烦, 用M-j来执行`ac-complete'
 ;;   (add-to-list 'ac-dictionary-directories
-;;                 (my-dotfile "vendor/auto-complete/dict/"))
+;;                 (my-dotfile-vendor "auto-complete/dict/"))
 ;; 
 ;;   (setq ac-auto-show-menu t
 ;;         ac-auto-start t

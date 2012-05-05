@@ -41,10 +41,10 @@
 ;; color-theme
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Color theme
-;; (add-to-list 'load-path (my-dotfile "/vendor/color-theme"))
+;; (add-to-list 'load-path (my-dotfile-vendor "color-theme"))
 ;; (color-theme-initialize)
 ;;; (color-theme-dark-laptop)
-;(add-to-list 'load-path (my-dotfile "/vendor/color-theme-by-leon/"))
+;(add-to-list 'load-path (my-dotfile-vendor "color-theme-by-leon/"))
 ;(require 'color-theme-tangotango)
 ;(require 'color-theme-blackboard)
 ;(require 'color-theme-blackboard-xiaoqiang)
@@ -60,7 +60,7 @@
 
 ;; optional : load old color-theme-6.6.0's color-theme-library
 ;; (load-file
-;;     (my-dotfile "vendor/color-theme/themes/color-theme-library.el"))
+;;     (my-dotfile-vendor "color-theme/themes/color-theme-library.el"))
 ;; (color-theme-dark-laptop)
 
 ;; After I uploaded the "color-theme-library", my favorite color-theme comes back.
@@ -69,7 +69,7 @@
 
 ;; sunburst
 (add-to-list 'load-path
-             (my-dotfile "vendor/Emacs-Sunburst-Color-Theme.git/"))
+             (my-dotfile-vendor "Emacs-Sunburst-Color-Theme.git/"))
 (require 'color-theme-sunburst)
 ;; (color-theme-sunburst)
 (require 'color-theme-sunburst-new)
@@ -89,7 +89,7 @@
 ;; (color-theme-wombat+)
 
 (add-to-list 'load-path
-             (my-dotfile "vendor/color-theme-wombat-dark.git/"))
+             (my-dotfile-vendor "color-theme-wombat-dark.git/"))
 (require 'color-theme-wombat-dark)
 (color-theme-wombat-dark)
 

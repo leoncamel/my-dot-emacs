@@ -26,7 +26,7 @@
 
 (require 'wget)
 (setq wget-download-directory
-      (my-dotfile "var/wget-downloads"))
+      (my-dotfile-var "wget-downloads"))
 
 (provide 'init_wget)
 ;;; init_wget.el ends here

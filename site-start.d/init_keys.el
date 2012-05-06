@@ -117,5 +117,13 @@ should be a list of keys that will be bound globally to
 (smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; alias for frequently used functions
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+(defalias 'df 'describe-function)
+(defalias 'dv 'describe-variable)
+(defalias 'dk 'describe-key)
+(defalias 'dp 'describe-package)
+
 (provide 'init_keys)
 ;;; init_keys.el ends here

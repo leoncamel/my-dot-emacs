@@ -31,6 +31,8 @@
 (global-set-key (kbd "M-X") 'helm-M-x)
 ;; (global-set-key (kbd "C-c g") 'helm-do-grep)
 
+(require 'helm-semantic)
+(helm-attrset 'candidate-number-limit 9999 helm-c-source-semantic)
 
 (provide 'init_helm)
 ;;; init_helm.el ends here

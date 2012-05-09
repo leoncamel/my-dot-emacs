@@ -30,6 +30,7 @@
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "M-X") 'helm-M-x)
 ;; (global-set-key (kbd "C-c g") 'helm-do-grep)
+(global-set-key (kbd "C-:") 'helm-semantic)
 
 (require 'helm-semantic)
 (helm-attrset 'candidate-number-limit 9999 helm-c-source-semantic)

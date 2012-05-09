@@ -31,9 +31,11 @@
 
 (require 'loccur)
 ;; defines shortcut for loccur of the current word
-(global-set-key (kbd "C-:") 'loccur-current)
+(global-set-key (kbd "C-%") 'loccur-current)
+
 ;; defines shortcut for the interactive loccur command
-(global-set-key (kbd "C-*") 'loccur)
+;; (global-set-key (kbd "C-*") 'loccur)
+
 ;; defines shortcut for the loccur of the previously found word
 ;; (global-set-key (kbd "C-*") 'loccur-previous-match)
 ;; (define-key global-map [(control shift o)] 'loccur-previous-match)

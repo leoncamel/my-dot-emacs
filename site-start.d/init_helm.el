@@ -25,6 +25,11 @@
 ;;; Code:
 
 (require 'helm-config)
+(define-key helm-command-map (kbd "C-s") 'helm-semantic)
+(define-key helm-command-map (kbd "o k") 'helm-org-keywords)
+(define-key helm-command-map (kbd "o h") 'helm-org-headlines)
+(custom-set-variables
+ '(helm-command-prefix-key "C-h"))
 
 (global-set-key (kbd "C-;") 'helm-mini)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)

@@ -26,5 +26,9 @@
 
 (setq comment-style 'multi-line)
 
+(add-to-list 'load-path (my-dotfile-vendor "llvm-mode"))
+(require 'llvm-mode)
+(require 'tablegen-mode)
+
 (provide 'init_cpp)
 ;;; init_cpp.el ends here

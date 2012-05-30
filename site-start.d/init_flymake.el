@@ -24,7 +24,8 @@
 
 ;;; Code:
 
-
+;; disable the annoying Flymake dialog box
+(setq flymake-gui-warnings-enabled nil)
 
 (provide 'init_flymake)
 ;;; init_flymake.el ends here

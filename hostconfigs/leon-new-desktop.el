@@ -33,6 +33,8 @@
          ;; High Priority ;;
          "~/bin/"
          "~/bin/global-5.9.5/bin"
+         ;; textlive
+         "/usr/local/texlive/2011/bin/x86_64-linux"
          ;;
          "~/.cabal/bin"
          "~/bin/ghc-7.4.1/bin"

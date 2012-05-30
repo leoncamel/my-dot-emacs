@@ -30,5 +30,8 @@
 (require 'llvm-mode)
 (require 'tablegen-mode)
 
+;; objc-mode
+(add-to-list 'auto-mode-alist '("\\.m$" . objc-mode))
+
 (provide 'init_cpp)
 ;;; init_cpp.el ends here

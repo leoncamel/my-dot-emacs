@@ -24,9 +24,27 @@
 
 ;;; Code:
 
-(setq yas/my-snippets-dir
-      (my-dotfile "/etc/my-yasnippets/"))
+;; (setq yas/my-snippets-dir (my-dotfile-etc "my-yasnippets/"))
+;; (yas/load-directory yas/my-snippets-dir)
+;; (require 'dropdown-list)
+;; (setq yas/prompt-functions '(yas/dropdown-prompt
+;;                              yas/ido-prompt
+;;                              yas/completing-prompt))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;
+;; for latest yasnippet
+;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(require 'yasnippet)
+(add-to-list 'yas/snippet-dirs (my-dotfile-etc "my-yasnippets/"))
+(yas/global-mode 1)
+(setq yas/my-snippets-dir (my-dotfile-etc "my-yasnippets/"))
 (yas/load-directory yas/my-snippets-dir)
+
+(require 'dropdown-list)
+(setq yas/prompt-functions '(yas/dropdown-prompt
+                             yas/ido-prompt
+                             yas/completing-prompt))
 
 (provide 'init_yasnippet)
 ;;; init_yasnippet.el ends here

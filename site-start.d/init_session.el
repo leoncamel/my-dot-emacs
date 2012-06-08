@@ -64,8 +64,7 @@
     (make-directory wg-file-root t)))
 
 ;; load workgroup if existed
-(setq wg-file
-      (my-dotfile-var "workgroups/wg-save"))
+(setq wg-file (my-dotfile-var "workgroups/wg-save"))
 (when (file-exists-p wg-file)
   (wg-load wg-file))
 

@@ -87,7 +87,7 @@
     org
     org-table-comment
     yasnippet
-    yasnippet-bundle
+    ;; yasnippet-bundle           ;; `yasnippet` is under active development.
     autopair
     paredit
     expand-region

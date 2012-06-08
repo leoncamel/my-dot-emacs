@@ -118,6 +118,7 @@
     melpa
     loccur
     gtags
+    magit
     wget
     smex
     scpaste

@@ -42,8 +42,8 @@
 
                 ;; Helm
                 ("*helm mini*" :height 30)
-                ("\\*helm [a-zA-Z0-9_-]+\\*" :regexp t :height 20)
-                
+                ("\\*helm[ a-zA-Z0-9_-]+\\*" :regexp t :height 20)
+
                 ;;
                 ("*Compile-Log*" :height 10 :noselect t)
                 (dired-mode :position top)

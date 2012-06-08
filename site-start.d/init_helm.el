@@ -24,13 +24,18 @@
 
 ;;; Code:
 
+;; (add-to-list 'load-path (my-dotfile-vendor "helm.git"))
 (require 'helm-config)
+(require 'helm-mode)
+
+;; Local keybinding
 (define-key helm-command-map (kbd "C-s") 'helm-semantic)
 (define-key helm-command-map (kbd "o k") 'helm-org-keywords)
 (define-key helm-command-map (kbd "o h") 'helm-org-headlines)
 (custom-set-variables
  '(helm-command-prefix-key "C-h"))
 
+;; Global keybinding
 (global-set-key (kbd "C-;") 'helm-mini)
 (global-set-key (kbd "C-x C-b") 'helm-buffers-list)
 (global-set-key (kbd "M-X") 'helm-M-x)

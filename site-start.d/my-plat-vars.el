@@ -1,3 +1,4 @@
+;; -*- coding: utf-8 -*-
 
 ;; Emacs の種類バージョンを判別するための変数を定義
 ;; @see http://github.com/elim/dotemacs/blob/master/init.el

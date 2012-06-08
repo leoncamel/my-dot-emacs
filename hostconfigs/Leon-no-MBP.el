@@ -41,6 +41,8 @@
          ;; homebrew
          "~/bin/homebrew/bin/"
          "~/bin/homebrew/sbin/"
+         ;; python from homebrew
+         "~/bin/homebrew/share/python"
          ;; macports
          "/opt/local/bin/"
          "/opt/local/sbin/"
@@ -61,6 +63,9 @@
 ;; haskell's scion settings
 (setq my-cfg/enable-scion t)
 (setq my-cfg/enable-ghc-mod t)
+;; (setq my-cfg/enable-haskell-mode-git t)
+
+(switch-net-env "waseda")
 
 (provide 'Leon-no-MBP)
 ;;; Leon-no-MBP.el ends here

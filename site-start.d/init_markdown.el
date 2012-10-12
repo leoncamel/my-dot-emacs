@@ -38,5 +38,9 @@
           (lambda ()
             (setq imenu-generic-expression leon-markdown-imenu-generic-expression)))
 
+;; Pandoc mode
+(require 'pandoc-mode)
+(add-hook 'markdown-mode-hook 'turn-on-pandoc)
+
 (provide 'init_markdown)
 ;;; init_markdown.el ends here

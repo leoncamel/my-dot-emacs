@@ -118,6 +118,9 @@
 
 (require 'init_autoinsert)
 
+;; bookmarks
+(require 'init_bookmark)
+
 ;; Notes Taking mode : deft
 (require 'init_notes)
 

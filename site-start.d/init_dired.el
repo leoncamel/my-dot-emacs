@@ -33,6 +33,10 @@
 ;; use single dired buffer
 (require 'dired-single)
 
+;; TODO : when refersh(press 'g' in dired,
+;;        it require flymake-mode, pretty wired.
+(require 'flymake)
+
 ;; Reference :: http://xahlee.org/emacs/emacs_dired_open_file_in_ext_apps.html
 (defun open-in-external-app ()
   "Open the current file or dired marked files in external app.

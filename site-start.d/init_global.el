@@ -185,6 +185,12 @@
 ;; C-v や M-v した時に以前の画面にあった文字を何行分残すか(初期設定 2)
 ;;(setq next-screen-context-lines 5)
 
+;; TODO : set meta key for emacs-mac
+(if (eq mac-option-modifier nil)
+    (progn
+      (setq mac-option-modifier 'meta)
+      (setq mac-command-modifier 'hyper)))
+
 ;; uniquify buffer name
 (eval-after-load "uniquify"
   '(progn

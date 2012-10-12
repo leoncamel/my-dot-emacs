@@ -52,6 +52,11 @@
 
 ;; (require 'semantic-gcc)
 ;; (semantic-add-system-include "~/exp/include/boost_1_37" 'c++-mode)
+;; (semantic-add-system-include "~/bin/homebrew/include" 'c-mode)
+(semantic-add-system-include "~/bin/homebrew/include/gtk-2.0")
+(semantic-add-system-include "~/bin/homebrew/include/glib-2.0")
+(semantic-add-system-include "~/bin/homebrew/include/pango-1.0")
+(semantic-add-system-include "~/bin/homebrew/include")
 
 (require 'semanticdb)
 (global-semanticdb-minor-mode 1)
@@ -65,6 +70,23 @@
 ;;  Unix Shell, Perl, Pascal, Tcl, Fortran, Asm
 ;; (semantic-load-enable-primary-exuberent-ctags-support)
 
+;; keybindings
+;; (defun my-cedet-hook()
+;;   (local-set-key [(control return)] 'semantic-ia-complete-symbol)
+
+;;   (local-set-key "\C-c?" 'semantic-ia-complete-symbol-menu)
+;;   (local-set-key (kbd "M-n") 'semantic-ia-complete-symbol-menu)
+;;   (local-set-key "\C-c>" 'semantic-complete-analyze-inline)
+;;   (local-set-key (kbd "M-/") 'semantic-complete-analyze-inline)
+;;   (local-set-key "\C-cp" 'semantic-analyze-proto-impl-toggle)
+;;   (local-set-key "\C-cd" 'semantic-ia-fast-jump)
+;;   (local-set-key "\C-cr" 'semantic-symref-symbol)
+;;   (local-set-key "\C-cR" 'semantic-symref)
+
+;;   ;;; c/c++ setting
+;;   (local-set-key "." 'semantic-complete-self-insert)
+;;   (local-set-key ">" 'semantic-complete-self-insert))
+;; (add-hook 'c-mode-common-hook 'my-cedet-hook)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; CEDET latest version's settings

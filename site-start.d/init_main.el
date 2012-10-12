@@ -72,11 +72,14 @@
 (require 'init_flymake)
 
 (require 'init_popwin)                  ;; popwin
+(require 'init_wm)                      ;; Windows Manager : e2wm
 
 (require 'init_magit)
 (require 'init_tramp)
 
 (require 'init_eproject)                ;; eproject
+
+(require 'init_latex)
 
 ;; meta-text modes
 (require 'init_org)

@@ -96,6 +96,7 @@
 (require 'init_ocaml)
 (require 'init_web)
 (require 'init_haskell)
+(require 'init_dotnet)
 
 (require 'init_slime)
 

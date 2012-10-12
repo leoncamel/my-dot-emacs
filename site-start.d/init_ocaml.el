@@ -24,7 +24,12 @@
 
 ;;; Code:
 
-
+(when (executable-find "utop")
+  (add-to-list 'load-path (my-dotfile-vendor "utop"))
+  
+  (autoload 'utop-setup-ocaml-buffer "utop" "Toplevel for OCaml" t)
+  (add-hook 'tuareg-mode-hook 'utop-setup-ocaml-buffer)
+  (add-hook 'typerex-mode-hook 'utop-setup-ocaml-buffer))
 
 (provide 'init_ocaml)
 ;;; init_ocaml.el ends here

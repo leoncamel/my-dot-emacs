@@ -1,4 +1,4 @@
-;;; init_html.el --- Web Development related modes settings
+;;; init_web.el --- Web Development related modes settings
 
 ;; Copyright (C) 2012  Le0n Zh4ng
 
@@ -39,5 +39,5 @@
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
-(provide 'init_html)
+(provide 'init_web)
 ;;; init_html.el ends here

@@ -1,6 +1,6 @@
-;;; init_js.el --- javascript-mode settings
+;;; init_html.el --- Web Development related modes settings
 
-;; Copyright (C) 2011  Le0n Zh4ng
+;; Copyright (C) 2012  Le0n Zh4ng
 
 ;; Author: Le0n Zh4ng <leoncamel@gmail.com>
 ;; Keywords: 
@@ -24,7 +24,20 @@
 
 ;;; Code:
 
+;; nxhtml mode
+;;     it can integrate html,js,css together
+;; (load (my-dotfile-vendor "nxhtml.git/autostart.el"))
 
+;; Zen Coding Mode
+(require 'zencoding-mode)
+(add-hook 'sgml-mode-hook 'zencoding-mode)
+(add-hook 'html-mode-hook 'zencoding-mode)
+(add-hook 'text-mode-hook 'zencoding-mode)
+(define-key zencoding-mode-keymap "\C-z" 'zencoding-expand-line)
 
-(provide 'init_js)
-;;; init_js.el ends here
+;; JavaScript modes
+(autoload 'js2-mode "js2-mode" nil t)
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+
+(provide 'init_html)
+;;; init_html.el ends here

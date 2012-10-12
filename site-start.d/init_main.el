@@ -94,7 +94,6 @@
 (require 'init_python)
 (require 'init_ruby)
 (require 'init_ocaml)
-(require 'init_js)
 (require 'init_haskell)
 
 (require 'init_slime)

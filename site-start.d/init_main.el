@@ -100,6 +100,12 @@
 
 (require 'init_slime)
 
+;; java related modes
+(require 'init_jvm)
+
+;; ESS
+(require 'init_ess)
+
 (require 'init_cpp)
 (when mac-p
   (require 'init_objc))

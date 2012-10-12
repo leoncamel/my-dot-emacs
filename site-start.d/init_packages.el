@@ -50,15 +50,22 @@
 
     ;;;;;;;;;;;;;;;;;;;;
     ;; Programming Mode
+    zencoding-mode
     lua-mode
     clojure-mode
     cmake-mode
     coffee-mode
     markdown-mode
+    pandoc-mode
     yaml-mode
     tuareg
     marmalade
     oddmuse
+    scala-mode
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; latex
+    auctex
 
     ;;;;;;;;;;;;;;;;;;;;
     ;; Haskell
@@ -105,6 +112,10 @@
     ;; Lisp Modes
     rainbow-mode
     rainbow-delimiters
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; csharp & fsharp
+    csharp-mode
 
     ;;;;;;;;;;;;;;;;;;;;
     ;; Buffer and Window

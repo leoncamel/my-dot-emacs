@@ -47,6 +47,16 @@
 ;; reference : http://madscientist.jp/~ikegami/diary/20090215.html
 (require 'init_ac_hs)
 
+(set-default 'ac-sources
+             '(ac-source-semantic
+               ;; ac-source-yasnippet
+               ac-source-abbrev
+               ac-source-words-in-buffer
+               ac-source-words-in-all-buffer
+               ac-source-imenu
+               ac-source-files-in-current-dir
+               ac-source-filename))
+
 ;; (require 'auto-complete-config)
 ;; (require 'auto-complete-yasnippet)
 ;; (require 'auto-complete-etags)

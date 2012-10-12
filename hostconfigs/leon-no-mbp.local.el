@@ -34,6 +34,8 @@
          "~/bin/"
          ;; texlive 2011
          "/usr/local/texlive/2011/bin/x86_64-darwin/"
+         ;; ocamlbrew
+         "~/opt/ocamlbrew/ocaml-4.00.1/bin/"
          ;; haskell cabal
          "~/Library/Haskell/bin/"
          ;; Racket-v5.2
@@ -65,7 +67,7 @@
 (setq my-cfg/enable-ghc-mod t)
 ;; (setq my-cfg/enable-haskell-mode-git t)
 
-(switch-net-env "waseda")
+;; (switch-net-env "waseda")
 
 (provide 'Leon-no-MBP)
 ;;; Leon-no-MBP.el ends here

@@ -118,12 +118,22 @@
     csharp-mode
 
     ;;;;;;;;;;;;;;;;;;;;
+    ;; Ess
+    ess
+
+    ;;;;;;;;;;;;;;;;;;;;
     ;; Buffer and Window
     buffer-move
     popwin
     win-switch
     workgroups
+    window-layout
+    e2wm
 
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; bookmarks
+    bm
+    
     ;;;;;;;;;;;;;;;;;;;;
     ;; Utilities
     melpa

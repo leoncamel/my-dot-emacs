@@ -62,7 +62,8 @@
     marmalade
     oddmuse
     scala-mode
-
+    js2-mode
+    
     ;;;;;;;;;;;;;;;;;;;;
     ;; latex
     auctex

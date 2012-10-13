@@ -34,3 +34,6 @@
 [submodule "vendor/fsharp-mode.git"]
 	path = vendor/fsharp-mode.git
 	url = https://github.com/emacsmirror/fsharp-mode.git
+[submodule "vendor/nxhtml.git"]
+	path = vendor/nxhtml.git
+	url = https://github.com/emacsmirror/nxhtml.git

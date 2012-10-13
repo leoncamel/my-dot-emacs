@@ -26,7 +26,7 @@
 
 ;; nxhtml mode
 ;;     it can integrate html,js,css together
-;; (load (my-dotfile-vendor "nxhtml.git/autostart.el"))
+(load (my-dotfile-vendor "nxhtml.git/autostart.el"))
 
 ;; Zen Coding Mode
 (require 'zencoding-mode)

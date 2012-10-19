@@ -1,7 +1,8 @@
 ;;; init.el --- Everything started from here
 ;;
-;; My init.el, majorly based on the Emacs Starter Kit
+;; Copyright (C) 2011,2012  Le0n Zh4ng
 ;;
+;; My init.el, majorly based on the Emacs Starter Kit
 ;; This is the first thing to get loaded.
 ;;
 ;; "Emacs outshines all other editing software in approximately the

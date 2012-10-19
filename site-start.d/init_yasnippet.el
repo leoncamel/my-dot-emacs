@@ -1,6 +1,6 @@
 ;;; init_yasnippet.el --- yasnippet settings
 
-;; Copyright (C) 2011  Le0n Zh4ng
+;; Copyright (C) 2011,2012  Le0n Zh4ng
 
 ;; Author: Le0n Zh4ng <leoncamel@gmail.com>
 ;; Keywords: 

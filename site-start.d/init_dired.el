@@ -1,6 +1,6 @@
 ;;; init_dired.el --- dired settings
 
-;; Copyright (C) 2011  Le0n Zh4ng
+;; Copyright (C) 2011,2012  Le0n Zh4ng
 
 ;; Author: Le0n Zh4ng <leoncamel@gmail.com>
 ;; Keywords: 
@@ -70,8 +70,8 @@ Works in Microsoft Windows, Mac OS X, Linux."
   (when (fboundp 'dired-single-buffer)
     (define-key dired-mode-map [return] 'dired-single-buffer)
     (define-key dired-mode-map "^"
-    (function
-     (lambda nil (interactive) (dired-single-buffer "..")))))
+      (function
+       (lambda nil (interactive) (dired-single-buffer "..")))))
   (when (fboundp 'dired-single-buffer-mouse)
     (define-key dired-mode-map [mouse-1] 'dired-single-buffer-mouse))
 
@@ -79,13 +79,13 @@ Works in Microsoft Windows, Mac OS X, Linux."
   (when (fboundp 'joc-dired-single-buffer)
     (define-key dired-mode-map [return] 'joc-dired-single-buffer)
     (define-key dired-mode-map "^"
-    (function
-     (lambda nil (interactive) (joc-dired-single-buffer "..")))))
+      (function
+       (lambda nil (interactive) (joc-dired-single-buffer "..")))))
   (when (fboundp 'joc-dired-single-buffer-mouse)
     (define-key dired-mode-map [mouse-1] 'joc-dired-single-buffer-mouse))
 
   ;; allow dired to be able to delete or copy a whole dir.
-  ;; “always” means no asking. “top” means ask once. Any other symbol means ask each and every time for a dir and subdir.
+  ;; "always" means no asking. "top" means ask once. Any other symbol means ask each and every time for a dir and subdir.
   (setq dired-recursive-copies (quote always))
   (setq dired-recursive-deletes (quote top)))
 

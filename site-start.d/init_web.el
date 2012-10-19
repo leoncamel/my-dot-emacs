@@ -39,5 +39,8 @@
 (autoload 'js2-mode "js2-mode" nil t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 
+;; flymake-jslint
+(add-hook 'js-mode-hook 'flymake-jslint-load)
+
 (provide 'init_web)
 ;;; init_html.el ends here

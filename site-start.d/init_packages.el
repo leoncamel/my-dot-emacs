@@ -62,8 +62,11 @@
     marmalade
     oddmuse
     scala-mode
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; Web Dev
     js2-mode
-    
+ 
     ;;;;;;;;;;;;;;;;;;;;
     ;; latex
     auctex
@@ -89,6 +92,12 @@
     ;;;;;;;;;;;;;;;;;;;;
     ;; Auto-complete
     auto-complete
+
+    ;;;;;;;;;;;;;;;;;;;;
+    ;; Flymake
+    flymake
+    flymake-jslint
+    flymake-tuareg
     
     ;;;;;;;;;;;;;;;;;;;;
     ;; Text Editing

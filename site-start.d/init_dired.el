@@ -30,9 +30,6 @@
 
 (setq ls-lisp-dirs-first t)
 
-;; use single dired buffer
-(require 'dired-single)
-
 ;; TODO : when refersh(press 'g' in dired,
 ;;        it require flymake-mode, pretty wired.
 (require 'flymake)
@@ -67,13 +64,26 @@ Works in Microsoft Windows, Mac OS X, Linux."
 (defun my-dired-init ()
   "Bunch of stuff to run for dired, either immediately or when it's
    loaded."
+  (require 'dired-single)
   ;; <add other stuff here>
-  (define-key dired-mode-map [return] 'dired-single-buffer)
-  (define-key dired-mode-map [mouse-1] 'dired-single-buffer-mouse)
-  (define-key dired-mode-map "^"
+  ;; original single-buffer
+  (when (fboundp 'dired-single-buffer)
+    (define-key dired-mode-map [return] 'dired-single-buffer)
+    (define-key dired-mode-map "^"
     (function
-     (lambda nil (interactive) (dired-single-buffer ".."))))
-  
+     (lambda nil (interactive) (dired-single-buffer "..")))))
+  (when (fboundp 'dired-single-buffer-mouse)
+    (define-key dired-mode-map [mouse-1] 'dired-single-buffer-mouse))
+
+  ;; joc single-buffer
+  (when (fboundp 'joc-dired-single-buffer)
+    (define-key dired-mode-map [return] 'joc-dired-single-buffer)
+    (define-key dired-mode-map "^"
+    (function
+     (lambda nil (interactive) (joc-dired-single-buffer "..")))))
+  (when (fboundp 'joc-dired-single-buffer-mouse)
+    (define-key dired-mode-map [mouse-1] 'joc-dired-single-buffer-mouse))
+
   ;; allow dired to be able to delete or copy a whole dir.
   ;; “always” means no asking. “top” means ask once. Any other symbol means ask each and every time for a dir and subdir.
   (setq dired-recursive-copies (quote always))

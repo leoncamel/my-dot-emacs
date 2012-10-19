@@ -24,6 +24,11 @@
 
 ;;; Code:
 
+;; flymake-tuareg
+(require 'flymake-tuareg)
+(add-hook 'tuareg-mode-hook 'flymake-tuareg-load)
+
+;; utop-mode
 (when (executable-find "utop")
   (add-to-list 'load-path (my-dotfile-vendor "utop"))
   

@@ -34,9 +34,12 @@
      (linux-p
       (newleon-fontset-dejvu-msyh 16))
      (darwin-p
-      (macleon-fontset-dejvu-hei 16))
+      ;; (macleon-fontset-dejvu-hei 16)
+      (macleon-fontset-melon-msyh 16)
+      )
      (t
       (newleon-fontset-dejvu-msyh 16))))
+
 
 ;; color-theme
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

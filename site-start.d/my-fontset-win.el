@@ -316,6 +316,32 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
   (add-to-list 'default-frame-alist '(font . "fontset-menlokakugo"))  ;; 実際に設定する場合
   )
 
+
+(defun macleon-fontset-melon-msyh (&optional size)
+  (interactive "P")
+  (when size
+    (setq my-latin-font size))
+
+  ;; Setting English Font
+  (set-face-attribute
+   'default nil :font (format "Menlo %d" size))
+
+  ;; Chinese Font
+  (dolist (charset '(kana han symbol cjk-misc bopomofo))
+    (set-fontset-font (frame-parameter nil 'font)
+                      charset
+                      (font-spec :family "Microsoft Yahei" :size size)))
+
+  ;; Another method:
+  
+  ;; (set-frame-font "Menlo-15")
+  ;; (set-fontset-font
+  ;;     (frame-parameter nil 'font)
+  ;;     'han
+  ;;     (font-spec :family "Hiragino Sans GB" ))
+
+  )
+
 ;; TODO: for mac's jp,zh font settings
 ;;  [1] : http://sakito.jp/emacs/emacs23.html
 ;;  [2] : http://d.hatena.ne.jp/CortYuming/20100903/p1

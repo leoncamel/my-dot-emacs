@@ -41,5 +41,21 @@
                  (+ (third before-init-time) (* 1000000 (second before-init-time))))
               1000)))
 
+;; Basic Editing
+;; Reference : http://www.emacswiki.org/emacs/DeletingSyntax
+(defun kill-syntax-forward ()
+  "Kill characters with syntax at point."
+  (interactive)
+  (kill-region (point)
+               (progn (skip-syntax-forward (string (char-syntax (char-after))))
+                      (point))))
+
+(defun kill-syntax-backward ()
+  "Kill characters with syntax at point."
+  (interactive)
+  (kill-region (point)
+               (progn (skip-syntax-backward (string (char-syntax (char-before))))
+                      (point))))
+
 (provide 'my-utils)
 ;;; my-utils.el ends here

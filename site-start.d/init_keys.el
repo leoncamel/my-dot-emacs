@@ -55,8 +55,12 @@
 
 ;; fullscreen
 (require 'my-fullscreen)
-(global-set-key (kbd "C-c m")   'toggle-fullscreen)
-(global-set-key (kbd "C-c t")   'toggle-transparency)
+(global-set-key (kbd "C-c m") 'toggle-fullscreen)
+(global-set-key (kbd "C-c t") 'toggle-transparency)
+
+;; kill-syntax-forward/backword
+(require 'my-utils)
+(global-set-key (kbd "M-DEL") 'kill-syntax-backward)
 
 ;; In order to avoid conflict with cua-mode.
 ;; reference: http://www.emacswiki.org/emacs/WinnerMode

@@ -27,6 +27,11 @@
 ;; org-mode
 ;(add-to-list 'load-path (my-dotfile-vendor "org-6.35i/lisp/"))
 ;(add-to-list 'load-path (my-dotfile-vendor "org-6.35i/contrib/lisp/"))
+
+(add-to-list 'load-path (my-dotfile-vendor "org-8.0.6/lisp/"))
+(add-to-list 'load-path (my-dotfile-vendor "org-8.0.6/contrib/lisp/"))
+
+
 ;(require 'org-install)
 ;(require 'org-babel-init)
 ;(require 'org-babel-R)
@@ -131,15 +136,28 @@
 
 ;; reference : newsmth
 
+(require 'ox-latex)
 (setq org-src-fontify-natively t)
 (setq org-export-latex-minted t)
-(add-to-list 'org-export-latex-packages-alist '("" "minted"))
-(add-to-list 'org-export-latex-minted-langs '(ocaml "ocaml"))
-(add-to-list 'org-export-latex-minted-langs '(haskell "haskell"))
-(add-to-list 'org-export-latex-minted-langs '(clojure "clojure"))
-(add-to-list 'org-export-latex-minted-langs '(erlang "erlang"))
-(setq org-export-latex-listings 'minted)
-(setq org-latex-to-pdf-process
+;; (add-to-list 'org-latex-inputenc-alist '(("utf8" . "utf8x")))
+
+
+(add-to-list 'org-latex-default-packages-alist '("" "minted"))
+;; (add-to-list 'org-latex-packages-alist '("" "listing"))
+;; (add-to-list 'org-latex-packages-alist '("" "color"))
+(add-to-list 'org-latex-packages-alist '("" "minted"))
+
+(add-to-list 'org-latex-minted-langs '(ocaml "ocaml"))
+(add-to-list 'org-latex-minted-langs '(haskell "haskell"))
+(add-to-list 'org-latex-minted-langs '(clojure "clojure"))
+(add-to-list 'org-latex-minted-langs '(erlang "erlang"))
+(add-to-list 'org-latex-minted-langs '(python "python"))
+
+;; (setq org-export-latex-listings 'minted)
+(setq org-latex-listings 'minted)
+;; (setq org-latex-pdf-process
+;;       '("pdflatex -shell-escape -interaction nonstopmode %f"))
+(setq org-latex-pdf-process
       '("pdflatex -shell-escape -interaction nonstopmode %f"))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -149,14 +167,16 @@
   (and (buffer-file-name)
        (file-exists-p (buffer-file-name))
        (reftex-parse-all))
-  (define-key org-mode-map (kbd "C-c )") 'reftex-citation)
-  )
+  (define-key org-mode-map (kbd "C-c )") 'reftex-citation))
 (add-hook 'org-mode-hook 'org-mode-reftex-setup)
 
 ; another bibtex tweaking
 (require 'org-bibtex)
 
 
+;; org-reveal
+(add-to-list 'load-path (my-dotfile-vendor "org-reveal.git/"))
+(require 'ox-reveal)
 
 (provide 'init_org)
 ;;; init_org.el ends here

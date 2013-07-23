@@ -26,14 +26,14 @@
 
 ;; nxhtml mode
 ;;     it can integrate html,js,css together
-(load (my-dotfile-vendor "nxhtml.git/autostart.el"))
+;; (load (my-dotfile-vendor "nxhtml.git/autostart.el"))
 
 ;; Zen Coding Mode
-(require 'zencoding-mode)
-(add-hook 'sgml-mode-hook 'zencoding-mode)
-(add-hook 'html-mode-hook 'zencoding-mode)
-(add-hook 'text-mode-hook 'zencoding-mode)
-(define-key zencoding-mode-keymap "\C-z" 'zencoding-expand-line)
+(require 'emmet-mode)
+(add-hook 'sgml-mode-hook 'emmet-mode)
+(add-hook 'html-mode-hook 'emmet-mode)
+(add-hook 'text-mode-hook 'emmet-mode)
+(define-key emmet-mode-keymap "\C-z" 'emmet-expand-line)
 
 ;; JavaScript modes
 (autoload 'js2-mode "js2-mode" nil t)

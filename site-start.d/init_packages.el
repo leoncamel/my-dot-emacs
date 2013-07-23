@@ -50,7 +50,7 @@
 
     ;;;;;;;;;;;;;;;;;;;;
     ;; Programming Mode
-    zencoding-mode
+    emmet-mode ;; zencoding-mode
     lua-mode
     clojure-mode
     cmake-mode
@@ -69,7 +69,7 @@
  
     ;;;;;;;;;;;;;;;;;;;;
     ;; latex
-    auctex
+    ;; auctex
 
     ;;;;;;;;;;;;;;;;;;;;
     ;; Haskell

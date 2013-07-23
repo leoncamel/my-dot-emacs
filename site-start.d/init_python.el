@@ -24,7 +24,10 @@
 
 ;;; Code:
 
+;; (autoload 'jedi:setup "jedi" nil t)
 
+;; (add-hook 'python-mode-hook 'jedi:setup)
+(add-hook 'python-mode-hook 'jedi:ac-setup)
 
 (provide 'init_python)
 ;;; init_python.el ends here

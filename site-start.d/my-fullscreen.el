@@ -73,6 +73,10 @@
                              (if (boundp 'old-fullscreen) old-fullscreen nil)
                            (progn (setq old-fullscreen current-value)
                                   'fullboth)))))
+;;
+(defun toggle-fullscreen-w32-fullscreen-exe ()
+  (interactive)
+  (shell-command "emacs_fullscreen.exe"))
 
 ;;
 ;; toggle-fullscreen

@@ -38,7 +38,7 @@
       (macleon-fontset-melon-msyh 16)
       )
      (t
-      (newleon-fontset-dejvu-msyh 16))))
+      (newleon-fontset-dejvu-msyh 18))))
 
 
 ;; color-theme

@@ -26,12 +26,47 @@
 
 ;; csharp
 (require 'csharp-mode)
+(defun my-csharp-mode-hook ()
+  "Hook function for initialize csharp-mode."
+  (require 'yasnippet)
+  (yas/minor-mode-on)
+  (c-set-style "bsd"))
+
+(add-hook 'csharp-mode-hook 'my-csharp-mode-hook t)
 
 ;; fsharp
-(add-to-list 'load-path (my-dotfile-vendor "fsharp-mode.git"))
+;; (add-to-list 'load-path (my-dotfile-vendor "fsharp-mode.git"))
+;; (setq auto-mode-alist (cons '("\\.fs[iylx]?$" . fsharp-mode) auto-mode-alist))
+;; (autoload 'fsharp-mode "fsharp" "Major mode for editing F# code." t)
+;; (autoload 'run-fsharp "inf-fsharp" "Run an inferior F# process." t)
+
+;; Use melpa's fsharp-mode package
 (setq auto-mode-alist (cons '("\\.fs[iylx]?$" . fsharp-mode) auto-mode-alist))
-(autoload 'fsharp-mode "fsharp" "Major mode for editing F# code." t)
-(autoload 'run-fsharp "inf-fsharp" "Run an inferior F# process." t)
+(autoload 'fsharp-mode "fsharp-mode" "Major mode for editing F# code." t)
+;; (autoload 'run-fsharp "inf-fsharp" "Run an inferior F# process." t)
+
+;; 
+(setq inferior-fsharp-program "Fsi.exe")
+(setq fsharp-compiler "Fsc.exe")
+
+;; quote command. Especially for windows path with *white space*
+(setq fsharp-compile-command (shell-quote-argument (executable-find "fsc")))
+(setq fsharp-build-command (shell-quote-argument (executable-find "msbuild")))
+
+;; TODO: move to better place
+;; Thrift mode
+(add-to-list 'load-path (my-dotfile-vendor "thrift-mode"))
+(require 'thrift-mode)
 
 (provide 'init_dotnet)
 ;;; init_dotnet.el ends here
+
+
+
+
+
+
+
+
+
+

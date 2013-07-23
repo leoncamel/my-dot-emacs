@@ -28,5 +28,16 @@
 (add-to-list 'auto-mode-alist '("\\.clj$" . clojure-mode))
 (add-to-list 'auto-mode-alist '("\\.cljs$" . clojure-mode))
 
+;; nREPL and nREPL-ritz
+(require 'nrepl)
+(require 'nrepl-ritz)
+(custom-set-variables
+ '(nrepl-popup-stacktraces nil)
+ '(nrepl-lein-command "lein"))
+
+;; align-cljlet
+(require 'align-cljlet)
+(setq defroute-columns 4)
+
 (provide 'init_clojure)
 ;;; init_clojure.el ends here
